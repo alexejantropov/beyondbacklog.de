@@ -1,0 +1,28 @@
+---
+// Closing section of the homepage: author photo, handwritten greeting, short bio (design variant 2).
+import { Image } from 'astro:assets';
+import author from '~/assets/site/author.jpg';
+import Eyebrow from './ui/Eyebrow.astro';
+import Stroke from './ui/Stroke.astro';
+import Button from './ui/Button.astro';
+import { site } from '../data/site';
+---
+<section class="border-t border-ink/8">
+  <div class="container-bb section-y">
+    <div class="grid items-center gap-10 lg:grid-cols-[minmax(0,1fr)_420px] lg:gap-[72px]">
+      <div class="flex flex-col gap-5">
+        <Eyebrow class="text-[2.25rem] md:text-[2.75rem]">Hallo, ich bin Alexej.</Eyebrow>
+        <h2 class="headline text-h2">Ich schreibe über <Stroke>Produktentwicklung und KI</Stroke>, aus 20 Jahren Praxis.</h2>
+        <p class="max-w-[600px] text-lead text-ink/72">Interim Product Manager, Co-Autor des Agile Product Manifesto, Lehrbeauftragter für KI-Projekte. Hier teile ich, was in Produktteams wirklich funktioniert. Handwerk, Struktur, Tools statt Hype.</p>
+        <div class="flex flex-col gap-3 sm:flex-row sm:flex-wrap">
+          <Button href="/about" block>Mehr über mich</Button>
+          <Button href={site.workWithMeUrl} variant="outline" block>Work with me</Button>
+        </div>
+      </div>
+      <div class="relative max-w-[420px] lg:justify-self-end">
+        <Image src={author} alt={site.author} width={840} widths={[480, 840]} sizes="(min-width: 1024px) 420px, 100vw" class="aspect-[4/5] w-full rounded-[28px] object-cover object-top shadow-[0_24px_60px_rgba(10,10,10,0.14)]" />
+        <p class="absolute bottom-8 -left-3 -rotate-3 rounded-xl border border-ink/10 bg-white px-5 py-3 font-hand text-[1.625rem] leading-none font-semibold text-accent-deep shadow-[0_10px_30px_rgba(10,10,10,0.12)] md:-left-6">Geht nicht, gibt’s nicht.</p>
+      </div>
+    </div>
+  </div>
+</section>

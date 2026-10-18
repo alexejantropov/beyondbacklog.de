@@ -1,0 +1,35 @@
+# CLAUDE.md
+
+Beyond Backlog (www.beyondbacklog.de): German newsletter and blog by Alexej Antropov, moved from Substack in October 2026. Static Astro 7 + Tailwind 4 site, every page prerendered, served on Replit Autoscale by `server.mjs` (Express: static files from `dist/client`, compression, security headers) with `@astrojs/node` in middleware mode for everything on demand. Newsletter via Resend (double opt-in: `/api/subscribe` sends the link, `GET /api/confirm` only shows `/newsletter-bestaetigen`, its button POSTs to `/api/confirm`). The migration plan and decision log live in `migration.md` (local only, gitignored).
+
+## Commands
+- `npm run dev` / `npm run build` / `npm start` (serves `dist/` like Replit does: `node server.mjs`, env `HOST`, `PORT`).
+- `npm run ci` = `check` (astro check), `lint`, `test` (Vitest), `build`, `check:dist`. CI and the pre-commit hook (`.githooks/`, activated by `npm install`) run exactly this. Don't bypass it with `--no-verify`.
+- After a build: `npm run check:responsive -- <routes>` (device matrix, screenshots in `.responsive/`) and `npm run check:a11y` (axe, WCAG 2.2 AA). Required for every UI change: 0 errors on all devices, look at the screenshots.
+- `node scripts/check-legacy.mjs --base <url>`: every old Substack URL against a deployed site.
+- `npm run import:substack [slug…]`: Substack backup (`migration/substack-public/`) → `src/content/posts` + `src/assets/posts`. Posts with `imported: false` in the frontmatter are skipped (hand-edited).
+- `npm run newsletter -- <slug> [--intro "…"] [--send]`: e-mail HTML + Resend broadcast draft from a post. Needs `dist/` and `.env`.
+- Shared script helpers in `scripts/lib/`: `preview-server.mjs` (starts `server.mjs` for the browser checks), `legacy-urls.mjs` (parses `tests/legacy-urls.txt`). Scripts import `src/` modules directly (`.ts` with explicit extension).
+- `node scripts/export-email-templates.mjs`: writes `emails/*.html` for importing into Resend.
+
+## Hard rules
+- **No URL may disappear.** Post URLs are the Substack URLs: `/p/<slug>`, slug = file name in `src/content/posts/`, never renamed. `npm run check:dist` compares against `tests/routes.snapshot.txt`; every URL in `tests/legacy-urls.txt` (all Substack URLs) must resolve directly or with exactly one 301. Changing a path needs a redirect in **`src/data/redirects.ts`** (the only place; applied by `src/middleware.ts` at runtime) and the old path in `tests/legacy-urls.txt`, then `npm run check:dist -- --update`.
+- **URLs have no trailing slash and live on `https://www.beyondbacklog.de`** (`trailingSlash: 'never'`, `build.format: 'file'`). Don't create a page and a directory with the same name (`/x` + `/x/y`): the Node adapter then serves a 404 for `/x`. Use flat names (`/newsletter-danke`).
+- **Images:** `src/assets/` only, referenced as `~/assets/…` (components, frontmatter `cover`, Markdown image syntax). Raw `<img>` and `substackcdn` URLs in content fail `tests/content.test.ts`. Max 2400 px; the importer converts HEIC.
+- **Privacy:** nothing third-party loads on page view (no Google Fonts, no analytics, no iframes). YouTube videos are linked preview images that `src/components/YouTubeLinks.astro` upgrades on click. `check:dist` fails otherwise.
+- **Responsive and accessible:** every component works from 360 px to 1920 px, tap targets ≥ 44 px, body text ≥ 16 px on phones, WCAG 2.2 AA.
+- Content language is German, posts tagged `english-only` are English (`lang: en`). Address the reader as "du". Keep the English PM terms (Product Owner, Backlog, Discovery, …).
+
+## Structure
+- `src/pages/`: `index` (hero with the newest post + six more as cards + LinkedIn feed + about closing + newsletter box), `beitraege` (all posts with tag pills), `p/[slug]` (posts and Substack pages; `p/work-with-me.astro` is hand-made), `s/[tag]`, `about`, `newsletter`, `newsletter-danke|bestaetigt|fehler` (all via `NewsletterStatus`), `newsletter-bestaetigen` (on demand: checks the token, the subscription happens only on the POST of its button, so link scanners can't confirm), `impressum`, `datenschutz.md`, `feed.xml.ts`. On demand: `404` and the catch-all `[...path]` (both render `NotFound`, so the middleware runs for unknown paths), `api/subscribe.ts` + `api/confirm.ts`.
+- Design tokens in `src/styles/global.css` (accent `#9747ff`, Open Sans on the width axis for headlines via `.headline`, Caveat for eyebrows/quotes, pen stroke `.stroke` from `src/lib/stroke.ts`). Building blocks in `src/components/ui/` (`Stroke`, `Eyebrow`, `Button`, `NewsletterForm`, `NewsletterBox`, `PostCard`), sections in `src/components/` (`Hero`, `PostGrid`, `AboutClosing`, `NewsletterStatus`, `NotFound`). Reuse these before writing new markup.
+- Content schema `src/content.config.ts`; helpers `src/lib/posts.ts` (lists, reading time, related), `seo.ts` (meta description, `stripTrailingSlash`, noindex paths, `formatDate`), `structuredData.ts`, `redirects.ts`, `email.ts` (address check and sign-up messages, also bundled into the form script, so no Node imports), `subscribe.ts` (signed double-opt-in tokens, rate limit), `resend.ts`.
+- Site data in `src/data/site.ts`: canonical `url`, author, addresses, `mailFrom`, and `tags` (slug, label, lang, intro of the topic page). The content schema derives its tag enum from it, so a new tag is added only there. Never hardcode the domain or the sender elsewhere.
+- E-mail templates in `src/email/templates.ts` (confirmation, welcome, issue, `styleIssueBody` for post HTML in a mail).
+- LinkedIn feed on the homepage: `src/content/linkedin/posts.json` (maintained by hand, see the README there), rendered by `src/components/LinkedInFeed.astro`; images in `src/assets/linkedin/`.
+- Secrets (never in the repo): `.env.example` lists them. Replit: Deployment → Secrets.
+
+## Workflow for a new post
+1. Markdown in `src/content/posts/<slug>.md` (frontmatter like the imported ones), images in `src/assets/posts/<slug>/`.
+2. `npm run ci`, commit, push. Replit: pull and republish.
+3. `npm run build && npm run newsletter -- <slug>`, test mail in Resend, send.

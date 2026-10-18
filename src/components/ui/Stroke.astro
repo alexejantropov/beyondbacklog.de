@@ -1,0 +1,7 @@
+---
+// Hand-drawn pen stroke under a word or phrase (src/lib/stroke.ts). Decorative only.
+import { strokeStyle } from '../../lib/stroke';
+interface Props { class?: string }
+const { class: className } = Astro.props;
+---
+<span class:list={['stroke', className]} style={strokeStyle()}><slot /></span>

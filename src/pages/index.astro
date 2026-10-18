@@ -1,0 +1,22 @@
+---
+import Layout from '../layouts/Layout.astro';
+import Hero from '../components/Hero.astro';
+import PostGrid from '../components/PostGrid.astro';
+import LinkedInFeed from '../components/LinkedInFeed.astro';
+import AboutClosing from '../components/AboutClosing.astro';
+import NewsletterBox from '../components/ui/NewsletterBox.astro';
+import { publishedPosts } from '../lib/posts';
+import { website } from '../lib/structuredData';
+
+const posts = await publishedPosts();
+const [latest, ...rest] = posts;
+---
+<Layout structuredData={website(Astro.site!.href)} ogImage={latest?.data.cover}>
+  {latest && <Hero latest={latest} />}
+  <PostGrid posts={rest} limit={6} filter={false} eyebrow="Neueste Beiträge" heading="Frisch aus dem Backlog." more={{ href: '/beitraege', label: `Weitere Beiträge (${posts.length}) →` }} />
+  <LinkedInFeed />
+  <AboutClosing />
+  <div class="container-bb py-16 md:py-20">
+    <NewsletterBox id="email-home" />
+  </div>
+</Layout>

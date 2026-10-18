@@ -1,0 +1,21 @@
+---
+import Layout from '../layouts/Layout.astro';
+import Eyebrow from '../components/ui/Eyebrow.astro';
+import Stroke from '../components/ui/Stroke.astro';
+import NewsletterForm from '../components/ui/NewsletterForm.astro';
+import { site } from '../data/site';
+---
+<Layout title={`Newsletter abonnieren | ${site.name}`} description={`${site.name} als Newsletter: ${site.tagline} Kostenlos, unregelmäßig, jederzeit abbestellbar.`}>
+  <section class="container-bb section-y">
+    <div class="mx-auto flex max-w-[640px] flex-col gap-6">
+      <Eyebrow>Newsletter</Eyebrow>
+      <h1 class="headline text-h1">Neue Beiträge <Stroke>direkt ins Postfach</Stroke>.</h1>
+      <p class="text-lead text-ink/72">{site.tagline} Erfahrungen und Learnings aus 20 Jahren agiler Produktentwicklung, von {site.author}. Unregelmäßig, kostenlos, jederzeit abbestellbar.</p>
+      <div id="ungueltig" class="hidden rounded-xl border border-accent/40 bg-tint px-5 py-3 text-sm font-semibold target:block" role="alert">Bitte gib eine gültige E-Mail-Adresse ein.</div>
+      <div id="zu-viele" class="hidden rounded-xl border border-accent/40 bg-tint px-5 py-3 text-sm font-semibold target:block" role="alert">Zu viele Versuche. Bitte probier es in ein paar Minuten noch einmal.</div>
+      <div id="fehler" class="hidden rounded-xl border border-accent/40 bg-tint px-5 py-3 text-sm font-semibold target:block" role="alert">Das hat nicht geklappt. Bitte versuch es später noch einmal.</div>
+      <NewsletterForm id="email-page" />
+      <p class="text-sm text-ink/60">Nach dem Absenden bekommst du eine E-Mail mit einem Bestätigungslink. Erst mit dem Klick darauf und der Bestätigung auf der folgenden Seite bist du angemeldet (Double-Opt-In). Versand über Resend, Details in der <a href="/datenschutz" class="underline underline-offset-[3px]">Datenschutzerklärung</a>.</p>
+    </div>
+  </section>
+</Layout>

@@ -1,0 +1,52 @@
+---
+// Click-to-enlarge for images inside `.prose` content. At most once per page.
+---
+<div id="lightbox" class="fixed inset-0 z-[70] hidden items-center justify-center bg-ink/92 p-4 md:p-10" role="dialog" aria-modal="true" aria-label="Bildansicht">
+  <button id="lightbox-close" type="button" class="absolute top-3 right-3 z-10 grid size-11 place-items-center rounded-full bg-white/10 text-white transition-colors hover:bg-white/20 md:top-6 md:right-6" aria-label="Schließen">
+    <svg class="size-6" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" d="M6 18L18 6M6 6l12 12" /></svg>
+  </button>
+  <img id="lightbox-img" class="max-h-full max-w-full rounded-xl bg-white object-contain p-2" src="" alt="" />
+</div>
+<script>
+  const lightbox = document.getElementById('lightbox');
+  const lightboxImg = document.getElementById('lightbox-img') as HTMLImageElement | null;
+  const lightboxClose = document.getElementById('lightbox-close');
+  if (lightbox && lightboxImg && lightboxClose) {
+    let opener: HTMLElement | null = null;
+    const isOpen = () => !lightbox.classList.contains('hidden');
+    const close = () => {
+      if (!isOpen()) return;
+      lightbox.classList.add('hidden');
+      lightbox.classList.remove('flex');
+      document.documentElement.classList.remove('overflow-hidden');
+      opener?.focus({ preventScroll: true });
+    };
+    document.querySelectorAll<HTMLImageElement>('.prose img').forEach(img => {
+      if (img.closest('a')) return;
+      img.classList.add('cursor-zoom-in');
+      img.tabIndex = 0;
+      img.setAttribute('role', 'button');
+      img.setAttribute('aria-label', `${img.alt || 'Bild'} vergrößern`);
+      img.addEventListener('keydown', e => {
+        if (e.key === 'Enter' || e.key === ' ') { e.preventDefault(); img.click(); }
+      });
+      img.addEventListener('click', () => {
+        opener = img;
+        lightboxImg.src = img.currentSrc || img.src;
+        lightboxImg.alt = img.alt;
+        lightbox.classList.remove('hidden');
+        lightbox.classList.add('flex');
+        document.documentElement.classList.add('overflow-hidden');
+        lightboxClose.focus();
+      });
+    });
+    lightboxClose.addEventListener('click', close);
+    lightbox.addEventListener('click', e => { if (e.target === lightbox) close(); });
+    // The close button is the only focusable element in the dialog: keep Tab on it.
+    document.addEventListener('keydown', e => {
+      if (!isOpen()) return;
+      if (e.key === 'Escape') close();
+      if (e.key === 'Tab') { e.preventDefault(); lightboxClose.focus(); }
+    });
+  }
+</script>

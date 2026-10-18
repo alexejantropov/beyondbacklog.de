@@ -1,0 +1,12 @@
+migration/substack-export/
+migration/substack-public/
+node_modules/
+dist/
+.responsive/
+re-design/
+.DS_Store
+migration.md
+.env
+.astro/
+migration/
+.err

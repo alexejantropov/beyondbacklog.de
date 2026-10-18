@@ -1,0 +1,19 @@
+---
+import Layout from '../../layouts/Layout.astro';
+import PostGrid from '../../components/PostGrid.astro';
+import NewsletterBox from '../../components/ui/NewsletterBox.astro';
+import { publishedPosts } from '../../lib/posts';
+import { site } from '../../data/site';
+
+export function getStaticPaths() {
+  return site.tags.map(t => ({ params: { tag: t.slug }, props: t }));
+}
+const { slug: tag, label, intro, lang } = Astro.props;
+const posts = await publishedPosts();
+---
+<Layout title={`${label} | ${site.name}`} description={intro} lang={lang}>
+  <PostGrid posts={posts} activeTag={tag} eyebrow="Thema" heading={`${label}.`} intro={intro} />
+  <div class="container-bb pb-20 md:pb-24">
+    <NewsletterBox id="email-tag" />
+  </div>
+</Layout>

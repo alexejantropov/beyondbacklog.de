@@ -1,0 +1,27 @@
+---
+// Privacy-friendly video embeds: the import writes YouTube videos as linked preview images
+// (<a class="video" href="https://www.youtube.com/watch?v=ID"><img …></a>). Nothing is loaded from
+// YouTube until the visitor clicks; then the link is replaced by a youtube-nocookie player.
+// Without JS the link opens the video on youtube.com.
+---
+<script>
+  document.querySelectorAll<HTMLAnchorElement>('.prose a.video[href*="youtube.com/watch"]').forEach(link => {
+    const id = new URL(link.href).searchParams.get('v');
+    if (!id) return;
+    link.setAttribute('aria-label', `Video abspielen: ${link.querySelector('img')?.alt ?? ''}`);
+    link.addEventListener('click', event => {
+      event.preventDefault();
+      const box = document.createElement('div');
+      box.className = 'relative aspect-video overflow-hidden rounded-2xl bg-ink';
+      const iframe = document.createElement('iframe');
+      iframe.allow = 'accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture';
+      iframe.allowFullscreen = true;
+      iframe.title = link.querySelector('img')?.alt ?? 'Video';
+      iframe.className = 'absolute inset-0 size-full';
+      iframe.src = `https://www.youtube-nocookie.com/embed/${id}?autoplay=1&rel=0&playsinline=1`;
+      box.append(iframe);
+      link.replaceWith(box);
+      iframe.focus();
+    });
+  });
+</script>

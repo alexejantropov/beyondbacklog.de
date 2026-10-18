@@ -1,0 +1,102 @@
+---
+// "Work with me": the Substack page /p/work-with-me plus the content of about.me/alexejantropov,
+// as one page on this site (decision 17.10.2026). Hand-made, not imported (SKIP in the importer).
+import { Image } from 'astro:assets';
+import Layout from '../../layouts/Layout.astro';
+import Eyebrow from '../../components/ui/Eyebrow.astro';
+import Stroke from '../../components/ui/Stroke.astro';
+import Button from '../../components/ui/Button.astro';
+import NewsletterBox from '../../components/ui/NewsletterBox.astro';
+import author from '~/assets/site/author.jpg';
+import { site } from '../../data/site';
+import { person } from '../../lib/structuredData';
+
+const CALENDLY = 'https://calendly.com/antropov-n1rd/30min';
+const CV = '/files/ac80700a-2baf-4ff8-a78d-1e8ab9e2da73.pdf';
+const description = 'Interim Product Management, Product Leadership und Coaching, KI-Beratung mit Vorträgen und Workshops. Alexej Antropov begleitet Teams durch die digitale und KI-Transformation.';
+
+const offers = [
+  { title: 'Product Consulting', items: ['Interim Product Management', 'Product Leadership', 'Product Coaching'], text: 'Ich übernehme Produktrollen auf Zeit, führe Produktteams oder begleite Product Owner und Product Manager in ihrer Rolle.' },
+  { title: 'KI-Beratung', items: ['Vorträge & Keynotes', 'Schulungen & Workshops', 'Einführung von KI-Nutzung in Produktmanagement und Softwareentwicklung'], text: 'Vom ersten Überblick bis zur Etablierung im Alltag: welche KI-Werkzeuge in der Produktentwicklung tragen, und wie ein Team sie einsetzt.' },
+];
+const facts = [
+  { label: 'Praxis', value: '18+ Jahre', text: 'digitale Produkt- und Software-Entwicklung, zuletzt als Head of Product Development mit KI-Features und als AI-Coordinator.' },
+  { label: 'Branchen', value: 'B2B SaaS bis Media', text: 'Marktplatz, Publishing und Media, Company Building, CRM und Marketing.' },
+  { label: 'Qualifikation', value: 'M.Sc.', text: 'Technologie- und Innovationsmanagement; KI-Beauftragter gemäß EU AI Act; Professional Scrum Product Owner und Scrum Master.' },
+  { label: 'Mitautor', value: 'Agile Product Manifesto', text: 'maßgeblich mitverfasst, 2022.' },
+];
+---
+<Layout title={`Work with me | ${site.name}`} description={description} ogImage={author} structuredData={{ '@context': 'https://schema.org', ...person(Astro.site!.href), jobTitle: 'Interim Product Manager' }}>
+  <section class="border-b border-ink/6 bg-tint">
+    <div class="container-bb section-y">
+      <div class="grid items-center gap-10 lg:grid-cols-[minmax(0,1.15fr)_380px] lg:gap-16">
+        <div class="flex flex-col gap-6">
+          <Eyebrow>Work with me</Eyebrow>
+          <h1 class="headline text-display">Danke, dass du dich für eine <Stroke>Zusammenarbeit</Stroke> interessierst.</h1>
+          <p class="max-w-[600px] text-lead text-ink/72">Hi, ich bin Alexej: Interim Product Manager, Dozent für Digital Business Innovation und Co-Autor des Agile Product Manifesto. Als Product Leader begleite ich dich und dein Team durch die digitale und KI-Transformation.</p>
+          <p class="font-hand text-[1.75rem] leading-tight font-semibold text-accent-deep">less poor products. less poor companies.</p>
+          <div class="flex flex-col gap-3 sm:flex-row sm:flex-wrap">
+            <Button href={CALENDLY} variant="accent" size="lg" block>Termin wählen (30 Min.)</Button>
+            <Button href={`mailto:${site.contactEmail}`} variant="outline" size="lg" block>E-Mail schreiben</Button>
+          </div>
+        </div>
+        <div class="relative max-w-[380px] lg:justify-self-end">
+          <Image src={author} alt={site.author} width={760} widths={[480, 760]} sizes="(min-width: 1024px) 380px, 100vw" loading="eager" class="aspect-[4/5] w-full rounded-[28px] object-cover object-top shadow-[0_24px_60px_rgba(10,10,10,0.14)]" />
+          <p class="absolute bottom-8 -left-3 -rotate-3 rounded-xl border border-ink/10 bg-white px-5 py-3 font-hand text-[1.625rem] leading-none font-semibold text-accent-deep shadow-[0_10px_30px_rgba(10,10,10,0.12)]">Geht nicht, gibt’s nicht.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="container-bb section-y">
+    <Eyebrow>Angebot</Eyebrow>
+    <h2 class="headline text-h2 mt-3 max-w-[20ch]">Von langfristigen Engagements bis zum Vortrag.</h2>
+    <p class="mt-5 max-w-[640px] text-lead text-ink/72">In einer Welt des schnellen Wandels braucht es technologiegestützte Produkte und Arbeitsweisen mit Mut, Menschlichkeit und Technologieeinsatz, um nachhaltig wertschöpfend und schnell genug zu innovieren. Dabei helfe ich in diesen Formen:</p>
+    <div class="mt-10 grid gap-6 md:grid-cols-2">
+      {offers.map((offer, i) => (
+        <article class:list={['flex flex-col gap-4 rounded-[20px] p-7 md:p-9', i === 0 ? 'bg-ink text-paper' : 'border border-ink/10 bg-white']}>
+          <span class:list={['font-hand text-[1.75rem] leading-none font-semibold', i === 0 ? 'text-accent-light' : 'text-accent-deep']}>0{i + 1}</span>
+          <h3 class="headline text-[1.75rem] leading-tight tracking-[-0.02em]">{offer.title}</h3>
+          <ul class:list={['flex flex-col gap-2 text-base', i === 0 ? 'text-paper/85' : 'text-ink/80']}>
+            {offer.items.map(item => <li class="flex gap-3"><span class:list={['mt-2.5 size-1.5 shrink-0 rounded-full', i === 0 ? 'bg-accent-light' : 'bg-accent']} aria-hidden="true"></span>{item}</li>)}
+          </ul>
+          <p class:list={['text-[0.9375rem] leading-relaxed', i === 0 ? 'text-paper/70' : 'text-ink/65']}>{offer.text}</p>
+        </article>
+      ))}
+    </div>
+  </section>
+
+  <section class="border-y border-ink/8 bg-white">
+    <div class="container-bb section-y">
+      <Eyebrow>Hintergrund</Eyebrow>
+      <h2 class="headline text-h2 mt-3 max-w-[22ch]">Erfahrung, auf die du bauen kannst.</h2>
+      <dl class="mt-10 grid gap-x-8 gap-y-8 sm:grid-cols-2 lg:grid-cols-4">
+        {facts.map(f => (
+          <div class="flex flex-col gap-2 border-t border-ink/12 pt-5">
+            <dt class="font-hand text-[1.375rem] leading-none font-semibold text-accent-deep">{f.label}</dt>
+            <dd class="headline text-[1.375rem] leading-tight tracking-[-0.02em]">{f.value}</dd>
+            <dd class="text-[0.9375rem] leading-relaxed text-ink/70">{f.text}</dd>
+          </div>
+        ))}
+      </dl>
+      <p class="mt-10 max-w-[640px] text-base leading-relaxed text-ink/72">Und da der technologische Fortschritt nicht stehen bleibt, lerne ich jeden Tag in und außerhalb von Kundenprojekten dazu und schreibe so viel es geht hier auf <a href="/" class="font-semibold underline underline-offset-[3px]">Beyond Backlog</a> auf.</p>
+    </div>
+  </section>
+
+  <section class="container-bb section-y">
+    <div class="grid items-center gap-8 rounded-[20px] bg-tint p-7 md:grid-cols-[minmax(0,1fr)_auto] md:p-11">
+      <div class="flex flex-col gap-3">
+        <Eyebrow>Nächster Schritt</Eyebrow>
+        <h2 class="headline text-[2rem] leading-[1.1] tracking-[-0.02em]">Lass uns reden, wann immer es dir passt.</h2>
+        <p class="text-base leading-relaxed text-ink/70">30 Minuten, unverbindlich. Oder schreib mir per E-Mail oder auf LinkedIn. Meinen Lebenslauf gibt es als PDF.</p>
+      </div>
+      <div class="flex flex-col gap-3 sm:flex-row md:flex-col">
+        <Button href={CALENDLY} variant="accent" block>Termin wählen</Button>
+        <Button href={CV} variant="outline" block>CV als PDF</Button>
+        <Button href={site.linkedinUrl} variant="link" block>LinkedIn</Button>
+      </div>
+    </div>
+    <p class="mt-10 font-hand text-[2.25rem] leading-none font-semibold text-accent-deep">Ich freue mich, dich kennenzulernen. Alexej</p>
+    <NewsletterBox id="email-work" class="mt-16" />
+  </section>
+</Layout>

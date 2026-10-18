@@ -1,0 +1,18 @@
+---
+// 404 content, used by src/pages/404.astro and the on-demand catch-all src/pages/[...path].astro.
+import Layout from '../layouts/Layout.astro';
+import Stroke from './ui/Stroke.astro';
+import Button from './ui/Button.astro';
+import { site } from '../data/site';
+---
+<Layout title={`Seite nicht gefunden | ${site.name}`} description="Diese Seite gibt es nicht (mehr)." noindex>
+  <section class="container-bb section-y">
+    <p class="font-hand text-[5.5rem] leading-none font-semibold text-accent-deep md:text-[8rem]" aria-hidden="true">404</p>
+    <h1 class="headline text-h1 mt-2 max-w-[18ch]">Diese Seite gibt es <Stroke>nicht mehr</Stroke>.</h1>
+    <p class="mt-6 max-w-[56ch] text-lead text-ink/70">Vielleicht ist der Link alt oder ein Tippfehler drin. Alle Beiträge findest du auf der Startseite.</p>
+    <div class="mt-10 flex flex-col gap-3 sm:flex-row sm:flex-wrap">
+      <Button href="/" block>Zur Startseite</Button>
+      <Button href="/newsletter" variant="outline" block>Newsletter abonnieren</Button>
+    </div>
+  </section>
+</Layout>

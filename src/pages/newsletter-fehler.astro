@@ -1,0 +1,9 @@
+---
+import NewsletterStatus from '../components/NewsletterStatus.astro';
+---
+<NewsletterStatus
+  heading="Das hat nicht geklappt."
+  text="Der Bestätigungslink ist ungültig oder abgelaufen (er gilt 48 Stunden). Melde dich einfach noch einmal an, dann schicken wir dir einen neuen Link."
+  secondary={{ href: '/newsletter', label: 'Noch einmal anmelden' }}
+  alt={{ id: 'technik', text: 'Dein Link ist in Ordnung, aber beim Eintragen gab es gerade einen technischen Fehler. Bitte öffne den Link aus der E-Mail in ein paar Minuten noch einmal.' }}
+/>

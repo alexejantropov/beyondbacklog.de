@@ -1,0 +1,16 @@
+---
+// Imprint and privacy policy: reading mode, noindex, not in the sitemap (src/lib/seo.ts).
+import Layout from './Layout.astro';
+import { site } from '../data/site';
+interface Props { frontmatter: { title: string; description?: string } }
+const { frontmatter } = Astro.props;
+---
+<Layout title={`${frontmatter.title} | ${site.name}`} description={frontmatter.description} noindex>
+  <article class="pt-10 pb-16 md:pt-14 md:pb-24">
+    <div class="container-bb">
+      <div class="prose prose-bb mx-auto max-w-[42rem] prose-h1:headline prose-h1:text-h1">
+        <slot />
+      </div>
+    </div>
+  </article>
+</Layout>

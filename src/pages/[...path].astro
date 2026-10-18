@@ -1,0 +1,10 @@
+---
+// Catch-all for every path that is neither a prerendered page nor an API route. In middleware mode
+// the Node adapter would otherwise hand unknown paths back to Express; this route makes sure
+// src/middleware.ts runs (301 for old Substack URLs, trailing slashes, /p/<slug>/comments) and
+// the answer is a real 404 page.
+export const prerender = false;
+import NotFound from '../components/NotFound.astro';
+Astro.response.status = 404;
+---
+<NotFound />

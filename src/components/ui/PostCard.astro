@@ -1,0 +1,22 @@
+---
+// Card in the post grid: cover (or a tinted tile with the tag), meta line, title, teaser.
+import { Image } from 'astro:assets';
+import { tagLabel } from '../../data/site';
+import { formatDate } from '../../lib/seo';
+import { minutes, postPath, type Post } from '../../lib/posts';
+
+interface Props { post: Post; eager?: boolean }
+const { post, eager = false } = Astro.props;
+const { title, subtitle, date, lang, tags, cover, coverAlt } = post.data;
+const meta = [tags[0] && tagLabel(tags[0]), formatDate(date), `${minutes(post)} Min.`].filter(Boolean).join(' · ');
+---
+<a href={postPath(post)} class="group flex min-w-0 flex-col gap-3">
+  {cover ? (
+    <Image src={cover} alt={coverAlt} width={Math.min(cover.width, 1200)} widths={[480, 800, 1200]} sizes="(min-width: 1024px) 33vw, (min-width: 640px) 50vw, 100vw" loading={eager ? 'eager' : 'lazy'} class="aspect-[16/10] w-full rounded-card object-cover" />
+  ) : (
+    <div class="grid aspect-[16/10] w-full place-items-center rounded-card bg-tint p-4 text-center font-hand text-[2rem] font-semibold text-accent-deep" aria-hidden="true">{tags[0] ? tagLabel(tags[0]) : date.getFullYear()}</div>
+  )}
+  <p class="mt-1 text-meta font-bold tracking-[0.14em] text-ink/60 uppercase">{meta}</p>
+  <h3 lang={lang} class="headline text-h3 group-hover:text-accent-deep">{title}</h3>
+  {subtitle && <p lang={lang} class="line-clamp-3 text-base leading-normal text-ink/65 md:text-sm">{subtitle}</p>}
+</a>

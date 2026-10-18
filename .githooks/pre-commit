@@ -1,0 +1,10 @@
+#!/bin/sh
+# Runs the full check suite (same as CI) before every commit. Skip in an emergency: git commit --no-verify
+echo "pre-commit: running npm run ci …"
+if ! npm run ci --silent > .git/pre-commit.log 2>&1; then
+  cat .git/pre-commit.log
+  echo ""
+  echo "✗ pre-commit: checks failed – commit aborted (full log: .git/pre-commit.log)"
+  exit 1
+fi
+echo "✓ pre-commit: all checks passed"

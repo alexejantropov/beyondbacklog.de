@@ -1,0 +1,7 @@
+---
+// Rendered on demand (the middleware redirects old Substack paths first).
+export const prerender = false;
+import NotFound from '../components/NotFound.astro';
+Astro.response.status = 404;
+---
+<NotFound />

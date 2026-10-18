@@ -1,0 +1,31 @@
+---
+// Imprint. Provider data as on mykrimi.app (decision 17.10.2026).
+import LegalLayout from '../layouts/LegalLayout.astro';
+import { site } from '../data/site';
+---
+<LegalLayout frontmatter={{ title: 'Impressum', description: `Impressum und rechtliche Angaben von ${site.name}.` }}>
+  <h1>Impressum</h1>
+  <p>Angaben gemäß § 5 DDG</p>
+  <p>
+    Alexej Antropov<br />
+    Kunstmühlstraße 2b<br />
+    83026 Rosenheim<br />
+    Deutschland
+  </p>
+  <h2>Kontakt</h2>
+  <p>E-Mail: <a href={`mailto:${site.contactEmail}`}>{site.contactEmail}</a></p>
+  <h2>Umsatzsteuer-ID</h2>
+  <p>Umsatzsteuer-Identifikationsnummer gemäß § 27 a UStG:<br />DE433487998</p>
+  <h2>Verantwortlich für den Inhalt nach § 18 Abs. 2 MStV</h2>
+  <p>
+    Alexej Antropov<br />
+    Kunstmühlstraße 2b<br />
+    83026 Rosenheim
+  </p>
+  <h2>Haftung für Inhalte</h2>
+  <p>Die Inhalte dieser Seiten wurden mit größter Sorgfalt erstellt. Für die Richtigkeit, Vollständigkeit und Aktualität der Inhalte kann ich jedoch keine Gewähr übernehmen. Als Diensteanbieter bin ich für eigene Inhalte auf diesen Seiten nach den allgemeinen Gesetzen verantwortlich. Ich bin nicht verpflichtet, übermittelte oder gespeicherte fremde Informationen zu überwachen oder nach Umständen zu forschen, die auf eine rechtswidrige Tätigkeit hinweisen.</p>
+  <h2>Haftung für Links</h2>
+  <p>Für die Inhalte externer Links sind ausschließlich die Betreiber der verlinkten Seiten verantwortlich. Zum Zeitpunkt der Verlinkung waren keine Rechtsverstöße erkennbar. Bei Bekanntwerden von Rechtsverletzungen entferne ich den entsprechenden Link umgehend.</p>
+  <h2>Urheberrecht</h2>
+  <p>Die Inhalte dieser Seiten unterliegen dem deutschen Urheberrecht. Jede Verwertung außerhalb der Grenzen des Urheberrechts bedarf der vorherigen Zustimmung des jeweiligen Rechteinhabers. Zitate mit Quellenangabe sind willkommen.</p>
+</LegalLayout>

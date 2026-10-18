@@ -1,0 +1,36 @@
+---
+// Status page of the double opt-in (newsletter-danke, -bestaetigt, -fehler): heading, one
+// paragraph (also the meta description), back to the homepage, optionally a second action.
+import Layout from '../layouts/Layout.astro';
+import Eyebrow from './ui/Eyebrow.astro';
+import Button from './ui/Button.astro';
+import { site } from '../data/site';
+
+interface Props {
+  heading: string;
+  text: string;
+  secondary?: { href: string; label: string };
+  /** Alternative text shown instead of `text` when the URL ends in #<id> (no JS, CSS :target). */
+  alt?: { id: string; text: string };
+}
+const { heading, text, secondary, alt } = Astro.props;
+---
+<Layout title={`${heading} | ${site.name}`} description={text} noindex>
+  <section class="container-bb section-y">
+    <div class="mx-auto flex max-w-[640px] flex-col gap-6">
+      <Eyebrow>Newsletter</Eyebrow>
+      <h1 class="headline text-h1">{heading}</h1>
+      <p class="text-lead text-ink/72" data-default-text>{text}</p>
+      {alt && <p id={alt.id} class="hidden text-lead text-ink/72 target:block">{alt.text}</p>}
+      <div class="flex flex-col gap-3 sm:flex-row">
+        <Button href="/" block>Zur Startseite</Button>
+        {secondary && <Button href={secondary.href} variant="outline" block>{secondary.label}</Button>}
+      </div>
+    </div>
+  </section>
+</Layout>
+
+<style>
+  /* With the alternative message targeted, hide the default one. */
+  body:has(p:target) [data-default-text] { display: none; }
+</style>

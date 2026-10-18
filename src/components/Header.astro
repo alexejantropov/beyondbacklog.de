@@ -1,0 +1,88 @@
+---
+// Sticky header: logo + wordmark, tag navigation, "Über", newsletter button. Below `lg` a burger
+// opens a drawer. No "Archiv" entry (design decision): the homepage is the archive.
+import { Image } from 'astro:assets';
+import logo from '~/assets/site/logo.png';
+import { site } from '../data/site';
+import { stripTrailingSlash } from '../lib/seo';
+
+const path = stripTrailingSlash(Astro.url.pathname.replace(/\.html$/, ''));
+const nav = [
+  ...site.tags.map(t => ({ id: `/s/${t.slug}`, label: t.label, href: `/s/${t.slug}` })),
+  { id: '/about', label: 'Über', href: '/about' },
+];
+const isActive = (href: string) => path === href;
+---
+<header class="sticky top-0 z-50 w-full border-b border-ink/8" data-site-header>
+  <div class="absolute inset-0 bg-paper/92 backdrop-blur-md" aria-hidden="true"></div>
+  <div class="container-bb relative flex h-16 items-center justify-between gap-6 lg:h-[72px]">
+    <a href="/" class="flex min-h-11 items-center gap-3" aria-label={`${site.name} – Startseite`}>
+      <Image src={logo} alt="" width={80} height={80} class="size-9 rounded-[9px] lg:size-10 lg:rounded-[10px]" loading="eager" />
+      <span class="headline text-[1.125rem] tracking-[-0.02em] lg:text-[1.25rem]">{site.name}</span>
+    </a>
+
+    <nav class="hidden lg:block" aria-label="Hauptnavigation">
+      <ul class="flex items-center gap-7 xl:gap-9">
+        {nav.map(item => (
+          <li>
+            <a
+              href={item.href}
+              aria-current={isActive(item.id) ? 'page' : undefined}
+              class:list={['inline-flex min-h-11 min-w-11 items-center justify-center text-sm transition-colors', isActive(item.id) ? 'font-bold text-accent-deep' : 'font-semibold text-ink hover:text-accent-deep']}
+            >{item.label}</a>
+          </li>
+        ))}
+      </ul>
+    </nav>
+
+    <a href="/newsletter" class="hidden min-h-11 items-center rounded-pill bg-ink px-5 text-[0.8125rem] font-bold whitespace-nowrap text-paper transition-colors hover:bg-accent-deep lg:inline-flex">Newsletter abonnieren</a>
+
+    <button type="button" class="group -mr-2.5 grid size-11 place-items-center lg:hidden" aria-expanded="false" aria-controls="site-menu" aria-label="Menü" data-menu-button data-label-open="Menü" data-label-close="Menü schließen">
+      <span class="flex w-[22px] flex-col gap-1" aria-hidden="true">
+        <span class="h-0.5 bg-ink transition-transform duration-200 group-aria-expanded:translate-y-1.5 group-aria-expanded:rotate-45"></span>
+        <span class="h-0.5 bg-ink transition-opacity duration-200 group-aria-expanded:opacity-0"></span>
+        <span class="h-0.5 bg-ink transition-transform duration-200 group-aria-expanded:-translate-y-1.5 group-aria-expanded:-rotate-45"></span>
+      </span>
+    </button>
+  </div>
+
+  <div id="site-menu" class="fixed inset-x-0 top-16 bottom-0 z-40 lg:hidden" hidden>
+    <div class="absolute inset-0 bg-ink/40" data-menu-overlay></div>
+    <div class="relative max-h-full overflow-y-auto overscroll-contain border-b border-ink/8 bg-paper">
+      <nav class="container-bb pt-5 pb-8 outline-none" aria-label="Hauptnavigation" tabindex="-1" data-menu-nav>
+        <ul class="flex flex-col">
+          {nav.map(item => (
+            <li>
+              <a href={item.href} aria-current={isActive(item.id) ? 'page' : undefined} class:list={['flex min-h-12 items-center text-[1.375rem] font-bold', isActive(item.id) ? 'text-accent-deep' : 'text-ink']}>{item.label}</a>
+            </li>
+          ))}
+        </ul>
+        <a href="/newsletter" class="mt-6 flex min-h-12 items-center justify-center rounded-pill bg-ink text-[0.9375rem] font-bold text-paper sm:inline-flex sm:px-8">Newsletter abonnieren</a>
+      </nav>
+    </div>
+  </div>
+</header>
+
+<script>
+  const header = document.querySelector<HTMLElement>('[data-site-header]');
+  const button = header?.querySelector<HTMLButtonElement>('[data-menu-button]');
+  const menu = document.getElementById('site-menu');
+  if (header && button && menu) {
+    const desktop = window.matchMedia('(min-width: 64rem)');
+    const setOpen = (open: boolean) => {
+      button.setAttribute('aria-expanded', String(open));
+      button.setAttribute('aria-label', (open ? button.dataset.labelClose : button.dataset.labelOpen) ?? '');
+      menu.hidden = !open;
+      document.documentElement.classList.toggle('overflow-hidden', open);
+      if (open) menu.querySelector<HTMLElement>('[data-menu-nav]')?.focus({ preventScroll: true });
+    };
+    const isOpen = () => button.getAttribute('aria-expanded') === 'true';
+    button.addEventListener('click', () => setOpen(!isOpen()));
+    menu.querySelector('[data-menu-overlay]')?.addEventListener('click', () => setOpen(false));
+    menu.querySelectorAll('a').forEach(link => link.addEventListener('click', () => setOpen(false)));
+    document.addEventListener('keydown', e => {
+      if (e.key === 'Escape' && isOpen()) { setOpen(false); button.focus(); }
+    });
+    desktop.addEventListener('change', () => { if (desktop.matches && isOpen()) setOpen(false); });
+  }
+</script>

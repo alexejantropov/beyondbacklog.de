@@ -1,0 +1,111 @@
+---
+// About page: intro with photo, three clear blocks (what this is, who I am, contact).
+import { Image } from 'astro:assets';
+import Layout from '../layouts/Layout.astro';
+import Eyebrow from '../components/ui/Eyebrow.astro';
+import Stroke from '../components/ui/Stroke.astro';
+import Button from '../components/ui/Button.astro';
+import NewsletterBox from '../components/ui/NewsletterBox.astro';
+import author from '~/assets/site/author.jpg';
+import { site } from '../data/site';
+import { person } from '../lib/structuredData';
+
+const description = `${site.author}: Interim Product Manager, Co-Autor des Agile Product Manifesto, Lehrbeauftragter für KI-Projekte. Über ${site.name} und mich.`;
+const stations = [
+  { year: 'seit 2006', text: 'Produktrollen für kundenorientierte Software: Web und Mobile, Marktplätze, SaaS, B2B und B2C, CRM, AdTech und MarTech, Medienprodukte.' },
+  { year: '2016', text: 'Erste Berührung mit KI. Seit 2022 beruflich und privat im Einsatz, Anfang 2023 die ersten KI-Features in Softwareprodukten.' },
+  { year: '2022', text: 'Co-Autor des Agile Product Manifesto. Review eines Kapitels in David Pereiras Buch Untrapping Product Teams.' },
+  { year: 'heute', text: 'Interim Product Manager und Berater für digitale und KI-Transformation. Lehrbeauftragter für KI-Projekte an der TH Rosenheim, früher Dozent für Business Innovation und Plattformen.' },
+];
+const links = [
+  { label: 'E-Mail', href: `mailto:${site.contactEmail}`, note: site.contactEmail },
+  { label: 'LinkedIn', href: site.linkedinUrl, note: 'linkedin.com/in/alexejantropov' },
+  { label: 'Persönliche Seite', href: site.personalSiteUrl, note: 'alexejantropov.de' },
+  { label: 'Agile Product Manifesto', href: 'https://agileproductmanifesto.com', note: 'agileproductmanifesto.com' },
+];
+---
+<Layout title={`Über | ${site.name}`} description={description} ogImage={author} structuredData={{ '@context': 'https://schema.org', ...person(Astro.site!.href) }}>
+  <section class="border-b border-ink/6 bg-tint">
+    <div class="container-bb section-y">
+      <div class="grid items-center gap-10 lg:grid-cols-[minmax(0,1.15fr)_380px] lg:gap-16">
+        <div class="flex flex-col gap-6">
+          <Eyebrow class="text-[2.25rem] md:text-[2.75rem]">Hallo, ich bin Alexej.</Eyebrow>
+          <h1 class="headline text-display">Und das hier ist <Stroke>Beyond Backlog</Stroke>.</h1>
+          <p class="max-w-[600px] text-lead text-ink/72">Mein Newsletter und Blog über Künstliche Intelligenz und Produktmanagement in der agilen Softwareentwicklung. Mich treibt die Frage um, wie KI die Produktivität und Innovationskraft von Produkt- und Software-Teams hebt.</p>
+          <div class="flex flex-col gap-3 sm:flex-row sm:flex-wrap">
+            <Button href="/p/work-with-me" block>Work with me</Button>
+            <Button href="/newsletter" variant="outline" block>Newsletter abonnieren</Button>
+          </div>
+        </div>
+        <div class="relative max-w-[380px] lg:justify-self-end">
+          <Image src={author} alt={site.author} width={760} widths={[480, 760]} sizes="(min-width: 1024px) 380px, 100vw" loading="eager" class="aspect-[4/5] w-full rounded-[28px] object-cover object-top shadow-[0_24px_60px_rgba(10,10,10,0.14)]" />
+          <p class="absolute bottom-8 -left-3 -rotate-3 rounded-xl border border-ink/10 bg-white px-5 py-3 font-hand text-[1.625rem] leading-none font-semibold text-accent-deep shadow-[0_10px_30px_rgba(10,10,10,0.12)]">Geht nicht, gibt’s nicht.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="container-bb section-y">
+    <div class="grid gap-10 lg:grid-cols-[320px_minmax(0,1fr)] lg:gap-16">
+      <div>
+        <Eyebrow>Worum es hier geht</Eyebrow>
+        <h2 class="headline text-h2 mt-3">Praxis statt Hype.</h2>
+      </div>
+      <div class="grid gap-6 sm:grid-cols-3">
+        {[
+          ['Erfahrungen', 'Learnings aus Kundenprojekten, eigenen Produkten und dem Alltag in Produktteams. Unregelmäßig, wenn es etwas zu sagen gibt.'],
+          ['Handwerk', 'Struktur, Tools und gemeinsame Ziele. Wie KI-Werkzeuge in Produktmanagement und Softwareentwicklung wirklich helfen.'],
+          ['Zwei Sprachen', 'Die Beiträge sind deutsch. Die wichtigsten Themen und Ressourcen gibt es zusätzlich unter English Only.'],
+        ].map(([title, text], i) => (
+          <article class:list={['flex flex-col gap-3 rounded-[20px] p-6', i === 0 ? 'bg-ink text-paper' : 'border border-ink/10 bg-white']}>
+            <span class:list={['font-hand text-[1.625rem] leading-none font-semibold', i === 0 ? 'text-accent-light' : 'text-accent-deep']}>0{i + 1}</span>
+            <h3 class="headline text-[1.375rem] leading-tight tracking-[-0.02em]">{title}</h3>
+            <p class:list={['text-[0.9375rem] leading-relaxed', i === 0 ? 'text-paper/75' : 'text-ink/70']}>{text}</p>
+            {i === 2 && <a href="/s/english-only" class="mt-auto text-sm font-bold underline decoration-2 underline-offset-[5px] hover:text-accent-deep">English Only →</a>}
+          </article>
+        ))}
+      </div>
+    </div>
+  </section>
+
+  <section class="border-y border-ink/8 bg-white">
+    <div class="container-bb section-y">
+      <div class="grid gap-10 lg:grid-cols-[320px_minmax(0,1fr)] lg:gap-16">
+        <div>
+          <Eyebrow>Über mich</Eyebrow>
+          <h2 class="headline text-h2 mt-3">Rund 20 Jahre Produktentwicklung.</h2>
+          <p class="mt-4 text-base leading-relaxed text-ink/70">Über zehn Jahre davon in Führung. M.Sc. Technology and Innovation Management. Abseits der Arbeit: West Coast Swing, früher Eishockey und Gleitschirm. Papa eines Sohnes. Aus Rosenheim.</p>
+        </div>
+        <ol class="flex flex-col">
+          {stations.map(s => (
+            <li class="grid gap-2 border-t border-ink/12 py-5 sm:grid-cols-[140px_minmax(0,1fr)] sm:gap-6">
+              <span class="font-hand text-[1.5rem] leading-none font-semibold text-accent-deep">{s.year}</span>
+              <p class="text-base leading-relaxed text-ink/80">{s.text}</p>
+            </li>
+          ))}
+        </ol>
+      </div>
+    </div>
+  </section>
+
+  <section class="container-bb section-y">
+    <div class="grid gap-10 lg:grid-cols-[320px_minmax(0,1fr)] lg:gap-16">
+      <div>
+        <Eyebrow>Kontakt</Eyebrow>
+        <h2 class="headline text-h2 mt-3">Schreib mir.</h2>
+        <p class="mt-4 text-base leading-relaxed text-ink/70">Antworten auf Newsletter-Mails landen direkt bei mir. Für Zusammenarbeit: <a href="/p/work-with-me" class="font-semibold underline underline-offset-[3px]">Work with me</a>.</p>
+      </div>
+      <ul class="grid gap-4 sm:grid-cols-2">
+        {links.map(l => (
+          <li>
+            <a href={l.href} class="group flex min-h-[88px] flex-col justify-center gap-1 rounded-[16px] border border-ink/10 bg-white px-6 py-4 transition-colors hover:border-ink" {...(l.href.startsWith('http') ? { target: '_blank', rel: 'noopener noreferrer' } : {})}>
+              <span class="headline text-[1.125rem] tracking-[-0.01em] group-hover:text-accent-deep">{l.label}</span>
+              <span class="text-sm text-ink/60">{l.note}</span>
+            </a>
+          </li>
+        ))}
+      </ul>
+    </div>
+    <NewsletterBox id="email-about" class="mt-16" />
+  </section>
+</Layout>

@@ -1,0 +1,30 @@
+---
+// Confirmation page (on demand): checks the token and asks for one click, so that link scanners
+// cannot confirm a subscription by prefetching the link.
+export const prerender = false;
+import Layout from '../layouts/Layout.astro';
+import Eyebrow from '../components/ui/Eyebrow.astro';
+import Button from '../components/ui/Button.astro';
+import { site } from '../data/site';
+import { verifyToken } from '../lib/subscribe';
+
+const token = Astro.url.searchParams.get('t') ?? '';
+const secret = process.env.SUBSCRIBE_SECRET;
+const result = secret ? verifyToken(secret, token) : ({ ok: false, reason: 'malformed' } as const);
+if (!result.ok) return Astro.redirect('/newsletter-fehler', 303);
+Astro.response.headers.set('Cache-Control', 'no-store');
+---
+<Layout title={`Anmeldung bestätigen | ${site.name}`} description="Ein Klick, und du bist angemeldet." noindex>
+  <section class="container-bb section-y">
+    <div class="mx-auto flex max-w-[640px] flex-col gap-6">
+      <Eyebrow>Newsletter</Eyebrow>
+      <h1 class="headline text-h1">Noch ein Klick.</h1>
+      <p class="text-lead text-ink/72">Bestätige, dass du den Newsletter von {site.name} an <strong>{result.email}</strong> bekommen möchtest.</p>
+      <form method="post" action="/api/confirm">
+        <input type="hidden" name="t" value={token} />
+        <button type="submit" class="inline-flex min-h-[52px] w-full items-center justify-center rounded-pill bg-accent px-7 text-base font-bold text-white transition-colors hover:bg-accent-deep sm:w-auto">Anmeldung bestätigen</button>
+      </form>
+      <p class="text-sm text-ink/60">Nicht du? Dann schließe die Seite einfach, es passiert nichts. <Button href="/" variant="link">Zur Startseite</Button></p>
+    </div>
+  </section>
+</Layout>

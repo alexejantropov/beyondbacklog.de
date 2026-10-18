@@ -1,0 +1,5 @@
+---
+import NewsletterStatus from '../components/NewsletterStatus.astro';
+import { site } from '../data/site';
+---
+<NewsletterStatus heading="Du bist dabei." text={`Deine Anmeldung ist bestätigt. Die nächste Ausgabe kommt von ${site.contactEmail}. Nimm den Absender am besten gleich ins Adressbuch, dann landet nichts im Spam.`} />
