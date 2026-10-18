@@ -44,7 +44,7 @@ const pill = (active: boolean) => `inline-flex min-h-11 items-center gap-2 round
       ))}
     </nav>
   </div>}
-  <div class="mt-8 grid gap-x-7 gap-y-9 sm:grid-cols-2 lg:grid-cols-3">
+  <div class="mt-8 grid gap-7 sm:grid-cols-2 lg:grid-cols-3">
     {(activeTag ? postsWithTag(posts, activeTag) : posts).slice(0, limit ?? Infinity).map((post, i) => <PostCard post={post} eager={filter && i < 3} />)}
   </div>
   {more && (

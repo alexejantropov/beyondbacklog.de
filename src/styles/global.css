@@ -87,16 +87,6 @@
   & :where(img) { border-radius: 1rem; }
   & :where(figcaption) { margin-top: 0.5rem; text-align: left; }
   & :where(a) { text-underline-offset: 3px; }
-  /* Quotes in handwriting (design decision 17.10.2026). */
-  & :where(blockquote) {
-    font-family: var(--font-hand);
-    font-weight: 600;
-    font-style: normal;
-    font-size: 1.7em;
-    line-height: 1.3;
-    quotes: none;
-  }
-  & :where(blockquote p:first-of-type)::before, & :where(blockquote p:last-of-type)::after { content: none; }
   /* Buttons from the Substack import (<a class="button">). */
   & :where(a.button) {
     display: inline-flex;
@@ -166,3 +156,18 @@
 
 /* Imported Substack buttons inside .prose: unlayered, so it beats the typography utility's link colour. */
 .prose a.button, .prose a.button:hover { color: var(--color-paper); text-decoration: none; }
+
+/* Quotes in handwriting (design decision 17.10.2026). Unlayered so these rules beat the typography
+   utility (.prose sets italic/500). Upright and bold: italic Caveat is hard to read. */
+.prose blockquote {
+  font-family: var(--font-hand);
+  font-style: normal;
+  font-weight: 700;
+  font-size: 1.55em;
+  line-height: 1.3;
+  quotes: none;
+  letter-spacing: 0.005em;
+}
+.prose blockquote em, .prose blockquote i, .prose blockquote cite, .prose blockquote strong { font-style: normal; }
+.prose blockquote p:first-of-type::before, .prose blockquote p:last-of-type::after { content: none; }
+.prose blockquote li { margin-block: 0.35em; }
