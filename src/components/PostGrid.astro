@@ -27,7 +27,7 @@ const pills = [
   { label: 'Alle', href: '/beitraege', count: posts.length, active: !activeTag },
   ...site.tags.map(t => ({ label: t.label, href: `/s/${t.slug}`, count: postsWithTag(posts, t.slug).length, active: activeTag === t.slug })),
 ];
-const pill = (active: boolean) => `inline-flex min-h-11 items-center gap-2 rounded-pill border px-[18px] text-sm font-bold transition-colors ${active ? 'border-ink bg-ink text-paper' : 'border-ink/20 bg-white text-ink hover:border-ink'}`;
+const pill = (active: boolean) => `inline-flex min-h-11 items-center gap-2 rounded-control border px-[18px] text-sm font-bold transition-colors ${active ? 'border-ink bg-ink text-paper' : 'border-ink/20 bg-white text-ink hover:border-ink'}`;
 ---
 <section class="container-bb pt-16 pb-20 md:pt-[72px] md:pb-24">
   <div class="flex flex-col gap-3">
@@ -49,7 +49,7 @@ const pill = (active: boolean) => `inline-flex min-h-11 items-center gap-2 round
   </div>
   {more && (
     <div class="mt-10 flex justify-center md:mt-12">
-      <a href={more.href} class="inline-flex min-h-12 items-center rounded-pill border border-ink/80 px-7 text-[0.9375rem] font-bold text-ink transition-colors hover:bg-ink hover:text-paper">{more.label}</a>
+      <a href={more.href} class="inline-flex min-h-12 items-center rounded-control border border-ink/80 px-7 text-[0.9375rem] font-bold text-ink transition-colors hover:bg-ink hover:text-paper">{more.label}</a>
     </div>
   )}
 </section>

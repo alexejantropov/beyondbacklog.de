@@ -5,7 +5,6 @@ import { Image } from 'astro:assets';
 import Eyebrow from './ui/Eyebrow.astro';
 import Stroke from './ui/Stroke.astro';
 import NewsletterForm from './ui/NewsletterForm.astro';
-import { formatDate } from '../lib/seo';
 import { postPath, type Post } from '../lib/posts';
 import { site } from '../data/site';
 
@@ -20,12 +19,12 @@ const { latest } = Astro.props;
       <Eyebrow class="lg:row-start-2">{site.name} · Newsletter &amp; Blog</Eyebrow>
       <h1 class="headline text-display lg:row-start-3">Produktentwicklung &amp; KI, <Stroke>ohne Hype</Stroke>.</h1>
       <p class="max-w-[560px] text-lead text-ink/72 lg:row-start-4">Erfahrungen und Learnings aus 20 Jahren agiler Produktentwicklung. Von {site.author}, unregelmäßig und kostenlos.</p>
-      <a href={postPath(latest)} class="group block overflow-hidden rounded-[18px] border border-ink/10 bg-white shadow-[0_16px_40px_rgba(10,10,10,0.12)] lg:col-start-2 lg:row-span-6 lg:row-start-1 lg:max-w-[520px] lg:self-center lg:justify-self-end lg:rotate-[1.5deg] lg:rounded-[20px] lg:shadow-[0_24px_60px_rgba(10,10,10,0.14)]">
+      <a href={postPath(latest)} class="group block overflow-hidden rounded-card border border-ink/10 bg-white shadow-[0_16px_40px_rgba(10,10,10,0.12)] lg:col-start-2 lg:row-span-6 lg:row-start-1 lg:max-w-[520px] lg:self-center lg:justify-self-end lg:rotate-[1.5deg] lg:rounded-box lg:shadow-[0_24px_60px_rgba(10,10,10,0.14)]">
         {latest.data.cover && <Image src={latest.data.cover} alt={latest.data.coverAlt} width={1200} widths={[480, 800, 1040, 1200]} sizes="(min-width: 1024px) 520px, 100vw" loading="eager" fetchpriority="high" class="aspect-video w-full object-cover" />}
         <div class="flex flex-col gap-2 p-5 lg:gap-2.5 lg:px-7 lg:pt-6 lg:pb-7">
           <Eyebrow as="span" class="text-[1.375rem] lg:text-[1.5rem]">Neuester Beitrag</Eyebrow>
+          {latest.data.eyebrow && <p lang={latest.data.lang} class="text-meta font-bold text-ink/60 uppercase">{latest.data.eyebrow}</p>}
           <h2 lang={latest.data.lang} class="headline text-[1.375rem] leading-[1.15] tracking-[-0.02em] group-hover:text-accent-deep lg:text-[1.75rem] lg:leading-[1.12]">{latest.data.title}</h2>
-          <p class="text-sm text-ink/60 lg:hidden">{formatDate(latest.data.date)}</p>
           {latest.data.subtitle && <p lang={latest.data.lang} class="line-clamp-3 text-[0.9375rem] leading-relaxed text-ink/70 max-lg:hidden">{latest.data.subtitle}</p>}
           <span class="mt-1.5 text-sm font-bold underline decoration-2 underline-offset-[5px] max-lg:hidden">Lesen →</span>
         </div>

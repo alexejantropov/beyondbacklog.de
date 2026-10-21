@@ -1,6 +1,7 @@
 ---
 title: Ist es safe enough to try? Oder hat jemand Einwände?
 subtitle: ""
+eyebrow: Sebastian Dinzenhofer
 date: 2024-01-05T12:37:00.000Z
 lang: de
 tags:

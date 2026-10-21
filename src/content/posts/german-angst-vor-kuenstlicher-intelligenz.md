@@ -1,6 +1,7 @@
 ---
 title: German Angst vor KI
 subtitle: "Was ich davon halte? Nichts! Und: Warum es jetzt wichtig ist, sich mit den Möglichkeiten von KI in der Produkt- und Softwareentwicklung zu befassen, um nicht den Anschluss zu verlieren."
+eyebrow: Die BCG-Studie
 date: 2024-07-03T15:57:14.793Z
 lang: de
 tags:

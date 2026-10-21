@@ -1,6 +1,7 @@
 ---
 title: Wie wirkt sich KI auf Dich aus?
 subtitle: KI befähigt die Arbeitnehmer, Aufgaben schneller zu erledigen und die Qualität ihrer Arbeit zu verbessern. Und was heißt es, für dich, wenn Du keine KI nutzt?
+eyebrow: Der Stanford-Report
 date: 2024-11-07T13:45:14.163Z
 lang: de
 tags:

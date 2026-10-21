@@ -1,6 +1,7 @@
 ---
 title: "Product Sense: Das Geheimnis erfolgreicher Produktmenschen"
 subtitle: Über den sechsten Sinn für Entscheidungen oder wie Demut, Neugier, Agency und Empathie dir helfen, als Produktmensch erfolgreich zu sein.
+eyebrow: Sechster Sinn
 date: 2024-08-10T07:00:29.932Z
 lang: de
 tags:

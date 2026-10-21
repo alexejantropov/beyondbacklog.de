@@ -1,6 +1,7 @@
 ---
 title: Das KI-Radar Update 01/2025
 subtitle: Zu Jahresbeginn (wieder) mit einer neuen Struktur und mit 25 neuen KI-Tools das umfangreichste Update des KI-Radars bisher! Es passiert viel bei KI-Tools und es ist noch lange nicht das Ende.
+eyebrow: 25 Tools
 date: 2025-01-22T19:40:10.109Z
 lang: de
 tags:

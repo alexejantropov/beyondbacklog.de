@@ -16,8 +16,10 @@
   --font-sans: 'Open Sans Variable', 'Open Sans', Helvetica, Arial, sans-serif;
   --font-hand: 'Caveat Variable', 'Caveat', cursive;
 
-  --radius-card: 1rem;
-  --radius-pill: 999px;
+  --radius-card: 0.625rem;
+  --radius-box: 0.75rem;
+  --radius-photo: 1rem;
+  --radius-control: 0.5rem;
 
   /* Fluid type scale: phone (390px) → desktop design (1440px). */
   --text-display: clamp(2.5rem, 1.6rem + 3.4vw, 4.5rem);
@@ -84,7 +86,7 @@
   --tw-prose-th-borders: rgb(10 10 10 / 0.2);
   --tw-prose-td-borders: rgb(10 10 10 / 0.1);
   & :where(h2, h3, h4) { font-stretch: 90%; font-weight: 800; letter-spacing: -0.02em; }
-  & :where(img) { border-radius: 1rem; }
+  & :where(img) { border-radius: var(--radius-card); }
   & :where(figcaption) { margin-top: 0.5rem; text-align: left; }
   & :where(a) { text-underline-offset: 3px; }
   /* Buttons from the Substack import (<a class="button">). */
@@ -93,7 +95,7 @@
     align-items: center;
     min-height: 2.75rem;
     padding-inline: 1.5rem;
-    border-radius: 999px;
+    border-radius: var(--radius-control);
     background: var(--color-ink);
     color: var(--color-paper);
     font-weight: 700;

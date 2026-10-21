@@ -1,6 +1,7 @@
 ---
 title: Das KI-Radar on stage & im Ohr
 subtitle: "Einblicke und Termine zum Jahresendspurt. Heute ein Update in eigener Sache samt Blick hinter die Kulissen – sozusagen beyond beyondbacklog. Und: wie du hier Gast-Artikel veröffentlichen kannst."
+eyebrow: Podcast
 date: 2024-12-03T20:40:50.568Z
 lang: de
 tags:

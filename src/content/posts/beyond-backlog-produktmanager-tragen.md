@@ -1,6 +1,7 @@
 ---
 title: Produktmanager tragen täglich mehrere Hüte.
 subtitle: ""
+eyebrow: Bullshit Umbrella
 date: 2024-01-03T12:37:00.000Z
 lang: de
 tags:

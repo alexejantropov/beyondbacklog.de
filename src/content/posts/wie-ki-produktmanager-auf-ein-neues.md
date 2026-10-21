@@ -1,6 +1,7 @@
 ---
 title: Wie KI Produktmanager auf ein neues Level hebt
 subtitle: Heute eine Podcast-Empfehlung mit Tipps, um mit KI-Tools effizient Prototypen zu erstellen, Kundenprobleme kreativ zu lösen und sich als KI-PM zu positionieren
+eyebrow: Podcast-Tipp
 date: 2024-11-23T11:22:17.152Z
 lang: de
 tags:

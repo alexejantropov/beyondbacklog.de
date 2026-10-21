@@ -1,6 +1,7 @@
 ---
 title: Product Orga Fitness In The Age Of AI (EN 🇺🇸)
 subtitle: "I hold this talk at Product Tank Munich about a topic and a question which literally keeps me awake at night: How can we use AI in our product development practice?"
+eyebrow: Beyond prompts
 date: 2024-09-23T10:44:29.587Z
 lang: en
 tags:

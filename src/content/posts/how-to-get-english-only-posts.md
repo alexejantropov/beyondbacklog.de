@@ -1,6 +1,7 @@
 ---
 title: 🇺🇸 How to Get English Only Posts from BeyondBacklog?
 subtitle: There is a simple way how you can subscribe to English content only. Just follow these two steps.
+eyebrow: Two steps
 date: 2024-10-01T16:11:57.850Z
 lang: en
 tags:
@@ -8,6 +9,7 @@ tags:
 cover: ~/assets/posts/how-to-get-english-only-posts/8007ba5d-518c-4281-b818-af72652cad65_1000x600.webp
 coverAlt: ""
 substackId: 149669564
+draft: true
 ---
 
 👋 Hi! I am glad you are interested in my content.

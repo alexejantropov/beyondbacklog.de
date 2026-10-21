@@ -15,12 +15,18 @@ describe('posts', () => {
   it('exist for every Substack /p/ URL', () => {
     for (const path of legacy) expect(existsSync(`${dir}/${path.slice(3)}.md`) || existsSync(`src/pages/p/${path.slice(3)}.astro`), path).toBe(true);
   });
-  it('have title, date and (unless a page) at least one tag', () => {
+  it('have title, date and (unless a page) a tag and an eyebrow', () => {
     for (const file of files) {
       const fm = frontmatter(file);
       expect(fm, file).toMatch(/^title: .+/m);
       expect(fm, file).toMatch(/^date: \d{4}-\d{2}-\d{2}/m);
-      if (!/^page: true/m.test(fm)) expect(fm, file).toMatch(/^tags:\n {2}- /m);
+      if (!/^page: true/m.test(fm)) {
+        expect(fm, file).toMatch(/^tags:\n {2}- /m);
+        const eyebrow = fm.match(/^eyebrow:\s*["']?(.+?)["']?\s*$/m)?.[1] ?? '';
+        const words = eyebrow.split(/\s+/).filter(Boolean);
+        expect(words.length, `${file} eyebrow`).toBeGreaterThan(0);
+        expect(words.length, `${file} eyebrow "${eyebrow}"`).toBeLessThanOrEqual(3);
+      }
     }
   });
   it('reference images only via ~/assets and those files exist', () => {

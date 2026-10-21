@@ -1,6 +1,7 @@
 ---
 title: PMs müssen nicht alles wissen.
 subtitle: '"Ich weiß es nicht" und "ich kann es herausfinden" sind valide Antworten.'
+eyebrow: Ohne Vortäuschen
 date: 2024-01-04T12:37:00.000Z
 lang: de
 tags:

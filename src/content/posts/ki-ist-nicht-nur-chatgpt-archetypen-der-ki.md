@@ -1,6 +1,7 @@
 ---
 title: KI ist nicht nur ChatGPT
 subtitle: "Mal ehrlich: sagst Du auch „KI“ und meinst damit „ChatGPT“? Ich bin ehrlich: Ich erwische mich dabei, diese zwei Begriffe als Synonym zu behandeln. Und das ist falsch! Also Zeit das mal auszubügeln."
+eyebrow: Fünf Archetypen
 date: 2024-07-01T18:31:07.887Z
 lang: de
 tags:

@@ -1,6 +1,7 @@
 ---
 title: "KI: Braucht es noch PMs, POs, Designer und Entwickler?"
 subtitle: "Wie wird KI die Produktentwicklung verändern? Braucht es uns noch? Ganz klar: jein! KI wird neue Anforderungen an uns stellen. Doch: Chance oder Gefahr? Und was tun?"
+eyebrow: Jein
 date: 2024-08-23T10:38:56.653Z
 lang: de
 tags:

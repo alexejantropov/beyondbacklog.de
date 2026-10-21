@@ -1,6 +1,7 @@
 ---
 title: Agile Product Mindset = Entrepreneurial Thinking x Growth Mindset (EN 🇺🇸)
 subtitle: Let's not mince words here - the challenge to master product development lies not in the tools or methodologies we use, but in the mindset we carry. It's time I lay down my formula of an effective PM.
+eyebrow: Not a sum
 date: 2023-10-21T16:18:00.000Z
 lang: en
 tags:

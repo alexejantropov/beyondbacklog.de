@@ -17,7 +17,7 @@ const isActive = (href: string) => path === href;
   <div class="absolute inset-0 bg-paper/92 backdrop-blur-md" aria-hidden="true"></div>
   <div class="container-bb relative flex h-16 items-center justify-between gap-6 lg:h-[72px]">
     <a href="/" class="flex min-h-11 items-center gap-3" aria-label={`${site.name} – Startseite`}>
-      <Image src={logo} alt="" width={80} height={80} class="size-9 rounded-[9px] lg:size-10 lg:rounded-[10px]" loading="eager" />
+      <Image src={logo} alt="" width={80} height={80} class="size-9 rounded-control lg:size-10" loading="eager" />
       <span class="headline text-[1.125rem] tracking-[-0.02em] lg:text-[1.25rem]">{site.name}</span>
     </a>
 
@@ -35,7 +35,7 @@ const isActive = (href: string) => path === href;
       </ul>
     </nav>
 
-    <a href="/newsletter" class="hidden min-h-11 items-center rounded-pill bg-ink px-5 text-[0.8125rem] font-bold whitespace-nowrap text-paper transition-colors hover:bg-accent-deep lg:inline-flex">Newsletter abonnieren</a>
+    <a href="/newsletter" class="hidden min-h-11 items-center rounded-control bg-ink px-5 text-[0.8125rem] font-bold whitespace-nowrap text-paper transition-colors hover:bg-accent-deep lg:inline-flex">Newsletter abonnieren</a>
 
     <button type="button" class="group -mr-2.5 grid size-11 place-items-center lg:hidden" aria-expanded="false" aria-controls="site-menu" aria-label="Menü" data-menu-button data-label-open="Menü" data-label-close="Menü schließen">
       <span class="flex w-[22px] flex-col gap-1" aria-hidden="true">
@@ -57,7 +57,7 @@ const isActive = (href: string) => path === href;
             </li>
           ))}
         </ul>
-        <a href="/newsletter" class="mt-6 flex min-h-12 items-center justify-center rounded-pill bg-ink text-[0.9375rem] font-bold text-paper sm:inline-flex sm:px-8">Newsletter abonnieren</a>
+        <a href="/newsletter" class="mt-6 flex min-h-12 items-center justify-center rounded-control bg-ink text-[0.9375rem] font-bold text-paper sm:inline-flex sm:px-8">Newsletter abonnieren</a>
       </nav>
     </div>
   </div>

@@ -1,6 +1,7 @@
 ---
 title: 'Embrace uncertainty: "sorry!" statt "darf ich?"'
 subtitle: In Momenten, wenn ich mich unsichere fühle, ob ich "etwas darf", erinnere ich mich an den Satz "Embrace uncertainty. Be bold to ask for forgiveness instead of permission." und handle einfach.
+eyebrow: Ohne Erlaubnis
 date: 2023-10-22T11:37:00.000Z
 lang: de
 tags:

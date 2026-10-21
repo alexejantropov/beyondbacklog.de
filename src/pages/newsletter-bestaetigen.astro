@@ -22,7 +22,7 @@ Astro.response.headers.set('Cache-Control', 'no-store');
       <p class="text-lead text-ink/72">Bestätige, dass du den Newsletter von {site.name} an <strong>{result.email}</strong> bekommen möchtest.</p>
       <form method="post" action="/api/confirm">
         <input type="hidden" name="t" value={token} />
-        <button type="submit" class="inline-flex min-h-[52px] w-full items-center justify-center rounded-pill bg-accent px-7 text-base font-bold text-white transition-colors hover:bg-accent-deep sm:w-auto">Anmeldung bestätigen</button>
+        <Button type="submit" variant="accent" size="field" block>Anmeldung bestätigen</Button>
       </form>
       <p class="text-sm text-ink/60">Nicht du? Dann schließe die Seite einfach, es passiert nichts. <Button href="/" variant="link">Zur Startseite</Button></p>
     </div>

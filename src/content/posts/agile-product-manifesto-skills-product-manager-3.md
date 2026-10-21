@@ -1,6 +1,7 @@
 ---
 title: Skills you 🫵 need to succeed in Agile Product Management, Part 3/3 (EN 🇺🇸)
 subtitle: The Agile Product Manifesto is a helpful guide to mastering agile product development and management. However, it remains useless until you understand where you need to catch up your skills to excel.
+eyebrow: The other six
 date: 2023-06-08T20:45:05.002Z
 lang: en
 tags:

@@ -13,6 +13,8 @@ const posts = defineCollection({
       title: z.string(),
       /** Substack subtitle: used as teaser and meta description. */
       subtitle: z.string().default(''),
+      /** Kicker on teaser cards, in place of the date. One or two words, three only with an article or preposition. */
+      eyebrow: z.string().default(''),
       date: z.coerce.date(),
       lang: z.enum(['de', 'en']).default('de'),
       tags: z.array(z.enum(tagSlugs)).default([]),

@@ -9,6 +9,10 @@ const INK = '#0a0a0a';
 const PAPER = '#fafaf7';
 const MUTED = 'rgba(10,10,10,0.6)';
 const FONT = "'Open Sans', Helvetica, Arial, sans-serif";
+// Same steps as src/styles/global.css (--radius-card / --radius-box / --radius-control). Px: mail clients.
+const RADIUS_CARD = '10px';
+const RADIUS_BOX = '12px';
+const RADIUS_CONTROL = '8px';
 
 const esc = (s: string) => s.replace(/&/g, '&amp;').replace(/</g, '&lt;').replace(/>/g, '&gt;').replace(/"/g, '&quot;');
 
@@ -37,7 +41,7 @@ ${preheader ? `<div style="display:none;max-height:0;overflow:hidden;opacity:0;c
   <a href="${site.url}" style="text-decoration:none;color:${INK};font-size:20px;font-weight:800;letter-spacing:-0.02em">${esc(site.name)}</a>
   <div style="height:3px;width:56px;background:${ACCENT};margin-top:10px;border-radius:2px"></div>
 </td></tr>
-<tr><td style="background:#ffffff;border:1px solid rgba(10,10,10,0.1);border-radius:16px;padding:32px 28px;font-size:17px;line-height:1.6">
+<tr><td style="background:#ffffff;border:1px solid rgba(10,10,10,0.1);border-radius:${RADIUS_BOX};padding:32px 28px;font-size:17px;line-height:1.6">
 ${body}
 </td></tr>
 <tr><td style="padding:24px 8px 0;font-size:13px;line-height:1.6;color:${MUTED}">
@@ -52,7 +56,7 @@ ${body}
 }
 
 export const button = (href: string, label: string) =>
-  `<table role="presentation" cellpadding="0" cellspacing="0" style="margin:24px 0"><tr><td style="border-radius:999px;background:${ACCENT}"><a href="${href}" style="display:inline-block;padding:14px 28px;color:#ffffff;font-weight:700;text-decoration:none;border-radius:999px">${esc(label)}</a></td></tr></table>`;
+  `<table role="presentation" cellpadding="0" cellspacing="0" style="margin:24px 0"><tr><td style="border-radius:${RADIUS_CONTROL};background:${ACCENT}"><a href="${href}" style="display:inline-block;padding:14px 28px;color:#ffffff;font-weight:700;text-decoration:none;border-radius:${RADIUS_CONTROL}">${esc(label)}</a></td></tr></table>`;
 
 export const heading = (text: string) => `<h1 style="margin:0 0 16px;font-size:28px;line-height:1.15;letter-spacing:-0.02em;font-weight:800">${text}</h1>`;
 export const hand = (text: string) => `<p style="margin:0 0 8px;font-family:'Caveat',cursive;font-size:24px;line-height:1.1;color:${ACCENT_DEEP}">${esc(text)}</p>`;
@@ -91,7 +95,7 @@ ${button(site.url, 'Alle Beiträge lesen')}
 /** Inline styles for rendered post HTML inside an issue (mail clients ignore <style>). */
 export const styleIssueBody = (html: string): string =>
   html
-    .replace(/<img /g, '<img style="max-width:100%;height:auto;border-radius:12px" ')
+    .replace(/<img /g, `<img style="max-width:100%;height:auto;border-radius:${RADIUS_CARD}" `)
     .replace(/<blockquote(?=[\s>])/g, `<blockquote style="margin:20px 0;padding:4px 0 4px 18px;border-left:4px solid ${ACCENT};font-size:19px;line-height:1.45;color:${INK}"`)
     .replace(/<h2(?=[\s>])/g, '<h2 style="font-size:24px;line-height:1.2;margin:28px 0 10px"')
     .replace(/<h3(?=[\s>])/g, '<h3 style="font-size:20px;line-height:1.25;margin:24px 0 8px"')
@@ -114,8 +118,8 @@ export function issueMail({ title, subtitle, date, url, bodyHtml, coverUrl, intr
   const body = `${hand(date)}
 ${heading(esc(title))}
 ${subtitle ? `<p style="margin:0 0 16px;font-size:19px;line-height:1.5;color:rgba(10,10,10,0.7)">${esc(subtitle)}</p>` : ''}
-${intro ? `<p style="margin:0 0 20px;padding:14px 16px;background:#f0ebfa;border-radius:12px;font-size:15px">${intro}</p>` : ''}
-${coverUrl ? `<a href="${url}"><img src="${coverUrl}" alt="" width="544" style="width:100%;height:auto;border-radius:12px;display:block;margin:0 0 20px"></a>` : ''}
+${intro ? `<p style="margin:0 0 20px;padding:14px 16px;background:#f0ebfa;border-radius:${RADIUS_CARD};font-size:15px">${intro}</p>` : ''}
+${coverUrl ? `<a href="${url}"><img src="${coverUrl}" alt="" width="544" style="width:100%;height:auto;border-radius:${RADIUS_CARD};display:block;margin:0 0 20px"></a>` : ''}
 <div class="post" style="font-size:17px;line-height:1.65">${bodyHtml}</div>
 ${button(url, 'Im Browser lesen')}`;
   return shell(body, {

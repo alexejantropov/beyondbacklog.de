@@ -1,6 +1,7 @@
 ---
 title: Das KI-Radar für Produktmanagement & Software-Entwicklung
 subtitle: Den Überblick bei 100+ KI-Tools verloren? Diese kuratierte Übersicht hilft Dir, welche KI-Apps Du bereits heute im Produktmanagement & Softwareentwicklung effektiv einsetzen kannst.
+eyebrow: Auf einen Blick
 date: 2024-11-01T17:25:00.000Z
 lang: de
 tags:

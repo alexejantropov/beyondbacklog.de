@@ -1,6 +1,7 @@
 ---
 title: "Das KI-Radar: Struktur-Update 12/2024"
 subtitle: Zum Jahresende bekommt das KI-Radars eine neue Struktur zur Einordnung der KI-Tools. Künftig nach Aufgaben während der Produktentwicklungszyklus, statt Rollen. Wie findest Du es?
+eyebrow: Statt Rollen
 date: 2024-12-17T20:30:21.274Z
 lang: de
 tags:

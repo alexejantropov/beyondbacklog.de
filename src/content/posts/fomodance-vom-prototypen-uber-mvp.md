@@ -1,6 +1,7 @@
 ---
 title: "FOMO.dance: Vom Prototypen über MVP zum MMP - mit KI."
 subtitle: Du siehst ein Problem? Dann löse es. Selbst. KI-Tools können helfen. Hie die Geschichte meiner Web-App FOMO.dance. Was als eine andere Idee begann, ist heute eine funktionierende Plattform für Tänzer.
+eyebrow: build to learn
 date: 2025-07-12T19:03:14.017Z
 lang: de
 tags:

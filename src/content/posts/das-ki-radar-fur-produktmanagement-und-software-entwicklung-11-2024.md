@@ -1,6 +1,7 @@
 ---
 title: Das KI-Radar Update 11/2024
 subtitle: Welche KI-Tools kannst Du im Produktmanagement und Softwareentwicklung effektiv einsetzen? Das aktualisierte Radar mit 14 neuen Tools.
+eyebrow: 14 Tools
 date: 2024-10-31T14:51:50.313Z
 lang: de
 tags:

@@ -1,6 +1,7 @@
 ---
 title: The AI Radar for Product Management & Software Development (EN 🇺🇸) (10/2024)
 subtitle: Lost track of 100+ AI tools? This curated overview will help you find out which AI tools you can already use effectively in product management and software development.
+eyebrow: At a glance
 date: 2024-10-04T17:19:27.661Z
 lang: en
 tags:
@@ -12,7 +13,7 @@ substackId: 149680600
 
 *This is the translated English version of my [German article about the AI radar](/p/das-ki-radar-fur-produktmanagement-und-software-entwicklung). I am happy to share it with my international audience. Though I am publishing in German first, I will publish English versions of my most important articles and resources in English as well. Consider subscribing to the “🇺🇸 English only” list for free to stay up-to-date:*
 
-→ [🇺🇸 How to Get English Only Posts from BeyondBacklog?](/p/how-to-get-english-only-posts)
+→ [English only posts](/s/english-only)
 
 * * *
 

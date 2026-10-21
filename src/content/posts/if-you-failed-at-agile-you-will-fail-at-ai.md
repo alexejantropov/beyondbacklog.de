@@ -1,6 +1,7 @@
 ---
 title: '"If you failed at Agile, you will fail at AI."'
 subtitle: Warum das agile Mindset über Erfolg oder Scheitern bei KI entscheidet. Einblicke in die kühne These von Jim Highsmith. Erfahre über Anpassungswille und kontinuierliches Lernen als Schlüssel zu Erfolg.
+eyebrow: Jim Highsmith
 date: 2024-11-10T13:47:59.626Z
 lang: de
 tags:

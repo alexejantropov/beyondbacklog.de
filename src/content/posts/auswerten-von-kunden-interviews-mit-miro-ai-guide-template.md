@@ -1,6 +1,7 @@
 ---
 title: Kundeninterviews mit Miro AI auswerten – ein Guide mit Template
 subtitle: "PMs und Designer haben wenig Zeit. Gleichzeitig: Führen und Auswerten von Kundeninterviews ist wichtig. So geht das Ableiten produktrelevanter Erkenntnisse aus Kundeninterviews schneller."
+eyebrow: David Pereira
 date: 2024-10-22T20:27:53.846Z
 lang: de
 tags:

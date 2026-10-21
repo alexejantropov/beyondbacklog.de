@@ -1,22 +1,28 @@
 ---
-// Pill button rendered as a link. At least 44px high (touch target).
-interface Props {
-  href: string;
+// Link, or a submit button. At least 44px high (touch target).
+// `field` matches the 52px form controls (newsletter input, confirm submit).
+interface Common {
   variant?: 'ink' | 'accent' | 'outline' | 'link';
-  size?: 'md' | 'lg';
+  size?: 'md' | 'lg' | 'field';
   block?: boolean;
   class?: string;
 }
-const { href, variant = 'ink', size = 'md', block = false, class: className } = Astro.props;
-const isExternal = /^https?:\/\//.test(href);
+type Props = Common & ({ href: string } | { type: 'submit' });
+const { variant = 'ink', size = 'md', block = false, class: className, ...rest } = Astro.props;
+const href = 'href' in rest ? rest.href : undefined;
+const type = 'type' in rest ? rest.type : undefined;
+const isExternal = href !== undefined && /^https?:\/\//.test(href);
 const variants = {
-  ink: 'rounded-pill bg-ink text-paper hover:bg-accent-deep',
-  accent: 'rounded-pill bg-accent text-white hover:bg-accent-deep',
-  outline: 'rounded-pill border border-ink/80 text-ink hover:bg-ink hover:text-paper',
+  ink: 'rounded-control bg-ink text-paper hover:bg-accent-deep',
+  accent: 'rounded-control bg-accent text-white hover:bg-accent-deep',
+  outline: 'rounded-control border border-ink/80 text-ink hover:bg-ink hover:text-paper',
   link: 'text-ink underline decoration-2 underline-offset-[6px] hover:text-accent-deep',
 };
-const sizes = variant === 'link' ? 'text-sm' : size === 'lg' ? 'px-8 py-4 text-base' : 'px-6 py-3 text-sm';
+const sizes = variant === 'link' ? 'text-sm' : size === 'lg' ? 'px-8 py-4 text-base' : size === 'field' ? 'min-h-[52px] px-7 text-base' : 'px-6 py-3 text-sm';
+const classes = ['inline-flex items-center justify-center gap-2 text-center font-bold transition-colors', size === 'field' ? false : 'min-h-11', variants[variant], sizes, block && 'w-full sm:w-auto', className];
 ---
-<a href={href} class:list={['inline-flex min-h-11 items-center justify-center gap-2 text-center font-bold transition-colors', variants[variant], sizes, block && 'w-full sm:w-auto', className]} {...(isExternal ? { target: '_blank', rel: 'noopener noreferrer' } : {})}>
-  <slot />
-</a>
+{type ? (
+  <button type={type} class:list={classes}><slot /></button>
+) : (
+  <a href={href} class:list={classes} {...(isExternal ? { target: '_blank', rel: 'noopener noreferrer' } : {})}><slot /></a>
+)}

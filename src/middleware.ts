@@ -27,8 +27,9 @@ export const onRequest = defineMiddleware((context, next) => {
   // Rule targets drop the query; a normalized path keeps it.
   const target = hit ? hit.target : normalized + url.search;
   if (apex) return Response.redirect(`${site.url}${target}`, hit?.rule.status ?? 301);
-  if (normalized !== url.pathname) return context.redirect(normalized + url.search, 301);
+  // One hop, also for /p/<slug>/comments when the post itself redirects.
   if (hit) return context.redirect(hit.target, hit.rule.status ?? 301);
+  if (normalized !== url.pathname) return context.redirect(normalized + url.search, 301);
 
   return next();
 });

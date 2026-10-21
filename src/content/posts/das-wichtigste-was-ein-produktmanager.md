@@ -1,6 +1,7 @@
 ---
 title: "Start als PM: zuerst Vertrauen, dann Rest."
 subtitle: Produktmanager erfüllen eine Führungsrolle ohne der formalen disziplinarischen "Macht"-Insignien. Doch niemand wird einer Führungskraft folgen, der er nicht vertraut.
+eyebrow: Ohne Macht
 date: 2024-01-01T12:37:00.000Z
 lang: de
 tags:

@@ -2,7 +2,7 @@ import { describe, expect, it } from 'vitest';
 import { redirects } from '../src/data/redirects';
 import { checkRedirects, collapsePostPath, normalizePath, resolvePath, resolveRedirect } from '../src/lib/redirects';
 
-const routes = new Set(['/', '/beitraege', '/newsletter', '/feed.xml', '/p/foo', '/s/ki', '/sitemap-index.xml', '/about']);
+const routes = new Set(['/', '/beitraege', '/newsletter', '/feed.xml', '/p/foo', '/s/ki', '/s/english-only', '/sitemap-index.xml', '/about']);
 
 describe('redirects', () => {
   it('resolves exact and splat rules', () => {
@@ -33,6 +33,8 @@ describe('redirects', () => {
     expect(resolvePath('/p/foo/', redirects, routes)).toEqual({ status: 301, target: '/p/foo' });
     expect(resolvePath('/p/foo/comments', redirects, routes)).toEqual({ status: 301, target: '/p/foo' });
     expect(resolvePath('/subscribe', redirects, routes)).toEqual({ status: 301, target: '/newsletter' });
+    expect(resolvePath('/p/how-to-get-english-only-posts', redirects, routes)).toEqual({ status: 301, target: '/s/english-only' });
+    expect(resolvePath('/p/how-to-get-english-only-posts/comments', redirects, routes)).toEqual({ status: 301, target: '/s/english-only' });
     expect(resolvePath('/nope', redirects, routes)).toBeUndefined();
   });
   it('keeps the production rules consistent against the real routes', () => {

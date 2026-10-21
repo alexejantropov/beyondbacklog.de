@@ -1,8 +1,7 @@
 ---
 // Closing section of the homepage: author photo, handwritten greeting, short bio (design variant 2).
-import { Image } from 'astro:assets';
-import author from '~/assets/site/author.jpg';
 import Eyebrow from './ui/Eyebrow.astro';
+import AuthorPortrait from './AuthorPortrait.astro';
 import Stroke from './ui/Stroke.astro';
 import Button from './ui/Button.astro';
 import { site } from '../data/site';
@@ -19,10 +18,7 @@ import { site } from '../data/site';
           <Button href={site.workWithMeUrl} variant="outline" block>Work with me</Button>
         </div>
       </div>
-      <div class="relative max-w-[420px] lg:justify-self-end">
-        <Image src={author} alt={site.author} width={840} widths={[480, 840]} sizes="(min-width: 1024px) 420px, 100vw" class="aspect-[4/5] w-full rounded-[28px] object-cover object-top shadow-[0_24px_60px_rgba(10,10,10,0.14)]" />
-        <p class="absolute bottom-8 -left-3 -rotate-3 rounded-xl border border-ink/10 bg-white px-5 py-3 font-hand text-[1.625rem] leading-none font-semibold text-accent-deep shadow-[0_10px_30px_rgba(10,10,10,0.12)] md:-left-6">Geht nicht, gibt’s nicht.</p>
-      </div>
+      <AuthorPortrait layout="home" />
     </div>
   </div>
 </section>

@@ -1,6 +1,7 @@
 ---
 title: Just Product 2025 - ein Abriss.
 subtitle: "Was ich dieses mal für mich mitgenommen habe: Erfolgreiche Produktentwicklung beginnt mit Kultur, nicht Prozessen. Mit systemischem Denken und pragmatischem Handeln. Mit und ohne KI im Einsatz."
+eyebrow: Klassentreffen
 date: 2025-10-13T17:02:51.333Z
 lang: de
 tags:

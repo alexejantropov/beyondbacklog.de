@@ -1,6 +1,7 @@
 ---
 title: Was wäre, wenn sich 8 Milliarden Menschen immer vertrauen würden? 🌐
 subtitle: 2024 will ich in Blockchain etwas mehr als in KI eintauchen.Wie das zusammenpasst?
+eyebrow: Nicht Krypto
 date: 2024-01-02T12:37:00.000Z
 lang: de
 tags:

@@ -1,8 +1,8 @@
 ---
 // "Work with me": the Substack page /p/work-with-me plus the content of about.me/alexejantropov,
 // as one page on this site (decision 17.10.2026). Hand-made, not imported (SKIP in the importer).
-import { Image } from 'astro:assets';
 import Layout from '../../layouts/Layout.astro';
+import AuthorPortrait from '../../components/AuthorPortrait.astro';
 import Eyebrow from '../../components/ui/Eyebrow.astro';
 import Stroke from '../../components/ui/Stroke.astro';
 import Button from '../../components/ui/Button.astro';
@@ -40,10 +40,7 @@ const facts = [
             <Button href={`mailto:${site.contactEmail}`} variant="outline" size="lg" block>E-Mail schreiben</Button>
           </div>
         </div>
-        <div class="relative max-w-[380px] lg:justify-self-end">
-          <Image src={author} alt={site.author} width={760} widths={[480, 760]} sizes="(min-width: 1024px) 380px, 100vw" loading="eager" class="aspect-[4/5] w-full rounded-[28px] object-cover object-top shadow-[0_24px_60px_rgba(10,10,10,0.14)]" />
-          <p class="absolute bottom-8 -left-3 -rotate-3 rounded-xl border border-ink/10 bg-white px-5 py-3 font-hand text-[1.625rem] leading-none font-semibold text-accent-deep shadow-[0_10px_30px_rgba(10,10,10,0.12)]">Geht nicht, gibt’s nicht.</p>
-        </div>
+        <AuthorPortrait loading="eager" />
       </div>
     </div>
   </section>
@@ -54,7 +51,7 @@ const facts = [
     <p class="mt-5 max-w-[640px] text-lead text-ink/72">In einer Welt des schnellen Wandels braucht es technologiegestützte Produkte und Arbeitsweisen mit Mut, Menschlichkeit und Technologieeinsatz, um nachhaltig wertschöpfend und schnell genug zu innovieren. Dabei helfe ich in diesen Formen:</p>
     <div class="mt-10 grid gap-6 md:grid-cols-2">
       {offers.map((offer, i) => (
-        <article class:list={['flex flex-col gap-4 rounded-[20px] p-7 md:p-9', i === 0 ? 'bg-ink text-paper' : 'border border-ink/10 bg-white']}>
+        <article class:list={['flex flex-col gap-4 rounded-box p-7 md:p-9', i === 0 ? 'bg-ink text-paper' : 'border border-ink/10 bg-white']}>
           <span class:list={['font-hand text-[1.75rem] leading-none font-semibold', i === 0 ? 'text-accent-light' : 'text-accent-deep']}>0{i + 1}</span>
           <h3 class="headline text-[1.75rem] leading-tight tracking-[-0.02em]">{offer.title}</h3>
           <ul class:list={['flex flex-col gap-2 text-base', i === 0 ? 'text-paper/85' : 'text-ink/80']}>
@@ -84,7 +81,7 @@ const facts = [
   </section>
 
   <section class="container-bb section-y">
-    <div class="grid items-center gap-8 rounded-[20px] bg-tint p-7 md:grid-cols-[minmax(0,1fr)_auto] md:p-11">
+    <div class="grid items-center gap-8 rounded-box bg-tint p-7 md:grid-cols-[minmax(0,1fr)_auto] md:p-11">
       <div class="flex flex-col gap-3">
         <Eyebrow>Nächster Schritt</Eyebrow>
         <h2 class="headline text-[2rem] leading-[1.1] tracking-[-0.02em]">Lass uns reden, wann immer es dir passt.</h2>

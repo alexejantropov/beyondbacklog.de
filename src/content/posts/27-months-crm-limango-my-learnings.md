@@ -1,6 +1,7 @@
 ---
 title: 27 months CRM @ limango - my learnings about customer dialogue & MarTech. (EN 🇺🇸)
 subtitle: ""
+eyebrow: "Don't guess"
 date: 2019-06-17T11:37:00.000Z
 lang: en
 tags:

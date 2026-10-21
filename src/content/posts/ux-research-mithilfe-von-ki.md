@@ -1,6 +1,7 @@
 ---
 title: UX Research mithilfe von KI
 subtitle: „Customer first!“ Klingt einfach, ist jedoch nicht leicht. „Get out of the building!“ Wir kennen den Satz. Wie oft tun wir es? Zu selten. Product Discovery ist hart. Mit KI geht’s einfacher! Lese wie.
+eyebrow: Ohne Ausrede
 date: 2024-10-07T20:07:56.851Z
 lang: de
 tags:

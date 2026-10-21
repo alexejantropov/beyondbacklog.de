@@ -1,6 +1,7 @@
 ---
 title: Was machen die in der Entwicklung?
 subtitle: "Aus Sicht von uns in der Produktentwicklung staut sich gefüllt die Arbeit. Und die Kollegen fragen sich: „Was machen die eigentlich?“ Wie damit umgehen?"
+eyebrow: Drei Fragen
 date: 2024-09-08T18:52:03.196Z
 lang: de
 tags:

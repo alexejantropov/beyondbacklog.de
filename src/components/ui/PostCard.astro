@@ -1,27 +1,26 @@
 ---
 // Post card (design "Entwurf 1", 18.10.2026): white card with a fine border, cover flush in the
-// head, topic as a pill on the image, date in small caps, title, teaser, "Lesen →" and reading time.
+// head, topic as a pill on the image, content kicker in small caps, title, teaser, "Lesen →" and reading time.
 import { Image } from 'astro:assets';
 import { tagLabel } from '../../data/site';
-import { formatDate } from '../../lib/seo';
 import { minutes, postPath, type Post } from '../../lib/posts';
 
 interface Props { post: Post; eager?: boolean }
 const { post, eager = false } = Astro.props;
-const { title, subtitle, date, lang, tags, cover, coverAlt } = post.data;
+const { title, subtitle, eyebrow, date, lang, tags, cover, coverAlt } = post.data;
 const tag = tags[0] ? tagLabel(tags[0]) : undefined;
 ---
-<a href={postPath(post)} class="group flex min-w-0 flex-col overflow-hidden rounded-[18px] border border-ink/12 bg-white transition-colors hover:border-ink" data-post data-tags={tags.join(' ')}>
+<a href={postPath(post)} class="group flex min-w-0 flex-col overflow-hidden rounded-card border border-ink/12 bg-white transition-colors hover:border-ink" data-post data-tags={tags.join(' ')}>
   <div class="relative">
     {cover ? (
       <Image src={cover} alt={coverAlt} width={Math.min(cover.width, 1200)} widths={[480, 800, 1200]} sizes="(min-width: 1024px) 33vw, (min-width: 640px) 50vw, 100vw" loading={eager ? 'eager' : 'lazy'} class="aspect-[16/10] w-full object-cover" />
     ) : (
       <div class="grid aspect-[16/10] w-full place-items-center bg-tint p-4 text-center font-hand text-[2.5rem] font-semibold text-accent-deep" aria-hidden="true">{tag ?? date.getFullYear()}</div>
     )}
-    {tag && <span class="absolute top-3.5 left-3.5 inline-flex min-h-7 items-center rounded-pill bg-ink px-3 text-xs font-bold text-paper">{tag}</span>}
+    {tag && <span class="absolute top-3.5 left-3.5 inline-flex min-h-7 items-center rounded-control bg-ink px-3 text-xs font-bold text-paper">{tag}</span>}
   </div>
   <div class="flex flex-1 flex-col gap-2.5 px-5 pt-5 pb-5 md:px-[22px]">
-    <p class="text-meta font-bold tracking-[0.14em] text-ink/60 uppercase"><time datetime={date.toISOString()}>{formatDate(date, lang)}</time></p>
+    {eyebrow && <p lang={lang} class="text-meta font-bold text-ink/60 uppercase">{eyebrow}</p>}
     <h3 lang={lang} class="headline text-[1.4375rem] leading-[1.2] tracking-[-0.02em] group-hover:text-accent-deep">{title}</h3>
     {subtitle && <p lang={lang} class="line-clamp-3 text-base leading-normal text-ink/68 md:text-[0.9375rem]">{subtitle}</p>}
     <div class="mt-auto flex items-center justify-between pt-2.5 text-[0.8125rem]">

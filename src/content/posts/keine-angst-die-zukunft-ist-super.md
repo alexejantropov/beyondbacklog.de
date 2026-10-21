@@ -1,6 +1,7 @@
 ---
 title: Keine Angst, die Zukunft ist super! Ja, im Präsens.
 subtitle: Technologie löst vielfältige Probleme. Wir als Anwender müssen es nur wollen. Meine Beobachtungen von einem Museumsbesuch.
+eyebrow: Zukunftsmuseum
 date: 2023-11-11T12:37:00.000Z
 lang: de
 tags:

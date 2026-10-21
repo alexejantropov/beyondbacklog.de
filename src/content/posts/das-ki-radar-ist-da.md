@@ -1,6 +1,7 @@
 ---
 title: Das KI-Radar it da!
 subtitle: Den Überblick bei 100+ KI-Tools verloren? Diese kuratierte Übersicht hilft Dir, welche KI-Tools Du bereits heute im Produktmanagement und Softwareentwicklung effektiv einsetzen kannst.
+eyebrow: 50 Handys
 date: 2024-10-01T08:58:00.000Z
 lang: de
 tags:

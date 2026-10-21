@@ -1,6 +1,7 @@
 ---
 title: Alles KI oder was?
 subtitle: "GPTs, LLMs und ML: Ein Erklärbär-Artikel zum Verstehen und Mitreden über die wichtigsten Begriffe rund um die Architektur der Künstlichen Intelligenz."
+eyebrow: Erklärbär
 date: 2024-07-12T15:48:55.450Z
 lang: de
 tags:

@@ -1,6 +1,7 @@
 ---
 title: Wie meistere ich zu viele Dinge gleichzeitig?
 subtitle: Das hat mich eine junge Gründerin gefragt. Und ich erzählte ihr von Klarheit, Prioritäten und Fokus.
+eyebrow: Eine Gründerin
 date: 2024-01-15T12:37:07.748Z
 lang: de
 tags:

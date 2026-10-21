@@ -314,6 +314,16 @@ async function convertPost(slug, post) {
   return { md, notes };
 }
 
+function keptFrontmatter(prev) {
+  const block = prev.match(/^---\r?\n([\s\S]*?)\r?\n---/);
+  if (!block) return {};
+  const data = YAML.parse(block[1]) ?? {};
+  return {
+    eyebrow: typeof data.eyebrow === 'string' ? data.eyebrow : '',
+    draft: data.draft === true,
+  };
+}
+
 // ---------- main ----------
 const files = readdirSync(join(SRC, 'posts')).filter(f => f.endsWith('.json') && !f.endsWith('.preload.json'));
 mkdirSync(OUT_MD, { recursive: true });
@@ -325,7 +335,8 @@ for (const file of files) {
   const post = JSON.parse(readFileSync(join(SRC, 'posts', file), 'utf8'));
   const meta = index.find(p => p.slug === slug) ?? {};
   const target = join(OUT_MD, `${slug}.md`);
-  if (existsSync(target) && /^imported:\s*false/m.test(readFileSync(target, 'utf8'))) { console.log(`skip ${slug} (imported: false)`); continue; }
+  const prev = existsSync(target) ? readFileSync(target, 'utf8') : '';
+  if (/^imported:\s*false/m.test(prev)) { console.log(`skip ${slug} (imported: false)`); continue; }
 
   const tags = [];
   for (const t of post.postTags ?? []) if (TAG_SLUGS[t.slug]) tags.push(TAG_SLUGS[t.slug]);
@@ -338,15 +349,19 @@ for (const file of files) {
   const cover = coverUrl ? await localImage(slug, coverUrl) : null;
   if (coverUrl && !cover) notes.push('cover missing');
 
+  // Hand-written card kicker and an explicit unpublish. A re-import must not drop either.
+  const kept = keptFrontmatter(prev);
   const fm = {
     title: esc(post.title),
     subtitle: esc(post.subtitle ?? ''),
+    ...(kept.eyebrow && { eyebrow: kept.eyebrow }),
     date: post.post_date,
     lang,
     tags,
     ...(cover && { cover, coverAlt: '' }),
     substackId: post.id,
     ...(post.type === 'page' && { page: true }),
+    ...(kept.draft && { draft: true }),
   };
   const doc = `---\n${YAML.stringify(fm, { lineWidth: 0 })}---\n\n${md}\n`;
   writeFileSync(target, doc);
