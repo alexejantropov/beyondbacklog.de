@@ -7,7 +7,7 @@
 //   node scripts/import-substack.mjs            all posts
 //   node scripts/import-substack.mjs <slug>…    only these
 import { copyFileSync, existsSync, mkdirSync, readFileSync, readdirSync, writeFileSync } from 'node:fs';
-import { basename, extname, join } from 'node:path';
+import { basename, join, parse as parsePath } from 'node:path';
 import { parse } from 'node-html-parser';
 import TurndownService from 'turndown';
 import YAML from 'yaml';
@@ -43,6 +43,10 @@ const cleanUrl = raw => {
   if (raw.startsWith('/')) return raw;
   try {
     const u = new URL(raw);
+    // The Substack reply address (as mailto: or the http://beyondbacklog@substack.com link form)
+    // becomes a mail link to the site's address.
+    const oldAddress = (u.protocol === 'mailto:' && u.pathname === 'beyondbacklog@substack.com') || (u.username === 'beyondbacklog' && u.hostname === 'substack.com');
+    if (oldAddress) return `mailto:${site.contactEmail}`;
     for (const k of [...u.searchParams.keys()]) if (/^utm_|^r$|^s$|^triedRedirect$/.test(k)) u.searchParams.delete(k);
     if (SELF_HOSTS.includes(u.hostname)) {
       // Own links become site paths; Substack-only paths follow src/data/redirects.ts.
@@ -81,18 +85,17 @@ async function localImage(slug, cdnUrl) {
   if (!entry || !String(entry.status).startsWith('ok')) return null;
   const src = join(SRC, entry.local_path);
   if (!existsSync(src)) return null;
-  const ext = extname(entry.local_path).toLowerCase();
-  const stem = basename(entry.local_path, extname(entry.local_path));
+  const { name: stem, ext: rawExt } = parsePath(entry.local_path);
+  const ext = rawExt.toLowerCase();
   // Photos and screenshots become WebP (quality 82, max 2400 px): smaller sources, and
   // astro:assets derives its responsive variants from them. gif (animated) and svg stay as they are.
   const convert = ['.heic', '.heif', '.jpg', '.jpeg', '.png', '.webp'].includes(ext);
   const { target, ref } = postAsset(slug, stem, convert ? '.webp' : ext);
   if (!existsSync(target)) {
-    if (!convert) copyFileSync(src, target);
-    else {
+    if (convert) {
       const input = ext === '.heic' || ext === '.heif' ? await heicConvert({ buffer: readFileSync(src), format: 'JPEG', quality: 0.92 }) : src;
       await sharp(input).rotate().resize({ width: MAX_PX, height: MAX_PX, fit: 'inside', withoutEnlargement: true }).webp({ quality: 82 }).toFile(target);
-    }
+    } else copyFileSync(src, target);
   }
   return ref;
 }
@@ -307,8 +310,8 @@ async function convertPost(slug, post) {
   // the next paragraph as raw text inside the HTML block.
   md = md.replace(/^\*?(?:Dein |Euer |Your )?Alexej\*?[ \t]*$/gm, '<p class="signature">Alexej</p>');
   if (footnotes.length) md += '\n\n' + footnotes.join('\n');
-  // The Substack reply address is gone; feedback goes to the site's address (as a real mail link).
-  md = md.replace(/\(https?:\/\/beyondbacklog@substack\.com\/?\)/g, `(mailto:${site.contactEmail})`).replaceAll('beyondbacklog@substack.com', site.contactEmail);
+  // The Substack reply address as visible text (links are rewritten by cleanUrl).
+  md = md.replaceAll('beyondbacklog@substack.com', site.contactEmail);
   return { md, notes };
 }
 
@@ -331,7 +334,7 @@ const summary = [];
 for (const file of files) {
   const slug = file.replace(/\.json$/, '');
   if (only.length && !only.includes(slug)) continue;
-  if (SKIP.includes(slug)) continue;
+  if (SKIP.includes(slug)) { if (only.includes(slug)) console.log(`skip ${slug} (hand-made page in src/pages/p/)`); continue; }
   const post = JSON.parse(readFileSync(join(SRC, 'posts', file), 'utf8'));
   const meta = index.find(p => p.slug === slug) ?? {};
   const target = join(OUT_MD, `${slug}.md`);
@@ -366,6 +369,12 @@ for (const file of files) {
   const words = countWords(md);
   summary.push({ slug, words, substackWords: meta.wordcount ?? null, lang, cover: Boolean(cover), notes });
   console.log(`${slug}: ${words} Wörter${meta.wordcount ? ` (Substack ${meta.wordcount})` : ''}, ${lang}${notes.length ? ' | ' + notes.join('; ') : ''}`);
+}
+// Slugs named on the command line that the backup doesn't have (typo, or not a Substack post).
+const unknown = only.filter(slug => !files.includes(`${slug}.json`));
+if (unknown.length) {
+  console.error(`Nicht im Substack-Backup (migration/substack-public/posts/): ${unknown.join(', ')}`);
+  process.exitCode = 1;
 }
 mkdirSync('migration', { recursive: true });
 writeFileSync('migration/import-summary.json', JSON.stringify(summary, null, 2));

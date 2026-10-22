@@ -39,7 +39,7 @@ const kind = eyebrow || 'Seite';
 // The text's images come from Astro's render metadata (`~/assets/…` paths of Markdown images).
 const postImages = import.meta.glob<{ default: ImageMetadata }>('/src/assets/posts/**/*', { eager: true });
 const bodyImages = (post.rendered?.metadata?.imagePaths ?? []).map(path => postImages[path.replace(/^~\//, '/src/')]?.default.src);
-const coverInBody = Boolean(cover && bodyImages.includes(cover.src));
+const showCover = cover && !bodyImages.includes(cover.src);
 ---
 <Layout title={`${title} | ${site.name}`} description={description} lang={lang} ogImage={cover} ogType="article" publishedTime={page ? undefined : date} ogImageAlt={coverAlt || title} structuredData={page ? undefined : [blogPosting(Astro.site!.href, { title, description, date, image: previewUrl, url, lang }), breadcrumbs(Astro.site!.href, [{ name: site.name, path: '/' }, list, { name: title, path: postPath(post) }])]}>
   <article class="pt-8 pb-16 md:pt-12 md:pb-24">
@@ -58,7 +58,7 @@ const coverInBody = Boolean(cover && bodyImages.includes(cover.src));
             </div>
           </div>
         )}
-        {cover && !coverInBody && (
+        {showCover && (
           <figure class="mt-9" data-cover>
             <Image src={cover} alt={coverAlt} lang={lang} width={Math.min(cover.width, 1600)} widths={[640, 1024, 1600]} sizes="(min-width: 768px) 42rem, 100vw" loading="eager" class="w-full rounded-card" />
           </figure>

@@ -1,6 +1,8 @@
 ---
 // Box under every post (design decision 22.10.2026): about the author first, subscribing second.
-// The bio is site.authorBio, the same text as the homepage closing.
+// The bio is site.authorBio, the same text as the homepage closing. Phones: small photo next to
+// eyebrow and name, bio below at full width (the text wrapper is `display: contents` there).
+// From sm: photo left, all text right.
 import AuthorPortrait from './AuthorPortrait.astro';
 import Button from './ui/Button.astro';
 import Eyebrow from './ui/Eyebrow.astro';
@@ -11,13 +13,17 @@ interface Props { id: string; class?: string }
 const { id, class: className } = Astro.props;
 ---
 <aside class:list={['rounded-box border border-ink/8 bg-tint p-6 md:p-8', className]} aria-labelledby={`${id}-title`}>
-  <div class="flex flex-col gap-6 sm:flex-row sm:items-center sm:gap-8">
-    <AuthorPortrait layout="box" />
-    <div class="flex flex-col gap-2.5">
-      <Eyebrow>Über den Autor</Eyebrow>
-      <p id={`${id}-title`} class="headline text-2xl tracking-[-0.02em]">{site.author}</p>
-      <p class="text-base leading-relaxed text-ink/72">{site.authorBio}</p>
-      <Button href="/about" variant="link" class="self-start">Mehr über mich →</Button>
+  <div class="grid grid-cols-[80px_minmax(0,1fr)] items-center gap-x-4 gap-y-5 sm:flex sm:items-center sm:gap-8">
+    <AuthorPortrait layout="box" class="col-start-1 row-start-1" />
+    <div class="contents sm:flex sm:flex-col sm:gap-2.5">
+      <div class="col-start-2 row-start-1 flex flex-col gap-1 sm:gap-2.5">
+        <Eyebrow>Über den Autor</Eyebrow>
+        <p id={`${id}-title`} class="headline text-xl tracking-[-0.02em] sm:text-2xl">{site.author}</p>
+      </div>
+      <div class="col-span-2 row-start-2 flex flex-col gap-2.5">
+        <p class="text-base leading-relaxed text-ink/72">{site.authorBio}</p>
+        <Button href="/about" variant="link" class="self-start">Mehr über mich →</Button>
+      </div>
     </div>
   </div>
   <NewsletterInline id={id} class="mt-6" />

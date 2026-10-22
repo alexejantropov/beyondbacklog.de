@@ -39,7 +39,7 @@ describe('posts', () => {
       const text = withoutComments(readFileSync(`${dir}/${file}`, 'utf8'));
       const slug = file.replace(/\.md$/, '');
       const cover = frontmatter(file).match(/^cover: (\S+)/m)?.[1];
-      for (const ref of [...[...text.matchAll(/!\[[^\]]*\]\(([^)]+)\)/g)].map(m => m[1]), ...(cover ? [cover] : [])]) {
+      for (const ref of [...text.matchAll(/!\[[^\]]*\]\(([^)]+)\)/g)].map(m => m[1]).concat(cover ?? [])) {
         expect(ref, `${file}: ${ref}`).toMatch(/^~\/assets\//);
         expect(existsSync(ref.replace('~/assets/', 'src/assets/')), `${file}: ${ref}`).toBe(true);
         // File names carry the slug (SEO; the importer's assetStem()).
