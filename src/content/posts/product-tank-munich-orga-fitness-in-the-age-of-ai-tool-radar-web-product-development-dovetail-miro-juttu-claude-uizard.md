@@ -4,12 +4,8 @@ subtitle: "I hold this talk at Product Tank Munich about a topic and a question 
 eyebrow: Beyond prompts
 date: 2024-09-23T10:44:29.587Z
 lang: en
-tags:
-  - product
-  - english-only
-  - ki
-cover: ~/assets/posts/product-tank-munich-orga-fitness-in-the-age-of-ai-tool-radar-web-product-development-dovetail-miro-juttu-claude-uizard/b80abf4d-469d-4038-936b-5a2254b9fde0_1280x853.webp
-coverAlt: ""
+cover: ~/assets/posts/product-tank-munich-orga-fitness-in-the-age-of-ai-tool-radar-web-product-development-dovetail-miro-juttu-claude-uizard/product-tank-munich-orga-fitness-in-the-age-of-ai-tool-radar-web-product-development-dovetail-miro-juttu-claude-uizard-b80abf4d.webp
+coverAlt: Speaker presenting the AI tool radar to the audience at Product Tank Munich
 substackId: 149156466
 ---
 
@@ -58,7 +54,7 @@ In this article I will provide the slides including my narrative, so you can gra
 8.  **[How to Stay in Touch](https://www.beyondbacklog.de/i/149156466/how-to-stay-in-touch)**
     
 
-![Talking at Product Tank, Munich, September 17th, 2024.](~/assets/posts/product-tank-munich-orga-fitness-in-the-age-of-ai-tool-radar-web-product-development-dovetail-miro-juttu-claude-uizard/b80abf4d-469d-4038-936b-5a2254b9fde0_1280x853.webp)
+![Talking at Product Tank, Munich, September 17th, 2024.](~/assets/posts/product-tank-munich-orga-fitness-in-the-age-of-ai-tool-radar-web-product-development-dovetail-miro-juttu-claude-uizard/product-tank-munich-orga-fitness-in-the-age-of-ai-tool-radar-web-product-development-dovetail-miro-juttu-claude-uizard-b80abf4d.webp)
 *Talking at Product Tank, Munich, September 17th, 2024.*
 
 ## Who am I?
@@ -73,7 +69,7 @@ This is exactly where I personally see huge potential for using the right AI too
 
 ## What is Product Orga Fitness Test?
 
-![](~/assets/posts/product-tank-munich-orga-fitness-in-the-age-of-ai-tool-radar-web-product-development-dovetail-miro-juttu-claude-uizard/3b662ad5-6f16-461a-a3d3-25c498919301_960x540.webp)
+![](~/assets/posts/product-tank-munich-orga-fitness-in-the-age-of-ai-tool-radar-web-product-development-dovetail-miro-juttu-claude-uizard/product-tank-munich-orga-fitness-in-the-age-of-ai-tool-radar-web-product-development-dovetail-miro-juttu-claude-uizard-3b662ad5.webp)
 
 For the talk I utilized the [product orga fitness test of the Value Rebels](https://www.valuerebels.com/post/is-your-organization-fit-enough-to-build-great-digital-products) - a boutique product consulting company on a mission to upgrade European product teams to build better digital products. This test is a quick assessment which help to understand the gaps between the status quo and the common definition of “what is a good product practice?” according to the definition of the Value Rebels.
 
@@ -83,19 +79,19 @@ During the talk I explored 3 of 49 questions from different dimensions with the 
 
 Here are the ratings of the live poll on the question if product teams do start with problem understanding:
 
-![](~/assets/posts/product-tank-munich-orga-fitness-in-the-age-of-ai-tool-radar-web-product-development-dovetail-miro-juttu-claude-uizard/ce35d3f2-3f3b-4082-bfd0-ff2059504a0f_960x540.webp)
+![](~/assets/posts/product-tank-munich-orga-fitness-in-the-age-of-ai-tool-radar-web-product-development-dovetail-miro-juttu-claude-uizard/product-tank-munich-orga-fitness-in-the-age-of-ai-tool-radar-web-product-development-dovetail-miro-juttu-claude-uizard-ce35d3f2.webp)
 
 So the question arises:
 
 > how could AI help you with the problem understanding?
 
-![](~/assets/posts/product-tank-munich-orga-fitness-in-the-age-of-ai-tool-radar-web-product-development-dovetail-miro-juttu-claude-uizard/72a5825e-ca45-4a47-948f-6729f6d8af04_960x540.webp)
+![](~/assets/posts/product-tank-munich-orga-fitness-in-the-age-of-ai-tool-radar-web-product-development-dovetail-miro-juttu-claude-uizard/product-tank-munich-orga-fitness-in-the-age-of-ai-tool-radar-web-product-development-dovetail-miro-juttu-claude-uizard-72a5825e.webp)
 
 First: why most of you did not rank with a 5? What is the reason?
 
 There are always several reasons. But there is always this one pain, you might be familiar with: From product managers point of view this is how it looks like when you have to analyze the recordings:
 
-![](~/assets/posts/product-tank-munich-orga-fitness-in-the-age-of-ai-tool-radar-web-product-development-dovetail-miro-juttu-claude-uizard/77a0d755-4156-4665-a2fa-d5de0b7eaa88_960x540.webp)
+![](~/assets/posts/product-tank-munich-orga-fitness-in-the-age-of-ai-tool-radar-web-product-development-dovetail-miro-juttu-claude-uizard/product-tank-munich-orga-fitness-in-the-age-of-ai-tool-radar-web-product-development-dovetail-miro-juttu-claude-uizard-77a0d755.webp)
 
 After the interview you have to hear all the recordings again in full length and summarize and analyze them in order to make the insights digestible for the team and for stakeholders. So we feel that it costs us almost the whole week of work to do everything right.
 
@@ -103,7 +99,7 @@ As humans, we seek the excuse: I need the management to allow me to put my time 
 
 ### Dovetail
 
-![](~/assets/posts/product-tank-munich-orga-fitness-in-the-age-of-ai-tool-radar-web-product-development-dovetail-miro-juttu-claude-uizard/7c6c5d90-1586-45be-a163-8b37b55d2548_960x540.webp)
+![](~/assets/posts/product-tank-munich-orga-fitness-in-the-age-of-ai-tool-radar-web-product-development-dovetail-miro-juttu-claude-uizard/product-tank-munich-orga-fitness-in-the-age-of-ai-tool-radar-web-product-development-dovetail-miro-juttu-claude-uizard-7c6c5d90.webp)
 
 Let me show you [dovetail.com](https://dovetail.com/)!
 
@@ -113,12 +109,12 @@ How? Let me show you.
 
 1.  You upload your video of the interview (it takes 1-2 minutes):
     
-    ![](~/assets/posts/product-tank-munich-orga-fitness-in-the-age-of-ai-tool-radar-web-product-development-dovetail-miro-juttu-claude-uizard/33fee9d1-e442-47b4-9df3-bb9244243406_960x540.webp)
+    ![](~/assets/posts/product-tank-munich-orga-fitness-in-the-age-of-ai-tool-radar-web-product-development-dovetail-miro-juttu-claude-uizard/product-tank-munich-orga-fitness-in-the-age-of-ai-tool-radar-web-product-development-dovetail-miro-juttu-claude-uizard-33fee9d1.webp)
     
 
 2.  you let the tool transcribe the video (it takes 2-3 minutes):
     
-    ![](~/assets/posts/product-tank-munich-orga-fitness-in-the-age-of-ai-tool-radar-web-product-development-dovetail-miro-juttu-claude-uizard/d2c712ba-9894-4ae7-a15b-3f6afaa2a1c5_960x540.webp)
+    ![](~/assets/posts/product-tank-munich-orga-fitness-in-the-age-of-ai-tool-radar-web-product-development-dovetail-miro-juttu-claude-uizard/product-tank-munich-orga-fitness-in-the-age-of-ai-tool-radar-web-product-development-dovetail-miro-juttu-claude-uizard-d2c712ba.webp)
     
 
 3.  You get suggestions on the highlight quotes of every interview (it takes 1 minute).
@@ -134,13 +130,13 @@ When you repeat this practice for 5 videos, you are done within 1–1,5 hours to
 
 6.  After this, you want to make your insights digestible for your colleagues:
     
-    ![](~/assets/posts/product-tank-munich-orga-fitness-in-the-age-of-ai-tool-radar-web-product-development-dovetail-miro-juttu-claude-uizard/d1e35ba7-5bd2-4783-9263-4984f53099fe_960x540.webp)
+    ![](~/assets/posts/product-tank-munich-orga-fitness-in-the-age-of-ai-tool-radar-web-product-development-dovetail-miro-juttu-claude-uizard/product-tank-munich-orga-fitness-in-the-age-of-ai-tool-radar-web-product-development-dovetail-miro-juttu-claude-uizard-d1e35ba7.webp)
     
     Therefor you just let the dovetail AI create a board with clusters of quotes to different topics. You can edit them and organize them by using your own tags. Let’s say it takes you another 30 minutes to have something to work on together with your team.
     
 7.  And if you want to make main insights easy digestible for your colleagues, you can automatically create a summary video with all important insights from all interviews. It takes you, not longer than 10-15 minutes:
     
-    ![](~/assets/posts/product-tank-munich-orga-fitness-in-the-age-of-ai-tool-radar-web-product-development-dovetail-miro-juttu-claude-uizard/ee08be22-21d5-4c26-b3dd-dfcf52d5201c_960x540.webp)
+    ![](~/assets/posts/product-tank-munich-orga-fitness-in-the-age-of-ai-tool-radar-web-product-development-dovetail-miro-juttu-claude-uizard/product-tank-munich-orga-fitness-in-the-age-of-ai-tool-radar-web-product-development-dovetail-miro-juttu-claude-uizard-ee08be22.webp)
     
     So instead of showing your team or colleagues 5 interviews 30 minutes each, you show a 10-minute video out of all significant insights, e.g., when you start with a roadmapping or planning or refinement session.
     
@@ -151,11 +147,11 @@ In case you want to do discovery work by the book, you may be want to create an 
 
 I prefer and recommend using this [Miro template for Interview results by David Pereira](https://miro.com/miroverse/interview-results/) he provides for free. This template is reduced to what in my opinion is really necessary:
 
-![](~/assets/posts/product-tank-munich-orga-fitness-in-the-age-of-ai-tool-radar-web-product-development-dovetail-miro-juttu-claude-uizard/3dac92e7-28a0-4fdf-b7e5-d888352f0d87_960x540.webp)
+![](~/assets/posts/product-tank-munich-orga-fitness-in-the-age-of-ai-tool-radar-web-product-development-dovetail-miro-juttu-claude-uizard/product-tank-munich-orga-fitness-in-the-age-of-ai-tool-radar-web-product-development-dovetail-miro-juttu-claude-uizard-3dac92e7.webp)
 
 With this template I suggest you to take the Dovetail transcript of the interview and to use the Miro AI feature to suggest what to fill in. This is a screenshot of my very first shot with a very simple prompt:
 
-![](~/assets/posts/product-tank-munich-orga-fitness-in-the-age-of-ai-tool-radar-web-product-development-dovetail-miro-juttu-claude-uizard/cfe84f97-d730-4f7a-baa0-93ad3e52e9e9_960x540.webp)
+![](~/assets/posts/product-tank-munich-orga-fitness-in-the-age-of-ai-tool-radar-web-product-development-dovetail-miro-juttu-claude-uizard/product-tank-munich-orga-fitness-in-the-age-of-ai-tool-radar-web-product-development-dovetail-miro-juttu-claude-uizard-cfe84f97.webp)
 
 Already with my very simple prompt I got a good enough list of opportunities I can copy, paste and edit them in the template. I got also one powerful quote which I can pretty much copy & paste. Only the facts are indeed too long for the template I use. So I either would need to re-iterate with one or two prompts, or fill out the facts by hand inspired from what Miro AI suggests me.
 
@@ -163,11 +159,11 @@ Already with my very simple prompt I got a good enough list of opportunities I c
 
 We saw how we can simplify the tasks of summarizing and analyzing customer interviews and make them digestible for our colleagues. But there is still another pain:
 
-![](~/assets/posts/product-tank-munich-orga-fitness-in-the-age-of-ai-tool-radar-web-product-development-dovetail-miro-juttu-claude-uizard/a23f9355-3341-4fb9-9f6e-dfc4b4778f28_960x540.webp)
+![](~/assets/posts/product-tank-munich-orga-fitness-in-the-age-of-ai-tool-radar-web-product-development-dovetail-miro-juttu-claude-uizard/product-tank-munich-orga-fitness-in-the-age-of-ai-tool-radar-web-product-development-dovetail-miro-juttu-claude-uizard-a23f9355.webp)
 
 Teresa Torres suggests implementing continuous discovery habits. But scheduling all the interviews with customers and the back and forth via email to find a slot is a lot of admin effort. You could automate this as well.
 
-![I skipped this slide during the presentation because of the time](~/assets/posts/product-tank-munich-orga-fitness-in-the-age-of-ai-tool-radar-web-product-development-dovetail-miro-juttu-claude-uizard/ff5c67f5-f053-4245-ba08-1b5481c85cfa_960x540.webp)
+![I skipped this slide during the presentation because of the time](~/assets/posts/product-tank-munich-orga-fitness-in-the-age-of-ai-tool-radar-web-product-development-dovetail-miro-juttu-claude-uizard/product-tank-munich-orga-fitness-in-the-age-of-ai-tool-radar-web-product-development-dovetail-miro-juttu-claude-uizard-ff5c67f5.webp)
 *I skipped this slide during the presentation because of the time*
 
 Here is just an inspiration from one of a lot of YouTube videos [how to automate appointment generation](https://www.youtube.com/watch?v=YRTMGuwnDSY). You can use tools like make.com together with ChatGPT and Gmail and Calendly or another tools. There is some AI logic for text generation inside this workflow. Such automation setups are pretty common for B2B sales and customer success calls. So what I already saw working for sales or customer success, we could adapt for product discovery as well.
@@ -178,11 +174,11 @@ Let me show you an alternative:
 
 #### Juttu
 
-![](~/assets/posts/product-tank-munich-orga-fitness-in-the-age-of-ai-tool-radar-web-product-development-dovetail-miro-juttu-claude-uizard/9937a93d-6f0a-4581-84a6-85eaa9f4447b_960x540.webp)
+![](~/assets/posts/product-tank-munich-orga-fitness-in-the-age-of-ai-tool-radar-web-product-development-dovetail-miro-juttu-claude-uizard/product-tank-munich-orga-fitness-in-the-age-of-ai-tool-radar-web-product-development-dovetail-miro-juttu-claude-uizard-9937a93d.webp)
 
 There is a startup named [Juttu.co](https://juttu.co/) currently in their first beta iteration out there. They solve exactly this continuous scheduling problem for you. It’s a simple mail automation with a kind of Calendly functionality and this is how it works:
 
-![For the animated GIF go here](~/assets/posts/product-tank-munich-orga-fitness-in-the-age-of-ai-tool-radar-web-product-development-dovetail-miro-juttu-claude-uizard/7bc55b36-a2b0-432a-874d-8a021dddabed_960x540.webp)
+![For the animated GIF go here](~/assets/posts/product-tank-munich-orga-fitness-in-the-age-of-ai-tool-radar-web-product-development-dovetail-miro-juttu-claude-uizard/product-tank-munich-orga-fitness-in-the-age-of-ai-tool-radar-web-product-development-dovetail-miro-juttu-claude-uizard-7bc55b36.webp)
 *For the animated GIF go here*
 
 You just put your list of contacts in this tool, define your interview slots in the calendar and set up the weekly limit. This tool promises to automate the continuous recruiting of customers for the interviews.
@@ -197,7 +193,7 @@ So I want to show you, that you don’t need AI for everything in order to impro
 
 Let’s wrap up: this is how one day in your week could look like:
 
-![](~/assets/posts/product-tank-munich-orga-fitness-in-the-age-of-ai-tool-radar-web-product-development-dovetail-miro-juttu-claude-uizard/c3ba8af5-4848-43f1-9269-c0f35a4e4817_960x540.webp)
+![](~/assets/posts/product-tank-munich-orga-fitness-in-the-age-of-ai-tool-radar-web-product-development-dovetail-miro-juttu-claude-uizard/product-tank-munich-orga-fitness-in-the-age-of-ai-tool-radar-web-product-development-dovetail-miro-juttu-claude-uizard-c3ba8af5.webp)
 
 You can run 5 automatically scheduled interviews in the morning, gain insights from 5 interview recordings and create digestible summary out of them in the afternoon.
 
@@ -211,7 +207,7 @@ And, there is another secret, I want to tell you…
 
 ### AI as Trojan Horse for Product Discovery
 
-![](~/assets/posts/product-tank-munich-orga-fitness-in-the-age-of-ai-tool-radar-web-product-development-dovetail-miro-juttu-claude-uizard/c67c5091-af82-4175-b0a7-f7ec0344a2ef_960x540.webp)
+![](~/assets/posts/product-tank-munich-orga-fitness-in-the-age-of-ai-tool-radar-web-product-development-dovetail-miro-juttu-claude-uizard/product-tank-munich-orga-fitness-in-the-age-of-ai-tool-radar-web-product-development-dovetail-miro-juttu-claude-uizard-c67c5091.webp)
 
 I see AI being the Trojan Horse for us product people to bring in product discovery to life in our companies. In my experience it’s much easier to get new tools, than to explain the whole concept of product discovery to your management or colleagues. Especially if you say: “We want to use AI” chances are higher you get support because managers consider this topic as hot and want their people to gain knowledge about it.
 
@@ -219,13 +215,13 @@ I see AI being the Trojan Horse for us product people to bring in product discov
 
 Here are the ratings of the live poll on the question if teams try to reduce the time to insight:
 
-![](~/assets/posts/product-tank-munich-orga-fitness-in-the-age-of-ai-tool-radar-web-product-development-dovetail-miro-juttu-claude-uizard/b85a0169-5b51-4ef3-9fb3-594de5a4f180_960x540.webp)
+![](~/assets/posts/product-tank-munich-orga-fitness-in-the-age-of-ai-tool-radar-web-product-development-dovetail-miro-juttu-claude-uizard/product-tank-munich-orga-fitness-in-the-age-of-ai-tool-radar-web-product-development-dovetail-miro-juttu-claude-uizard-b85a0169.webp)
 
 Therefrom the question arises:
 
 > How could AI help to reduce time to insight?
 
-![](~/assets/posts/product-tank-munich-orga-fitness-in-the-age-of-ai-tool-radar-web-product-development-dovetail-miro-juttu-claude-uizard/eef9a93e-ae13-4b80-91da-c734f415b4da_960x540.webp)
+![](~/assets/posts/product-tank-munich-orga-fitness-in-the-age-of-ai-tool-radar-web-product-development-dovetail-miro-juttu-claude-uizard/product-tank-munich-orga-fitness-in-the-age-of-ai-tool-radar-web-product-development-dovetail-miro-juttu-claude-uizard-eef9a93e.webp)
 
 > How could AI help us to throw away bad ideas fast?
 
@@ -243,7 +239,7 @@ I told you I started dancing West Coast Swing. And as a social dancer I think I 
 
 I wrote down the idea of a new app and a very simple prompt. This was my first result:
 
-![](~/assets/posts/product-tank-munich-orga-fitness-in-the-age-of-ai-tool-radar-web-product-development-dovetail-miro-juttu-claude-uizard/5910e5a6-7ab5-4c14-a667-fa9d064dfbdb_960x540.webp)
+![](~/assets/posts/product-tank-munich-orga-fitness-in-the-age-of-ai-tool-radar-web-product-development-dovetail-miro-juttu-claude-uizard/product-tank-munich-orga-fitness-in-the-age-of-ai-tool-radar-web-product-development-dovetail-miro-juttu-claude-uizard-5910e5a6.webp)
 
 It’s not bad! It’s fully clickable. I was never ever able to do such things before!
 
@@ -251,11 +247,11 @@ It’s not bad! It’s fully clickable. I was never ever able to do such things 
 
 Then I went to [uizard.io](http://uizard.io/). It’s an AI powered mockup and prototype creation tool. It is like Figma on AI steroids with a prompt command line.
 
-![](~/assets/posts/product-tank-munich-orga-fitness-in-the-age-of-ai-tool-radar-web-product-development-dovetail-miro-juttu-claude-uizard/ca936b71-7769-405f-9b02-c0cb885fb459_960x540.webp)
+![](~/assets/posts/product-tank-munich-orga-fitness-in-the-age-of-ai-tool-radar-web-product-development-dovetail-miro-juttu-claude-uizard/product-tank-munich-orga-fitness-in-the-age-of-ai-tool-radar-web-product-development-dovetail-miro-juttu-claude-uizard-ca936b71.webp)
 
 In [uizard.io](http://uizard.io/) I typed in just one sentence with the very high level idea what I wanted. Just one sentence, not the whole requirements! This is what I got within 1 Minute:
 
-![](~/assets/posts/product-tank-munich-orga-fitness-in-the-age-of-ai-tool-radar-web-product-development-dovetail-miro-juttu-claude-uizard/154f94d5-6e6d-4015-8757-3a7ec4ad6cc9_960x540.webp)
+![](~/assets/posts/product-tank-munich-orga-fitness-in-the-age-of-ai-tool-radar-web-product-development-dovetail-miro-juttu-claude-uizard/product-tank-munich-orga-fitness-in-the-age-of-ai-tool-radar-web-product-development-dovetail-miro-juttu-claude-uizard-154f94d5.webp)
 
 Doesn’t matter if for me or for a designer: reaching this state, overcoming the blank sheet of paper would take at least some hours or days including conversations between 2 people.
 
@@ -265,11 +261,11 @@ I think, pretty often!
 
 Now, I could have started to iterate from here in uizard, but this is what I did instead. I screenshotted the uizard results and gave them Claude:
 
-![](~/assets/posts/product-tank-munich-orga-fitness-in-the-age-of-ai-tool-radar-web-product-development-dovetail-miro-juttu-claude-uizard/09535f45-94eb-402c-a527-de36161d7e05_960x540.webp)
+![](~/assets/posts/product-tank-munich-orga-fitness-in-the-age-of-ai-tool-radar-web-product-development-dovetail-miro-juttu-claude-uizard/product-tank-munich-orga-fitness-in-the-age-of-ai-tool-radar-web-product-development-dovetail-miro-juttu-claude-uizard-09535f45.webp)
 
 This is the result after less than 1 hour and may be 10 iterations:
 
-![](~/assets/posts/product-tank-munich-orga-fitness-in-the-age-of-ai-tool-radar-web-product-development-dovetail-miro-juttu-claude-uizard/51982cf0-9d84-4458-97b4-ac51bc4f26e0_960x540.webp)
+![](~/assets/posts/product-tank-munich-orga-fitness-in-the-age-of-ai-tool-radar-web-product-development-dovetail-miro-juttu-claude-uizard/product-tank-munich-orga-fitness-in-the-age-of-ai-tool-radar-web-product-development-dovetail-miro-juttu-claude-uizard-51982cf0.webp)
 
 I think it’s pretty amazing for the effort I took. I was never able to create this state of my idea visualization within such a short amount of time.
 
@@ -285,7 +281,7 @@ We are going to become Super Swiss Army Knifes. In a very positive way. We now c
 
 I am bold on it: I say, utilizing AI tools with the right methods will someday **10x your innovation** **power** in terms of **speed in uncovering business value**.
 
-![](~/assets/posts/product-tank-munich-orga-fitness-in-the-age-of-ai-tool-radar-web-product-development-dovetail-miro-juttu-claude-uizard/4ffd14e4-fc8e-4ee5-9a7b-d029bfffcd3c_960x540.webp)
+![](~/assets/posts/product-tank-munich-orga-fitness-in-the-age-of-ai-tool-radar-web-product-development-dovetail-miro-juttu-claude-uizard/product-tank-munich-orga-fitness-in-the-age-of-ai-tool-radar-web-product-development-dovetail-miro-juttu-claude-uizard-4ffd14e4.webp)
 
 And the crazy thing is: this is just the beginning. The capabilities of the technology and the possibilities of its utilization will only improve.
 
@@ -299,13 +295,13 @@ This brings me to the next and last fitness test question.
 
 Here are the ratings of the live poll on the question if companies do care enough about development of their people:
 
-![](~/assets/posts/product-tank-munich-orga-fitness-in-the-age-of-ai-tool-radar-web-product-development-dovetail-miro-juttu-claude-uizard/e065e01a-9efe-4909-b3c1-6c92f2c7bf76_960x540.webp)
+![](~/assets/posts/product-tank-munich-orga-fitness-in-the-age-of-ai-tool-radar-web-product-development-dovetail-miro-juttu-claude-uizard/product-tank-munich-orga-fitness-in-the-age-of-ai-tool-radar-web-product-development-dovetail-miro-juttu-claude-uizard-e065e01a.webp)
 
 With these results in mind ask yourself:
 
 > How does AI affect you?
 
-![](~/assets/posts/product-tank-munich-orga-fitness-in-the-age-of-ai-tool-radar-web-product-development-dovetail-miro-juttu-claude-uizard/896a03d3-a8b6-406c-9aa0-fe5f260d874e_960x540.webp)
+![](~/assets/posts/product-tank-munich-orga-fitness-in-the-age-of-ai-tool-radar-web-product-development-dovetail-miro-juttu-claude-uizard/product-tank-munich-orga-fitness-in-the-age-of-ai-tool-radar-web-product-development-dovetail-miro-juttu-claude-uizard-896a03d3.webp)
 
 Not your team.
 
@@ -319,7 +315,7 @@ Let me show you some research results…
 
 There is a [study of the Stanford University](https://aiindex.stanford.edu/report/) showing the following:
 
-![](~/assets/posts/product-tank-munich-orga-fitness-in-the-age-of-ai-tool-radar-web-product-development-dovetail-miro-juttu-claude-uizard/e3fd12c0-d72c-4697-afda-80f690d9e7cd_960x540.webp)
+![](~/assets/posts/product-tank-munich-orga-fitness-in-the-age-of-ai-tool-radar-web-product-development-dovetail-miro-juttu-claude-uizard/product-tank-munich-orga-fitness-in-the-age-of-ai-tool-radar-web-product-development-dovetail-miro-juttu-claude-uizard-e3fd12c0.webp)
 
 The blue bars are performance score of knowledge workers on tasks without using ChatGPT, the pink bars are performance score with ChatGPT.
 
@@ -358,7 +354,7 @@ Another [study of Harvard Business School](https://www.hbs.edu/ris/Publication%2
 
 If we put these results in a formula, we see, that productivity doubles. And this is only using GPT-4 in 2023:
 
-![](~/assets/posts/product-tank-munich-orga-fitness-in-the-age-of-ai-tool-radar-web-product-development-dovetail-miro-juttu-claude-uizard/39212e48-0d60-4280-a5c3-4dafb1cd47a8_960x540.webp)
+![](~/assets/posts/product-tank-munich-orga-fitness-in-the-age-of-ai-tool-radar-web-product-development-dovetail-miro-juttu-claude-uizard/product-tank-munich-orga-fitness-in-the-age-of-ai-tool-radar-web-product-development-dovetail-miro-juttu-claude-uizard-39212e48.webp)
 
 Now, let’s do just a speculative thought experiment:
 
@@ -379,14 +375,14 @@ Since I know there are a lot of tools out there, it is a challenge to follow the
 
 This is why I started creating such a radar of AI tools for product development, where I want continuously evaluate AI tools for our use cases in product practice.
 
-![AI Tool Radar for Web Product Development, V1.0 September 2024](~/assets/posts/product-tank-munich-orga-fitness-in-the-age-of-ai-tool-radar-web-product-development-dovetail-miro-juttu-claude-uizard/2bb7e6ef-0ad3-4fc0-a834-e46b691715b9_960x540.webp)
+![AI Tool Radar for Web Product Development, V1.0 September 2024](~/assets/posts/product-tank-munich-orga-fitness-in-the-age-of-ai-tool-radar-web-product-development-dovetail-miro-juttu-claude-uizard/product-tank-munich-orga-fitness-in-the-age-of-ai-tool-radar-web-product-development-dovetail-miro-juttu-claude-uizard-2bb7e6ef.webp)
 *AI Tool Radar for Web Product Development, V1.0 September 2024*
 
 With this radar I want to focus on bridging the gap between technological possibilities and practical business applications that prepare product teams and product people to adopt and benefit from AI tools. I want to curate suitable tools and evaluate how they can help the product community.
 
 *If you want to get the **radar in high resolution** and stay up-to-date with the recent versions, consider becoming a subscriber! I am working on my next post I want to publish on October 1st, with the October edition of the radar containing additional tools. I intend to keep on updating this radar over time.*
 
-![](~/assets/posts/product-tank-munich-orga-fitness-in-the-age-of-ai-tool-radar-web-product-development-dovetail-miro-juttu-claude-uizard/3f344843-343d-4b91-a2e4-3fbd4364fd56_960x540.webp)
+![](~/assets/posts/product-tank-munich-orga-fitness-in-the-age-of-ai-tool-radar-web-product-development-dovetail-miro-juttu-claude-uizard/product-tank-munich-orga-fitness-in-the-age-of-ai-tool-radar-web-product-development-dovetail-miro-juttu-claude-uizard-3f344843.webp)
 
 ## Run the Full Fitness Orga Test
 

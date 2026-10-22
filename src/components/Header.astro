@@ -1,6 +1,6 @@
 ---
-// Sticky header: logo + wordmark, tag navigation, "Über", newsletter button. Below `lg` a burger
-// opens a drawer. No "Archiv" entry (design decision): the homepage is the archive.
+// Sticky header: logo + wordmark, nav (Beiträge, KI-Radar, Über mich, Work with me) and the
+// "Abonnieren" button, which stays visible on every width. Below `lg` the nav sits in a burger drawer.
 import { Image } from 'astro:assets';
 import logo from '~/assets/site/logo.png';
 import { site } from '../data/site';
@@ -8,17 +8,19 @@ import { stripTrailingSlash } from '../lib/seo';
 
 const path = stripTrailingSlash(Astro.url.pathname.replace(/\.html$/, ''));
 const nav = [
-  ...site.tags.map(t => ({ id: `/s/${t.slug}`, label: t.label, href: `/s/${t.slug}` })),
-  { id: '/about', label: 'Über', href: '/about' },
+  { label: 'Beiträge', href: '/beitraege' },
+  { label: 'KI-Radar', href: '/ki-radar' },
+  { label: 'Über mich', href: '/about' },
+  { label: 'Work with me', href: site.workWithMeUrl },
 ];
 const isActive = (href: string) => path === href;
 ---
 <header class="sticky top-0 z-50 w-full border-b border-ink/8" data-site-header>
   <div class="absolute inset-0 bg-paper/92 backdrop-blur-md" aria-hidden="true"></div>
-  <div class="container-bb relative flex h-16 items-center justify-between gap-6 lg:h-[72px]">
-    <a href="/" class="flex min-h-11 items-center gap-3" aria-label={`${site.name} – Startseite`}>
-      <Image src={logo} alt="" width={80} height={80} class="size-9 rounded-control lg:size-10" loading="eager" />
-      <span class="headline text-[1.125rem] tracking-[-0.02em] lg:text-[1.25rem]">{site.name}</span>
+  <div class="container-bb relative flex h-16 items-center justify-between gap-3 lg:h-[72px] lg:gap-6">
+    <a href="/" class="flex min-h-11 shrink-0 items-center gap-2 sm:gap-3" aria-label={`${site.name} – Startseite`}>
+      <Image src={logo} alt="" width={80} height={80} class="size-8 rounded-control sm:size-9 lg:size-10" loading="eager" />
+      <span class="headline text-[1.0625rem] tracking-[-0.02em] whitespace-nowrap sm:text-[1.125rem] lg:text-[1.25rem]">{site.name}</span>
     </a>
 
     <nav class="hidden lg:block" aria-label="Hauptnavigation">
@@ -27,23 +29,25 @@ const isActive = (href: string) => path === href;
           <li>
             <a
               href={item.href}
-              aria-current={isActive(item.id) ? 'page' : undefined}
-              class:list={['inline-flex min-h-11 min-w-11 items-center justify-center text-sm transition-colors', isActive(item.id) ? 'font-bold text-accent-deep' : 'font-semibold text-ink hover:text-accent-deep']}
+              aria-current={isActive(item.href) ? 'page' : undefined}
+              class:list={['inline-flex min-h-11 min-w-11 items-center justify-center text-sm transition-colors', isActive(item.href) ? 'font-bold text-accent-deep' : 'font-semibold text-ink hover:text-accent-deep']}
             >{item.label}</a>
           </li>
         ))}
       </ul>
     </nav>
 
-    <a href="/newsletter" class="hidden min-h-11 items-center rounded-control bg-ink px-5 text-[0.8125rem] font-bold whitespace-nowrap text-paper transition-colors hover:bg-accent-deep lg:inline-flex">Newsletter abonnieren</a>
+    <div class="flex items-center gap-1.5">
+      <a href="/newsletter" class="inline-flex min-h-11 items-center rounded-control bg-ink px-3 text-[0.8125rem] font-bold whitespace-nowrap text-paper transition-colors hover:bg-accent-deep sm:px-4 lg:px-5">Abonnieren</a>
 
-    <button type="button" class="group -mr-2.5 grid size-11 place-items-center lg:hidden" aria-expanded="false" aria-controls="site-menu" aria-label="Menü" data-menu-button data-label-open="Menü" data-label-close="Menü schließen">
-      <span class="flex w-[22px] flex-col gap-1" aria-hidden="true">
-        <span class="h-0.5 bg-ink transition-transform duration-200 group-aria-expanded:translate-y-1.5 group-aria-expanded:rotate-45"></span>
-        <span class="h-0.5 bg-ink transition-opacity duration-200 group-aria-expanded:opacity-0"></span>
-        <span class="h-0.5 bg-ink transition-transform duration-200 group-aria-expanded:-translate-y-1.5 group-aria-expanded:-rotate-45"></span>
-      </span>
-    </button>
+      <button type="button" class="group -mr-2.5 grid size-11 place-items-center lg:hidden" aria-expanded="false" aria-controls="site-menu" aria-label="Menü" data-menu-button data-label-open="Menü" data-label-close="Menü schließen">
+        <span class="flex w-[22px] flex-col gap-1" aria-hidden="true">
+          <span class="h-0.5 bg-ink transition-transform duration-200 group-aria-expanded:translate-y-1.5 group-aria-expanded:rotate-45"></span>
+          <span class="h-0.5 bg-ink transition-opacity duration-200 group-aria-expanded:opacity-0"></span>
+          <span class="h-0.5 bg-ink transition-transform duration-200 group-aria-expanded:-translate-y-1.5 group-aria-expanded:-rotate-45"></span>
+        </span>
+      </button>
+    </div>
   </div>
 
   <div id="site-menu" class="fixed inset-x-0 top-16 bottom-0 z-40 lg:hidden" hidden>
@@ -53,11 +57,10 @@ const isActive = (href: string) => path === href;
         <ul class="flex flex-col">
           {nav.map(item => (
             <li>
-              <a href={item.href} aria-current={isActive(item.id) ? 'page' : undefined} class:list={['flex min-h-12 items-center text-[1.375rem] font-bold', isActive(item.id) ? 'text-accent-deep' : 'text-ink']}>{item.label}</a>
+              <a href={item.href} aria-current={isActive(item.href) ? 'page' : undefined} class:list={['flex min-h-12 items-center text-[1.375rem] font-bold', isActive(item.href) ? 'text-accent-deep' : 'text-ink']}>{item.label}</a>
             </li>
           ))}
         </ul>
-        <a href="/newsletter" class="mt-6 flex min-h-12 items-center justify-center rounded-control bg-ink text-[0.9375rem] font-bold text-paper sm:inline-flex sm:px-8">Newsletter abonnieren</a>
       </nav>
     </div>
   </div>

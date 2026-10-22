@@ -4,14 +4,12 @@ subtitle: Technologie löst vielfältige Probleme. Wir als Anwender müssen es n
 eyebrow: Zukunftsmuseum
 date: 2023-11-11T12:37:00.000Z
 lang: de
-tags:
-  - product
-cover: ~/assets/posts/keine-angst-die-zukunft-ist-super/5af274df-dbc6-4c0a-91d2-26fc29b2c402_750x564.webp
-coverAlt: ""
+cover: ~/assets/posts/keine-angst-die-zukunft-ist-super/keine-angst-die-zukunft-ist-super-5af274df.webp
+coverAlt: Selfie vor der Glasfassade des Zukunftsmuseums
 substackId: 140492117
 ---
 
-![](~/assets/posts/keine-angst-die-zukunft-ist-super/5af274df-dbc6-4c0a-91d2-26fc29b2c402_750x564.webp)
+![](~/assets/posts/keine-angst-die-zukunft-ist-super/keine-angst-die-zukunft-ist-super-5af274df.webp)
 
 Keine Angst, die Zukunft ist super! Ja, im Präsens.
 

@@ -4,16 +4,15 @@ subtitle: Den Überblick bei 100+ KI-Tools verloren? Diese kuratierte Übersicht
 eyebrow: 50 Handys
 date: 2024-10-01T08:58:00.000Z
 lang: de
-tags:
-  - ki
-cover: ~/assets/posts/das-ki-radar-ist-da/b700add1-6009-4228-b2a1-b85d442764ea_8212x8167.webp
-coverAlt: ""
+kiRadar: true
+cover: ~/assets/posts/das-ki-radar-ist-da/das-ki-radar-ist-da-b700add1.webp
+coverAlt: "Erste Version des KI-Radars: KI-Tools in den Bereichen Design, Product, Engineering und Team"
 substackId: 153112699
 ---
 
 Das KI-Radar hat nach [meinem Talk bei Product Tank](/p/product-tank-munich-orga-fitness-in-the-age-of-ai-tool-radar-web-product-development-dovetail-miro-juttu-claude-uizard) eine bemerkenswerte Resonanz unter Produkt-Menschen erfahren: Ich erhielt Dutzende Nachrichten und Kommentare. Und ich werde nicht den Moment vergessen, als ca. 50 Handys hochgingen, um es zu fotografieren 😅
 
-![Das KI-Radar erstmalig gezeigt bei Product Tank München, 17.09.2024. Danke Adrian für das Foto!](~/assets/posts/das-ki-radar-ist-da/19abf703-bf00-400a-86a9-b77a4d81bdf5_2048x1536.webp)
+![Das KI-Radar erstmalig gezeigt bei Product Tank München, 17.09.2024. Danke Adrian für das Foto!](~/assets/posts/das-ki-radar-ist-da/das-ki-radar-ist-da-19abf703.webp)
 *Das KI-Radar erstmalig gezeigt bei Product Tank München, 17.09.2024. Danke Adrian für das Foto!*
 
 Als Reaktion auf dieses große Interesse habe ich diesen Guide verfasst, um eine praktische Anleitung zu bieten, wie das Radar zu lesen ist. Und dank freundlichen Hinweisen aus der Community auf Tools, die im Radar noch fehlten, habe ich es ergänzt.
@@ -32,7 +31,7 @@ Hier ist der Guide, wie das Radar zu lesen ist:
 
 So sieht das KI-Radar in der Version 10/2024 per 1.10.2024 aus. Die hochauflösende Version befindet sich ganz am Ende zum Herunterladen und Teilen unter Kollegen.
 
-![The AI Radar for Product Management & Software Development, 10/2024.](~/assets/posts/das-ki-radar-ist-da/b700add1-6009-4228-b2a1-b85d442764ea_8212x8167.webp)
+![The AI Radar for Product Management & Software Development, 10/2024.](~/assets/posts/das-ki-radar-ist-da/das-ki-radar-ist-da-b700add1.webp)
 *The AI Radar for Product Management & Software Development, 10/2024.*
 
 ### Was hat sich in der Version 10/2024 verändert?
@@ -73,5 +72,5 @@ PS: Hier ist der Guide, wie das Radar zu lesen ist:
 
 PPS: Hier das KI-Radar 10/2024 in voller Auflösung:
 
-![The AI Radar for Product Management & Software Development, 10/2024.](~/assets/posts/das-ki-radar-ist-da/28fdaef2-d5c0-43a6-b4c3-783a382ca75c_8212x8167.webp)
+![The AI Radar for Product Management & Software Development, 10/2024.](~/assets/posts/das-ki-radar-ist-da/das-ki-radar-ist-da-28fdaef2.webp)
 *The AI Radar for Product Management & Software Development, 10/2024.*

@@ -4,16 +4,14 @@ subtitle: KI befähigt die Arbeitnehmer, Aufgaben schneller zu erledigen und die
 eyebrow: Der Stanford-Report
 date: 2024-11-07T13:45:14.163Z
 lang: de
-tags:
-  - ki
-cover: ~/assets/posts/wie-wirkt-sich-ki-auf-dich-aus/4ee5776a-ca02-45db-bcd3-1927d52417dd_724x342.webp
-coverAlt: ""
+cover: ~/assets/posts/wie-wirkt-sich-ki-auf-dich-aus/wie-wirkt-sich-ki-auf-dich-aus-4ee5776a.webp
+coverAlt: "Schaubild: KI verbessert die Produktivität durch bessere Arbeitsergebnisse und schnellere Erledigung"
 substackId: 151103507
 ---
 
 Künstliche Intelligenz befähigt die Arbeitnehmer, Aufgaben schneller zu erledigen und die Qualität ihrer Arbeit zu verbessern. Quelle: [AI Index Report der Stanford University](https://aiindex.stanford.edu/report/)
 
-![](~/assets/posts/wie-wirkt-sich-ki-auf-dich-aus/4ee5776a-ca02-45db-bcd3-1927d52417dd_724x342.webp)
+![](~/assets/posts/wie-wirkt-sich-ki-auf-dich-aus/wie-wirkt-sich-ki-auf-dich-aus-4ee5776a.webp)
 
 Das sind wirklich gute Nachrichten!
 
@@ -26,7 +24,7 @@ Interessanter wird es im folgenden Detail:
 
 KI hilft die Qualifikationslücke zwischen gering und hoch qualifizierten Arbeitnehmern durch die Nutzung derselbigen zu schließen.
 
-![](~/assets/posts/wie-wirkt-sich-ki-auf-dich-aus/ac8b015a-fc98-493c-8f9d-3cb5834804f0_2205x1182.webp)
+![](~/assets/posts/wie-wirkt-sich-ki-auf-dich-aus/wie-wirkt-sich-ki-auf-dich-aus-ac8b015a.webp)
 
 ### Wie ist das Diagramm zu lesen?
 

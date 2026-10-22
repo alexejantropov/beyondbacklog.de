@@ -8,7 +8,7 @@ import { chromium } from 'playwright';
 import { startPreviewServer } from './lib/preview-server.mjs';
 
 const ROUTES = [
-  '/', '/s/ki', '/s/english-only', '/about', '/newsletter', '/newsletter-danke',
+  '/', '/beitraege', '/ki-radar', '/about', '/newsletter', '/newsletter-danke',
   '/p/just-product-2025-ein-abriss', '/p/product-tank-munich-orga-fitness-in-the-age-of-ai-tool-radar-web-product-development-dovetail-miro-juttu-claude-uizard',
   '/p/wie-ki-produktmanager-auf-ein-neues', '/p/work-with-me', '/impressum', '/datenschutz', '/404',
 ];

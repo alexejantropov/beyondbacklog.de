@@ -42,4 +42,10 @@
 /feed
 /s/english-only
 /p/just-product-2025-ein-abriss/comments
+# Former topic pages of this site (categories removed 22.10.2026), 301 to /beitraege
+/s/ki
+/s/product
+# Substack tag pages (linked from the Substack About page), 301 to /beitraege
+/t/ki
+/t/product
 /archive

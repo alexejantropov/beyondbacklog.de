@@ -40,7 +40,7 @@ Diese Daten sind technisch erforderlich, um die Website auszuliefern, ihre Stabi
 
 ## 4. Cookies, Speicherung auf deinem Gerät, Analyse
 
-Diese Website setzt keine Cookies und nutzt keine Analyse- oder Tracking-Dienste. Beim Filtern der Beiträge auf der Startseite wird lediglich die Adresse in deiner Browserzeile angepasst; es werden dabei keine Daten gespeichert oder übermittelt.
+Diese Website setzt keine Cookies und nutzt keine Analyse- oder Tracking-Dienste.
 
 ## 5. YouTube-Videos
 

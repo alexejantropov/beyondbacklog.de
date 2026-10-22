@@ -4,10 +4,8 @@ subtitle: Produktmanager erfüllen eine Führungsrolle ohne der formalen diszipl
 eyebrow: Ohne Macht
 date: 2024-01-01T12:37:00.000Z
 lang: de
-tags:
-  - product
-cover: ~/assets/posts/das-wichtigste-was-ein-produktmanager/photo-1521791136064-7986c2920216.webp
-coverAlt: ""
+cover: ~/assets/posts/das-wichtigste-was-ein-produktmanager/das-wichtigste-was-ein-produktmanager-photo-7986c2920216.webp
+coverAlt: Zwei Hände beim Händeschütteln
 substackId: 140492187
 ---
 
@@ -35,5 +33,5 @@ That said, einen erfolgreichen Start ins Neue Jahr!
   
 In #product #leadership we #trust
 
-![two people shaking hands](~/assets/posts/das-wichtigste-was-ein-produktmanager/photo-1521791136064-7986c2920216.webp)
+![two people shaking hands](~/assets/posts/das-wichtigste-was-ein-produktmanager/das-wichtigste-was-ein-produktmanager-photo-7986c2920216.webp)
 *Photo by Cytonn Photography on Unsplash*

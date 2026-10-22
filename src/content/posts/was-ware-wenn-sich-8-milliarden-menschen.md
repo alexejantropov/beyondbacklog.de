@@ -4,10 +4,8 @@ subtitle: 2024 will ich in Blockchain etwas mehr als in KI eintauchen.Wie das zu
 eyebrow: Nicht Krypto
 date: 2024-01-02T12:37:00.000Z
 lang: de
-tags:
-  - product
-cover: ~/assets/posts/was-ware-wenn-sich-8-milliarden-menschen/photo-1641932269834-af141d2c2017.webp
-coverAlt: ""
+cover: ~/assets/posts/was-ware-wenn-sich-8-milliarden-menschen/was-ware-wenn-sich-8-milliarden-menschen-photo-af141d2c2017.webp
+coverAlt: Verkettete Blöcke mit Bitcoin-Symbolen als Bild für eine Blockchain
 substackId: 140492246
 ---
 
@@ -42,5 +40,5 @@ Und ich rate jedem Produktmanager, Software-Entwickler und Digital-Unternehmer d
   
 Euch wünsche ich viel Vertrauen daran, dass jeder für sich persönlich ein gesundes, glückliches und spannendes Jahr 2024 erleben wird! 🚀😊
 
-![a large array of white cubes with numbers and symbols on them](~/assets/posts/was-ware-wenn-sich-8-milliarden-menschen/photo-1641932269834-af141d2c2017.webp)
+![a large array of white cubes with numbers and symbols on them](~/assets/posts/was-ware-wenn-sich-8-milliarden-menschen/was-ware-wenn-sich-8-milliarden-menschen-photo-af141d2c2017.webp)
 *Photo by Shubham Dhage on Unsplash*

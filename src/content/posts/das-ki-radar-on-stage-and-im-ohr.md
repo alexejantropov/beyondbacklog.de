@@ -4,10 +4,8 @@ subtitle: "Einblicke und Termine zum Jahresendspurt. Heute ein Update in eigener
 eyebrow: Podcast
 date: 2024-12-03T20:40:50.568Z
 lang: de
-tags:
-  - ki
-cover: ~/assets/posts/das-ki-radar-on-stage-and-im-ohr/6d199d9c-c7ec-44aa-873f-fa8bd4ca83ac_1110x579.webp
-coverAlt: ""
+cover: ~/assets/posts/das-ki-radar-on-stage-and-im-ohr/das-ki-radar-on-stage-and-im-ohr-6d199d9c.webp
+coverAlt: Grafik „Welche AI Tools für Produktmanagement nützlich sind? Das KI Radar hilft!“, Alexej Antropov im Gespräch mit Tim
 substackId: 152128905
 ---
 
@@ -25,7 +23,7 @@ Ich freue mich, schon sehr bald beim Push UX & Product Meetup in München einen 
 
 [Hier geht es zum Meetup](https://www.meetup.com/munichuxp/events/304414460/)
 
-![](~/assets/posts/das-ki-radar-on-stage-and-im-ohr/9fc458f4-933e-42a7-abd2-6cb991ede771_600x338.avif)
+![](~/assets/posts/das-ki-radar-on-stage-and-im-ohr/das-ki-radar-on-stage-and-im-ohr-9fc458f4.avif)
 
 ## Product Owner Meetup am 10.12.2024
 
@@ -33,7 +31,7 @@ Eine Woche später geht es online weiter beim Product Owner Meetup mit meinem Vo
 
 [Hier geht es zum Meetup](https://www.meetup.com/de-DE/product-owner-munchen/events/304810428/)
 
-![](~/assets/posts/das-ki-radar-on-stage-and-im-ohr/e99f952f-56b2-4e40-a627-4ae5acc546ed_600x338.avif)
+![](~/assets/posts/das-ki-radar-on-stage-and-im-ohr/das-ki-radar-on-stage-and-im-ohr-e99f952f.avif)
 
 Bei beiden Meet-Ups werde ich übrigens das KI-Radar in seiner neuen Struktur zeigen und die Herleitung erklären. Stay tuned!
 
@@ -51,7 +49,7 @@ Heißt also ganz pragmatisch: klein anfangen, mit KI-Tools experimentieren und l
 
 [Hier geht es zur Folge](https://produktwerker.de/ki-radar-ai-tools-fuer-produktmanagement/)
 
-![](~/assets/posts/das-ki-radar-on-stage-and-im-ohr/6d199d9c-c7ec-44aa-873f-fa8bd4ca83ac_1110x579.webp)
+![](~/assets/posts/das-ki-radar-on-stage-and-im-ohr/das-ki-radar-on-stage-and-im-ohr-6d199d9c.webp)
 
 ## Ich möchte Beyondbacklog.de für Gastartikel öffnen!
 

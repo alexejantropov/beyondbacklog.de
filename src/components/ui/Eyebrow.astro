@@ -1,6 +1,9 @@
 ---
 // Handwritten label above a headline (design decision: Caveat instead of small caps).
-interface Props { as?: 'p' | 'span' | 'div'; class?: string }
-const { as: Tag = 'p', class: className } = Astro.props;
+// Other HTML attributes (lang, id, aria-*) are passed through.
+import type { HTMLAttributes } from 'astro/types';
+
+interface Props extends HTMLAttributes<'p'> { as?: 'p' | 'span' | 'div' }
+const { as: Tag = 'p', class: className, ...attrs } = Astro.props;
 ---
-<Tag class:list={['font-hand text-hand font-semibold text-accent-deep', className]}><slot /></Tag>
+<Tag {...attrs} class:list={['font-hand text-hand font-semibold text-accent-deep', className]}><slot /></Tag>

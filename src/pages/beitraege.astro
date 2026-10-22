@@ -1,15 +1,15 @@
 ---
-// All posts with the tag filter (the Substack /archive; linked from the homepage as "Weitere Beiträge").
+// All posts except the KI-Radar series (/ki-radar), newest first (the Substack /archive; linked from the homepage as "Weitere Beiträge").
 import Layout from '../layouts/Layout.astro';
 import PostGrid from '../components/PostGrid.astro';
 import NewsletterBox from '../components/ui/NewsletterBox.astro';
-import { publishedPosts } from '../lib/posts';
+import { listedPosts } from '../lib/posts';
 import { site } from '../data/site';
 
-const posts = await publishedPosts();
+const posts = await listedPosts();
 ---
 <Layout title={`Alle Beiträge | ${site.name}`} description={`Alle ${posts.length} Beiträge von ${site.author} seit ${site.firstYear}: ${site.tagline}`}>
-  <PostGrid posts={posts} intro={`Alle Beiträge von ${site.author}, neueste zuerst. Filtere nach Thema oder lies einfach von oben nach unten.`} />
+  <PostGrid posts={posts} eagerFirstRow headingLevel="h1" />
   <div class="container-bb pb-20 md:pb-24">
     <NewsletterBox id="email-archive" />
   </div>

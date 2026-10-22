@@ -4,10 +4,8 @@ subtitle: Das hat mich eine junge Gründerin gefragt. Und ich erzählte ihr von 
 eyebrow: Eine Gründerin
 date: 2024-01-15T12:37:07.748Z
 lang: de
-tags:
-  - product
-cover: ~/assets/posts/klarheit-prioritaet-fokus/photo-1643538035490-115617dc1a00.webp
-coverAlt: ""
+cover: ~/assets/posts/klarheit-prioritaet-fokus/klarheit-prioritaet-fokus-photo-115617dc1a00.webp
+coverAlt: Vier Zielscheiben fürs Bogenschießen nebeneinander
 substackId: 140669964
 ---
 
@@ -29,7 +27,7 @@ Meine Antwort war:
 > 
 > Klarheit in deinen Prioritäten.
 
-![a group of arrows that are on a wall](~/assets/posts/klarheit-prioritaet-fokus/photo-1643538035490-115617dc1a00.webp)
+![a group of arrows that are on a wall](~/assets/posts/klarheit-prioritaet-fokus/klarheit-prioritaet-fokus-photo-115617dc1a00.webp)
 *Photo by Remy Gieling on Unsplash*
 
 Zu viele Prioritäten erzeugen oft Hektik und Stress. Nicht wegen der Arbeit oder des Zeitaufwands an sich, sondern meist wegen der Unklarheit über die Wichtigkeit im Kopf.

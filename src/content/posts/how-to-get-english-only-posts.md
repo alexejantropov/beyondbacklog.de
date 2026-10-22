@@ -4,10 +4,8 @@ subtitle: There is a simple way how you can subscribe to English content only. J
 eyebrow: Two steps
 date: 2024-10-01T16:11:57.850Z
 lang: en
-tags:
-  - english-only
-cover: ~/assets/posts/how-to-get-english-only-posts/8007ba5d-518c-4281-b818-af72652cad65_1000x600.webp
-coverAlt: ""
+cover: ~/assets/posts/how-to-get-english-only-posts/how-to-get-english-only-posts-8007ba5d.webp
+coverAlt: Sign with the words ENGLISH ONLY
 substackId: 149669564
 draft: true
 ---
@@ -23,7 +21,7 @@ Consider subscribing to the “🇺🇸 English only” list for free to stay up
 2.  Go to [beyondbacklog.de/account](https://www.beyondbacklog.de/account) make your choice like this:
     
 
-![Choose the “English Only” list in your account settings](~/assets/posts/how-to-get-english-only-posts/2b042a19-7995-43de-9b76-6167ac5cff71_1464x368.webp)
+![Choose the “English Only” list in your account settings](~/assets/posts/how-to-get-english-only-posts/how-to-get-english-only-posts-2b042a19.webp)
 *Choose the “English Only” list in your account settings*
 
 You are done! 💪
@@ -32,5 +30,5 @@ Happy reading!
 
 <p class="signature">Alexej</p>
 
-![English Only, taken from: https://www.linkedin.com/pulse/can-you-ask-employees-speak-english-only-work-wurkplace-limited/](~/assets/posts/how-to-get-english-only-posts/8007ba5d-518c-4281-b818-af72652cad65_1000x600.webp)
+![English Only, taken from: https://www.linkedin.com/pulse/can-you-ask-employees-speak-english-only-work-wurkplace-limited/](~/assets/posts/how-to-get-english-only-posts/how-to-get-english-only-posts-8007ba5d.webp)
 *English Only, taken from: https://www.linkedin.com/pulse/can-you-ask-employees-speak-english-only-work-wurkplace-limited/*

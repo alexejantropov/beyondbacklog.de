@@ -4,10 +4,9 @@ subtitle: Welche KI-Tools kannst Du im Produktmanagement und Softwareentwicklung
 eyebrow: 14 Tools
 date: 2024-10-31T14:51:50.313Z
 lang: de
-tags:
-  - ki
-cover: ~/assets/posts/das-ki-radar-fur-produktmanagement-und-software-entwicklung-11-2024/b05338d1-c8a7-4f8e-9dc7-d8018a385dcc_8212x8167.webp
-coverAlt: ""
+kiRadar: true
+cover: ~/assets/posts/das-ki-radar-fur-produktmanagement-und-software-entwicklung-11-2024/das-ki-radar-fur-produktmanagement-und-software-entwicklung-11-2024-b05338d1.webp
+coverAlt: "KI-Radar 11/2024: KI-Tools in den Bereichen Design, Product, Engineering und Team"
 substackId: 150831857
 ---
 
@@ -34,7 +33,7 @@ Und hier ist der Guide, wie das Radar zu lesen ist:
 
 Dank freundlichen Hinweisen aus der Community sowie auf Basis eigener Recherchen und Experimente, habe ich das KI-Radar ergänzt. So sieht die Version 11/2024 per 1.11.2024 aus. Die hochauflösende Version befindet sich ganz am Ende zum Herunterladen und Teilen unter Kollegen.
 
-![The AI Radar for Product Management & Software Development, 11/2024.](~/assets/posts/das-ki-radar-fur-produktmanagement-und-software-entwicklung-11-2024/b05338d1-c8a7-4f8e-9dc7-d8018a385dcc_8212x8167.webp)
+![The AI Radar for Product Management & Software Development, 11/2024.](~/assets/posts/das-ki-radar-fur-produktmanagement-und-software-entwicklung-11-2024/das-ki-radar-fur-produktmanagement-und-software-entwicklung-11-2024-b05338d1.webp)
 *The AI Radar for Product Management & Software Development, 11/2024.*
 
 ### Was hat sich in der Version 10/2024 verändert?
@@ -112,5 +111,5 @@ PS: hier der Guide, wie das Radar zu lesen ist:
 
 PPS: Hier das KI-Radar 11/2024 in voller Auflösung:
 
-![The AI Radar for Product Management & Software Development, 11/2024](~/assets/posts/das-ki-radar-fur-produktmanagement-und-software-entwicklung-11-2024/49bc20ee-f763-468f-9ba2-f5354fd8acd0_8212x8167.webp)
+![The AI Radar for Product Management & Software Development, 11/2024](~/assets/posts/das-ki-radar-fur-produktmanagement-und-software-entwicklung-11-2024/das-ki-radar-fur-produktmanagement-und-software-entwicklung-11-2024-49bc20ee.webp)
 *The AI Radar for Product Management & Software Development, 11/2024*

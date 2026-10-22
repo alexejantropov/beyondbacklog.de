@@ -4,10 +4,8 @@ subtitle: "Mal ehrlich: sagst Du auch „KI“ und meinst damit „ChatGPT“? I
 eyebrow: Fünf Archetypen
 date: 2024-07-01T18:31:07.887Z
 lang: de
-tags:
-  - ki
-cover: ~/assets/posts/ki-ist-nicht-nur-chatgpt-archetypen-der-ki/b8561108-d8cd-445e-8b57-34088f61e69f_2727x1466.webp
-coverAlt: ""
+cover: ~/assets/posts/ki-ist-nicht-nur-chatgpt-archetypen-der-ki/ki-ist-nicht-nur-chatgpt-archetypen-der-ki-b8561108.webp
+coverAlt: "Schaubild: Künstliche Intelligenz mit Generativer KI, Supervised ML, Computer Vision, Sprachverarbeitung und NLP"
 substackId: 145788003
 ---
 
@@ -34,7 +32,7 @@ Und nun der Reihe nach…
 
 ## **Die 5 Archetypen von Künstlicher Intelligenz**
 
-![5 Archetypen von KI](~/assets/posts/ki-ist-nicht-nur-chatgpt-archetypen-der-ki/b8561108-d8cd-445e-8b57-34088f61e69f_2727x1466.webp)
+![5 Archetypen von KI](~/assets/posts/ki-ist-nicht-nur-chatgpt-archetypen-der-ki/ki-ist-nicht-nur-chatgpt-archetypen-der-ki-b8561108.webp)
 *5 Archetypen von KI*
 
 ### **1) Generative KI**

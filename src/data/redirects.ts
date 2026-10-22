@@ -23,8 +23,12 @@ export const redirects: Redirect[] = [
   { from: '/publish/*', to: '/' },
   { from: '/account/*', to: '/' },
   { from: '/sign-in', to: '/' },
-  // English posts live at /s/english-only.
-  { from: '/p/how-to-get-english-only-posts', to: '/s/english-only' },
+  // Topic pages (Substack section /s/english-only, former /s/ki, /s/product): the site has no
+  // categories any more, all posts are on /beitraege.
+  { from: '/s/*', to: '/beitraege' },
+  // Substack tag pages (/t/ki, /t/product).
+  { from: '/t/*', to: '/beitraege' },
+  { from: '/p/how-to-get-english-only-posts', to: '/beitraege' },
   // /p/<slug>/comments and other sub-pages of a post → the post: handled by collapsePostPath
   // in src/lib/redirects.ts (no rule needed).
 ];

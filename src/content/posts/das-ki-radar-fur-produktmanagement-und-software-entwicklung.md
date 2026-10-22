@@ -4,10 +4,9 @@ subtitle: Den Überblick bei 100+ KI-Tools verloren? Diese kuratierte Übersicht
 eyebrow: Auf einen Blick
 date: 2024-11-01T17:25:00.000Z
 lang: de
-tags:
-  - ki
-cover: ~/assets/posts/das-ki-radar-fur-produktmanagement-und-software-entwicklung/2f2f51da-4d3c-49d7-94dc-035b1cf05822_9292x8780.webp
-coverAlt: ""
+kiRadar: true
+cover: ~/assets/posts/das-ki-radar-fur-produktmanagement-und-software-entwicklung/das-ki-radar-fur-produktmanagement-und-software-entwicklung-2f2f51da.webp
+coverAlt: KI-Radar für Produktmanagement und Software-Entwicklung mit Tool-Logos nach Bereichen
 substackId: 149286757
 ---
 
@@ -103,7 +102,7 @@ Ich lade Dich daher herzlich dazu ein, deine Erfahrungen mit den Tools mit mir z
 
 So sieht das KI-Radar in der Version 01/2025 per 22.01.2025 aus. Die hochauflösende Version befindet sich ganz am Ende zum Herunterladen und Teilen unter Kollegen.
 
-![Das KI-Radar für Produktmanagement & Softwareentwicklung 01/2025](~/assets/posts/das-ki-radar-fur-produktmanagement-und-software-entwicklung/2f2f51da-4d3c-49d7-94dc-035b1cf05822_9292x8780.webp)
+![Das KI-Radar für Produktmanagement & Softwareentwicklung 01/2025](~/assets/posts/das-ki-radar-fur-produktmanagement-und-software-entwicklung/das-ki-radar-fur-produktmanagement-und-software-entwicklung-2f2f51da.webp)
 *Das KI-Radar für Produktmanagement & Softwareentwicklung 01/2025*
 
 Was hat sich verändert? Das habe ich hier aufgeschrieben:
@@ -144,7 +143,7 @@ Ich möchte, dass das KI-Radar der Community stets eine Hilfe und Orientierung b
 
 Sendet mir eure praktischen Erfahrungen, Screenshots und Bildschirmaufnahmen mit den Systemen! Ich werde sie gerne einarbeiten und verbreiten – natürlich nicht ohne euch Credits dafür zu geben.
 
-![Eine schöne Visualisierung erstellt mit napkin.ai :-)](~/assets/posts/das-ki-radar-fur-produktmanagement-und-software-entwicklung/d9f8d110-9182-4eb0-a9a5-5dc914462266_561x419.webp)
+![Eine schöne Visualisierung erstellt mit napkin.ai :-)](~/assets/posts/das-ki-radar-fur-produktmanagement-und-software-entwicklung/das-ki-radar-fur-produktmanagement-und-software-entwicklung-d9f8d110.webp)
 *Eine schöne Visualisierung erstellt mit napkin.ai :-)*
 
 ### Schreibe einen Gastbeitrag!
@@ -163,5 +162,5 @@ PS: Hier das aktuelle KI-Radar 01/2025 in voller Auflösung. Teile es gerne mit 
 
 <p><a class="button" href="/p/das-ki-radar-fur-produktmanagement-und-software-entwicklung">Teilen</a></p>
 
-![Das KI-Radar für Produktmanagement & Softwareentwicklung 01/2025](~/assets/posts/das-ki-radar-fur-produktmanagement-und-software-entwicklung/3b91893a-efb6-4a29-a82b-6337aa3d009e_9292x8780.webp)
+![Das KI-Radar für Produktmanagement & Softwareentwicklung 01/2025](~/assets/posts/das-ki-radar-fur-produktmanagement-und-software-entwicklung/das-ki-radar-fur-produktmanagement-und-software-entwicklung-3b91893a.webp)
 *Das KI-Radar für Produktmanagement & Softwareentwicklung 01/2025*

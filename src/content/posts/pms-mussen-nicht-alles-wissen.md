@@ -4,10 +4,8 @@ subtitle: '"Ich weiß es nicht" und "ich kann es herausfinden" sind valide Antwo
 eyebrow: Ohne Vortäuschen
 date: 2024-01-04T12:37:00.000Z
 lang: de
-tags:
-  - product
-cover: ~/assets/posts/pms-mussen-nicht-alles-wissen/photo-1620247405684-8352d6d7ce09.webp
-coverAlt: ""
+cover: ~/assets/posts/pms-mussen-nicht-alles-wissen/pms-mussen-nicht-alles-wissen-photo-8352d6d7ce09.webp
+coverAlt: Frau zuckt mit offenen Händen ratlos mit den Schultern
 substackId: 140492406
 ---
 
@@ -23,7 +21,7 @@ Seit dem:
 \- wenn ich etwas nicht weiß, sage ich "Ich weiß es nicht“ ...  
 \- ... und „ich kann es herausfinden"  
 
-![woman in black button up long sleeve shirt](~/assets/posts/pms-mussen-nicht-alles-wissen/photo-1620247405684-8352d6d7ce09.webp)
+![woman in black button up long sleeve shirt](~/assets/posts/pms-mussen-nicht-alles-wissen/pms-mussen-nicht-alles-wissen-photo-8352d6d7ce09.webp)
 *Photo by Chris on Unsplash*
 
   

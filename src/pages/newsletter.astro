@@ -12,13 +12,12 @@ const newsletterAlert =
   <section class="container-bb section-y">
     <div class="mx-auto flex max-w-[640px] flex-col gap-6">
       <Eyebrow>Newsletter</Eyebrow>
-      <h1 class="headline text-h1">Neue Beiträge <Stroke>direkt ins Postfach</Stroke>.</h1>
-      <p class="text-lead text-ink/72">{site.tagline} Erfahrungen und Learnings aus 20 Jahren agiler Produktentwicklung, von {site.author}. Unregelmäßig, kostenlos, jederzeit abbestellbar.</p>
+      <h1 class="headline text-h1">{site.newsletterClaim.start} <Stroke>{site.newsletterClaim.highlight}</Stroke>.</h1>
+      <p class="text-lead text-ink/72">{site.tagline} Erfahrungen und Learnings aus 20 Jahren im Game.</p>
       <div id="ungueltig" class={newsletterAlert} role="alert">Bitte gib eine gültige E-Mail-Adresse ein.</div>
       <div id="zu-viele" class={newsletterAlert} role="alert">Zu viele Versuche. Bitte probier es in ein paar Minuten noch einmal.</div>
       <div id="fehler" class={newsletterAlert} role="alert">Das hat nicht geklappt. Bitte versuch es später noch einmal.</div>
       <NewsletterForm id="email-page" />
-      <p class="text-sm text-ink/60">Nach dem Absenden bekommst du eine E-Mail mit einem Bestätigungslink. Erst mit dem Klick darauf und der Bestätigung auf der folgenden Seite bist du angemeldet (Double-Opt-In). Versand über Resend, Details in der <a href="/datenschutz" class="underline underline-offset-[3px]">Datenschutzerklärung</a>.</p>
     </div>
   </section>
 </Layout>

@@ -4,11 +4,10 @@ subtitle: "Aus Sicht von uns in der Produktentwicklung staut sich gefüllt die A
 eyebrow: Drei Fragen
 date: 2024-09-08T18:52:03.196Z
 lang: de
-tags:
-  - product
-cover: ~/assets/posts/was-machen-die-in-der-entwicklung/56ea11fb-2c89-45c2-9753-8dcce56bc88d_612x612.webp
-coverAlt: ""
+cover: ~/assets/posts/was-machen-die-in-der-entwicklung/was-machen-die-in-der-entwicklung-56ea11fb.webp
+coverAlt: Nachdenklicher Emoji mit Brille und Hand am Kinn
 substackId: 141227620
+imported: false
 ---
 
 Kennst du die Situation? Du arbeitest und arbeitest, releast Neuerungen, Bugs werden gefixt, Kunden befragt, Daten analysiert, … und beim nächsten Gespräch mit Kollegen aus Business-Abteilungen oder über Hören-Sagen kommt die Frage:
@@ -38,7 +37,7 @@ Jetzt bin ich weniger emotional. Ich habe gelernt, was hinter der Frage steckt:
 
 Also widmen uns gleich mal allen drei Fragen und schauen uns an, wie du in der Situation jeweils damit umgehen kannst.
 
-![Quelle: k103.iheart.com](~/assets/posts/was-machen-die-in-der-entwicklung/56ea11fb-2c89-45c2-9753-8dcce56bc88d_612x612.webp)
+![Quelle: k103.iheart.com](~/assets/posts/was-machen-die-in-der-entwicklung/was-machen-die-in-der-entwicklung-56ea11fb.webp)
 *Quelle: k103.iheart.com*
 
 ## „Was macht ihr eigentlich?“
@@ -126,6 +125,4 @@ Also, bleib dran & mach einfach!
 -   🔗 *Teile bei LinkedIn, in WhatsApp, Slack oder Teams*
     
 
-*📮 Und sende mir gerne Dein Feedback an [beyondbacklog@substack.com](http://beyondbacklog@substack.com/).*
-
-* * *
+*📮 Und sende mir gerne Dein Feedback an [alexej@beyondbacklog.de](mailto:alexej@beyondbacklog.de).*

@@ -3,6 +3,7 @@
 /beitraege
 /datenschutz
 /impressum
+/ki-radar
 /newsletter
 /newsletter-bestaetigt
 /newsletter-danke
@@ -24,7 +25,6 @@
 /p/embrace-uncertainty-be-bold-to-ask
 /p/fomodance-vom-prototypen-uber-mvp
 /p/german-angst-vor-kuenstlicher-intelligenz
-/p/how-to-get-english-only-posts
 /p/if-you-failed-at-agile-you-will-fail-at-ai
 /p/ist-es-safe-enough-to-try-oder-hat
 /p/just-product-2025-ein-abriss
@@ -43,6 +43,3 @@
 /p/wie-ki-produktmanager-auf-ein-neues
 /p/wie-wirkt-sich-ki-auf-dich-aus
 /p/work-with-me
-/s/english-only
-/s/ki
-/s/product

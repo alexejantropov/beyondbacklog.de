@@ -4,10 +4,8 @@ subtitle: In Momenten, wenn ich mich unsichere fühle, ob ich "etwas darf", erin
 eyebrow: Ohne Erlaubnis
 date: 2023-10-22T11:37:00.000Z
 lang: de
-tags:
-  - product
-cover: ~/assets/posts/embrace-uncertainty-be-bold-to-ask/photo-1519599189038-58e6fc7a060d.webp
-coverAlt: ""
+cover: ~/assets/posts/embrace-uncertainty-be-bold-to-ask/embrace-uncertainty-be-bold-to-ask-photo-58e6fc7a060d.webp
+coverAlt: Wanderer steht auf einem schmalen Felsvorsprung über dem Meer
 substackId: 140491849
 ---
 
@@ -53,5 +51,5 @@ Am Ende war sie dankbar, die Blockaden in ihrem Kopf gelöst und schien einen Pl
   
 In Momenten, wenn ich mich unsichere fühle, ob ich "etwas darf", erinnere ich mich an diesen Satz "Embrace uncertainty. Be bold to ask for forgiveness instead of permission." und handle einfach. Das war noch nie verkehrt.
 
-![man standing on rock in the middle of clip](~/assets/posts/embrace-uncertainty-be-bold-to-ask/photo-1519599189038-58e6fc7a060d.webp)
+![man standing on rock in the middle of clip](~/assets/posts/embrace-uncertainty-be-bold-to-ask/embrace-uncertainty-be-bold-to-ask-photo-58e6fc7a060d.webp)
 *Photo by Michael Shannon on Unsplash*

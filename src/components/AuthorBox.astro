@@ -1,0 +1,24 @@
+---
+// Box under every post (design decision 22.10.2026): about the author first, subscribing second.
+// The bio is site.authorBio, the same text as the homepage closing.
+import AuthorPortrait from './AuthorPortrait.astro';
+import Button from './ui/Button.astro';
+import Eyebrow from './ui/Eyebrow.astro';
+import NewsletterInline from './ui/NewsletterInline.astro';
+import { site } from '../data/site';
+
+interface Props { id: string; class?: string }
+const { id, class: className } = Astro.props;
+---
+<aside class:list={['rounded-box border border-ink/8 bg-tint p-6 md:p-8', className]} aria-labelledby={`${id}-title`}>
+  <div class="flex flex-col gap-6 sm:flex-row sm:items-center sm:gap-8">
+    <AuthorPortrait layout="box" />
+    <div class="flex flex-col gap-2.5">
+      <Eyebrow>Über den Autor</Eyebrow>
+      <p id={`${id}-title`} class="headline text-2xl tracking-[-0.02em]">{site.author}</p>
+      <p class="text-base leading-relaxed text-ink/72">{site.authorBio}</p>
+      <Button href="/about" variant="link" class="self-start">Mehr über mich →</Button>
+    </div>
+  </div>
+  <NewsletterInline id={id} class="mt-6" />
+</aside>

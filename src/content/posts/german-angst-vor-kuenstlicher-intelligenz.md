@@ -4,21 +4,19 @@ subtitle: "Was ich davon halte? Nichts! Und: Warum es jetzt wichtig ist, sich mi
 eyebrow: Die BCG-Studie
 date: 2024-07-03T15:57:14.793Z
 lang: de
-tags:
-  - ki
-cover: ~/assets/posts/german-angst-vor-kuenstlicher-intelligenz/photo-1584475784921-d9dbfd9d17ca.webp
-coverAlt: ""
+cover: ~/assets/posts/german-angst-vor-kuenstlicher-intelligenz/german-angst-vor-kuenstlicher-intelligenz-photo-d9dbfd9d17ca.webp
+coverAlt: Leere Toilettenpapierrolle mit der Aufschrift „Don’t panic“
 substackId: 146197641
 ---
 
 Kürzlich habe ich diese Nachricht gelesen:
 
-![Artikel bei manager-magazin.de, 26.06.2024](~/assets/posts/german-angst-vor-kuenstlicher-intelligenz/de973682-be97-4e56-8439-d8f77eb8e63a_1598x494.webp)
+![Artikel bei manager-magazin.de, 26.06.2024](~/assets/posts/german-angst-vor-kuenstlicher-intelligenz/german-angst-vor-kuenstlicher-intelligenz-de973682.webp)
 *Artikel bei manager-magazin.de, 26.06.2024*
 
 „Typisch deutsch“, das dachte ich mir in diesem Moment. Wir haben am meisten von allen Angst vor Neuem. Die folgende Grafik zeigt es deutlich:
 
-![BCG-Studie. Grafik entnommen aus manager-magazin.de, 26.06.2024](~/assets/posts/german-angst-vor-kuenstlicher-intelligenz/fae964dd-a921-4f50-98e7-f88ecfd08088_1408x1176.webp)
+![BCG-Studie. Grafik entnommen aus manager-magazin.de, 26.06.2024](~/assets/posts/german-angst-vor-kuenstlicher-intelligenz/german-angst-vor-kuenstlicher-intelligenz-fae964dd.webp)
 *BCG-Studie. Grafik entnommen aus manager-magazin.de, 26.06.2024*
 
 ## Was steckt hinter der Angst der Deutschen vor KI?
@@ -31,7 +29,7 @@ In der Studie „AI at Work“ wurden rund 13.000 Führungskräfte, Managerinnen
 
 TL;DR: nicht viel!
 
-![yellow and black tissue roll](~/assets/posts/german-angst-vor-kuenstlicher-intelligenz/photo-1584475784921-d9dbfd9d17ca.webp)
+![yellow and black tissue roll](~/assets/posts/german-angst-vor-kuenstlicher-intelligenz/german-angst-vor-kuenstlicher-intelligenz-photo-d9dbfd9d17ca.webp)
 *Photo by Jas Min on Unsplash*
 
 Ich bin der Meinung, es ist entscheidend, sich mit KI (immer stärker) vertraut zu machen und die Chancen dieser Technologie zu erkennen, um nicht von der Entwicklung abgehängt zu werden.
@@ -42,7 +40,7 @@ Da mein beruflicher home turf die Produkt- und Softwareentwicklung ist, habe ich
 
 Darüber darf es eigentlich keine andere Meinung geben. Ich bin seit 2006 gut mit der Entscheidung gefahren, während des Abiturs beruflich „irgendwas mit Internet“ in einem Start-up zu machen. Fast 20 Jahre später bin ich derselben Meinung: Es lohnt sich, die Nutzungsmöglichkeiten in unserem Berufsfeld zu erforschen und zu entdecken. Denn heute wenden in der Produkt- und Softwareentwicklung erst 23 % bzw. 13 % der Unternehmen generative KI regelmäßig an:
 
-![entnommen aus „The state of AI in early 2024“ (McKinsey)](~/assets/posts/german-angst-vor-kuenstlicher-intelligenz/354037f0-cd8f-46d9-8359-299c8ddcb175_1678x452.webp)
+![entnommen aus „The state of AI in early 2024“ (McKinsey)](~/assets/posts/german-angst-vor-kuenstlicher-intelligenz/german-angst-vor-kuenstlicher-intelligenz-354037f0.webp)
 *entnommen aus „The state of AI in early 2024“ (McKinsey)*
 
 Das bedeutet im Umkehrschluss: die meisten Product Teams ziehen noch keine Vorteile aus KI bei ihrer täglichen Arbeit.
@@ -74,7 +72,7 @@ Obwohl die Einführung von generativer KI in Unternehmen sich verdoppelt hat ([M
 
 Erfahrungsberichte über Projekte, die es über die Experimentierphase hinaus in die Welt schaffen, gibt es bislang wenige. Und solche, die es in die viralen Schlagzeilen schaffen, sind nicht selten hochkarätige Fehlschläge, wie das Chatbot-Debakel bei McDonald’s.
 
-![Artikel bei techdirt.com, 26.06.2024](~/assets/posts/german-angst-vor-kuenstlicher-intelligenz/23ab196e-1f4d-49ad-b3b8-0e60bc64b2e4_1294x116.webp)
+![Artikel bei techdirt.com, 26.06.2024](~/assets/posts/german-angst-vor-kuenstlicher-intelligenz/german-angst-vor-kuenstlicher-intelligenz-23ab196e.webp)
 *Artikel bei techdirt.com, 26.06.2024*
 
 Folglich steigt die Skepsis und in einigen Fällen sind Budgetkürzungen für KI-Initiativen die Folge. Die anfängliche Begeisterung weicht einer nüchternen Management-Bewertung der tatsächlichen Möglichkeiten und Herausforderungen.

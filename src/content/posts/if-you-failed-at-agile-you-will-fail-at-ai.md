@@ -4,10 +4,8 @@ subtitle: Warum das agile Mindset über Erfolg oder Scheitern bei KI entscheidet
 eyebrow: Jim Highsmith
 date: 2024-11-10T13:47:59.626Z
 lang: de
-tags:
-  - ki
-cover: ~/assets/posts/if-you-failed-at-agile-you-will-fail-at-ai/93b9a5e8-0b4a-4eba-919e-cf0b72f48636_1280x686.webp
-coverAlt: ""
+cover: ~/assets/posts/if-you-failed-at-agile-you-will-fail-at-ai/if-you-failed-at-agile-you-will-fail-at-ai-93b9a5e8.webp
+coverAlt: "Zeichnung: Roboter mit Sprechblase „If you fail at Agile you’ll fail at AI“, daneben Team, Produkt und Kreislauf-Symbole"
 substackId: 151322388
 ---
 
@@ -28,12 +26,12 @@ Ich finde, das trifft für beides zu:
 
 [Jim Highsmith](https://www.linkedin.com/in/jhighsmith/) hat darüber diesen Post bei LinkedIn veröffentlicht:
 
-![If you failed at Agile, you will fail at AI - Post von Jim Highsmith](~/assets/posts/if-you-failed-at-agile-you-will-fail-at-ai/92fa78be-6a90-482b-98cf-7ed0d0a3ce6e_567x211.webp)
+![If you failed at Agile, you will fail at AI - Post von Jim Highsmith](~/assets/posts/if-you-failed-at-agile-you-will-fail-at-ai/if-you-failed-at-agile-you-will-fail-at-ai-92fa78be.webp)
 *If you failed at Agile, you will fail at AI - Post von Jim Highsmith*
 
 Agile Methoden sind auf Flexibilität, kontinuierliche Verbesserung und Kundenorientierung ausgerichtet. Sie sind nicht nur für die Softwareentwicklung, sondern auch für die erfolgreiche Implementierung von KI von entscheidender Bedeutung. Der unvorhersehbare Charakter der technologischen Fortschritte verbunden mit der bisher unbekannten Dynamik erfordert eine Kultur, die schnelle Anpassung und iteratives Lernen fördert. Ohne die Fähigkeit, auf unvorhergesehene Herausforderungen zu reagieren, werden KI-Projekte wahrscheinlich stagnieren oder scheitern.
 
-![Quelle: Stuart Young](~/assets/posts/if-you-failed-at-agile-you-will-fail-at-ai/93b9a5e8-0b4a-4eba-919e-cf0b72f48636_1280x686.webp)
+![Quelle: Stuart Young](~/assets/posts/if-you-failed-at-agile-you-will-fail-at-ai/if-you-failed-at-agile-you-will-fail-at-ai-93b9a5e8.webp)
 *Quelle: Stuart Young*
 
   

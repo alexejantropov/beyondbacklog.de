@@ -4,19 +4,16 @@ import Hero from '../components/Hero.astro';
 import PostGrid from '../components/PostGrid.astro';
 import LinkedInFeed from '../components/LinkedInFeed.astro';
 import AboutClosing from '../components/AboutClosing.astro';
-import NewsletterBox from '../components/ui/NewsletterBox.astro';
-import { publishedPosts } from '../lib/posts';
+import { listedPosts } from '../lib/posts';
 import { website } from '../lib/structuredData';
 
-const posts = await publishedPosts();
+// The KI-Radar series has its own page (/ki-radar) and is not listed here.
+const posts = await listedPosts();
 const [latest, ...rest] = posts;
 ---
 <Layout structuredData={website(Astro.site!.href)} ogImage={latest?.data.cover}>
   {latest && <Hero latest={latest} />}
-  <PostGrid posts={rest} limit={6} filter={false} eyebrow="Neueste Beiträge" heading="Frisch aus dem Backlog." more={{ href: '/beitraege', label: `Weitere Beiträge (${posts.length}) →` }} />
+  <PostGrid posts={rest} limit={6} eyebrow="Neueste Beiträge" heading="Frisch aus dem Backlog." more={{ href: '/beitraege', label: `Weitere Beiträge (${posts.length}) →` }} />
   <LinkedInFeed />
   <AboutClosing />
-  <div class="container-bb py-16 md:py-20">
-    <NewsletterBox id="email-home" />
-  </div>
 </Layout>

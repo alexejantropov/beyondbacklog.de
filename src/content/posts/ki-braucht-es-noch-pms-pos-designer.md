@@ -4,11 +4,10 @@ subtitle: "Wie wird KI die Produktentwicklung verändern? Braucht es uns noch? G
 eyebrow: Jein
 date: 2024-08-23T10:38:56.653Z
 lang: de
-tags:
-  - ki
-cover: ~/assets/posts/ki-braucht-es-noch-pms-pos-designer/f09f97a1-5f85-4248-b9ec-295a6b0f4130_1024x1024.webp
-coverAlt: ""
+cover: ~/assets/posts/ki-braucht-es-noch-pms-pos-designer/ki-braucht-es-noch-pms-pos-designer-f09f97a1.webp
+coverAlt: Humanoider Roboter arbeitet an einem Schreibtisch mit Laptop
 substackId: 146626446
+imported: false
 ---
 
 KI hier, KI dort, KI überall. KI verändert die Produkt- und Softwareentwicklung. Aber wie genau?
@@ -24,12 +23,12 @@ KI hier, KI dort, KI überall. KI verändert die Produkt- und Softwareentwicklun
 
 **Ja,** es werden PMs/POs, Designer und Engineers gebraucht. Denn es wird eher mehr Software-Systeme, Integrationen und Endgerätevarianten als weniger geben, die wir betreuen und weiterentwickeln müssen.
 
-![woman wearing black t-shirt holding white computer keyboard](~/assets/posts/ki-braucht-es-noch-pms-pos-designer/photo-1569012871812-f38ee64cd54c.webp)
+![woman wearing black t-shirt holding white computer keyboard](~/assets/posts/ki-braucht-es-noch-pms-pos-designer/ki-braucht-es-noch-pms-pos-designer-photo-f38ee64cd54c.webp)
 *Photo by Kelly Sikkema on Unsplash*
 
 **Und nein,** solche, die sich als User Story Schreiberlinge und Backlog Manager bzw. Pixel-Schubser oder nur Coder verstehen, wird es nicht brauchen. Ehrlich gesagt, braucht die moderne digitale Produktentwicklung sie in dieser Form heute auch schon nicht.
 
-![Image by StableDiffusionXL: a photo-realistic picture of AI impacting product development discipline](~/assets/posts/ki-braucht-es-noch-pms-pos-designer/f09f97a1-5f85-4248-b9ec-295a6b0f4130_1024x1024.webp)
+![Image by StableDiffusionXL: a photo-realistic picture of AI impacting product development discipline](~/assets/posts/ki-braucht-es-noch-pms-pos-designer/ki-braucht-es-noch-pms-pos-designer-f09f97a1.webp)
 *Image by StableDiffusionXL: a photo-realistic picture of AI impacting product development discipline*
 
 ## Doch wie wird KI die Jobs in der Produkt- und Softwareentwicklung beeinflussen?
@@ -74,7 +73,7 @@ Zu glauben, dass wir in der Produktentwicklung nicht betroffen seien, ist mir pe
 -   Wie kann ich kosteneffektiver und risikoärmer für das Geschäft innovieren?
     
 
-![Mensch und Maschine, Hand in Hand.](~/assets/posts/ki-braucht-es-noch-pms-pos-designer/ca910c42-e337-41cb-925f-688c6ade3c09_1792x1024.webp)
+![Mensch und Maschine, Hand in Hand.](~/assets/posts/ki-braucht-es-noch-pms-pos-designer/ki-braucht-es-noch-pms-pos-designer-ca910c42.webp)
 *Mensch und Maschine, Hand in Hand.*
 
 Deswegen will ich, dass Du und ich zu denjenigen gehören, die die Arbeitswelt der agilen Produktentwicklung im Digitalumfeld mitgestalten. Dann verändert nicht die KI unsere Arbeit, sondern wir nutzen die KI, um unsere Arbeitsweise zu verändern. Und das zum Besseren. Für Kunden, fürs Business, für uns selber.
@@ -87,7 +86,7 @@ Der [AI Index Report der Stanford University](https://aiindex.stanford.edu/repor
 
 Außerdem sei das Potenzial, die Qualifikationslücke zwischen gering und hoch qualifizierten Arbeitnehmern durch KI-Nutzung zu schließen, riesig:
 
-![KI hilft weniger qualifizierten Arbeitskräften, ähnlich gute Leistungen zu erbringen wie höher qualifizierteren Fachkräften. Quelle: AI Index Report 2024, Stanford University](~/assets/posts/ki-braucht-es-noch-pms-pos-designer/a19c9990-e2ed-4f15-9193-f390c5cfbe20_1960x1056.webp)
+![KI hilft weniger qualifizierten Arbeitskräften, ähnlich gute Leistungen zu erbringen wie höher qualifizierteren Fachkräften. Quelle: AI Index Report 2024, Stanford University](~/assets/posts/ki-braucht-es-noch-pms-pos-designer/ki-braucht-es-noch-pms-pos-designer-a19c9990.webp)
 *KI hilft weniger qualifizierten Arbeitskräften, ähnlich gute Leistungen zu erbringen wie höher qualifizierteren Fachkräften. Quelle: AI Index Report 2024, Stanford University*
 
 Die lernwilligen und experimentierfreudigen Jungspunde bekommen damit die Chance, den Erfahrungsvorsprung der alten Hasen für gewisse Aufgaben fast zu egalisieren. Große Chance für alle Young Professionals. Und wichtig zu verstehen für alle erfahrenen Fachkräfte: Es ist jetzt die falsche Zeit, um sich auf dem reinen Erfahrungsschatz auszuruhen!
@@ -129,6 +128,6 @@ PS: Ich will meine Gedanken dazu, wie PMs/POs, Designer und Entwickler für welc
 -   🔗 *Teile bei LinkedIn, in WhatsApp, Slack oder Teams*
     
 
-*📮 Und sende mir gerne Dein Feedback an [beyondbacklog@substack.com](http://beyondbacklog@substack.com/).*
+*📮 Und sende mir gerne Dein Feedback an [alexej@beyondbacklog.de](mailto:alexej@beyondbacklog.de).*
 
 [^1]: Navigating the Jagged Technological Frontier: Field Experimental Evidence of the Effects of AI on Knowledge Worker Productivity and Quality (https://www.hbs.edu/ris/Publication%20Files/24-013\_d9b45b68-9e74-42d6-a1c6-c72fb70c7282.pdf in: https://aiindex.stanford.edu/report/)

@@ -1,22 +1,25 @@
 ---
-// Closing section of the homepage: author photo, handwritten greeting, short bio (design variant 2).
+// Closing section of the homepage: author photo, handwritten greeting, short bio (design variant 2)
+// and the newsletter sign-up as part of it, like the author box under posts (decision 22.10.2026).
 import Eyebrow from './ui/Eyebrow.astro';
 import AuthorPortrait from './AuthorPortrait.astro';
 import Stroke from './ui/Stroke.astro';
 import Button from './ui/Button.astro';
+import NewsletterInline from './ui/NewsletterInline.astro';
 import { site } from '../data/site';
 ---
 <section class="border-t border-ink/8">
   <div class="container-bb section-y">
-    <div class="grid items-center gap-10 lg:grid-cols-[minmax(0,1fr)_420px] lg:gap-[72px]">
+    <div class="grid items-center gap-10 md:grid-cols-[minmax(0,1fr)_280px] md:gap-12 lg:grid-cols-[minmax(0,1fr)_420px] lg:gap-[72px]">
       <div class="flex flex-col gap-5">
         <Eyebrow class="text-[2.25rem] md:text-[2.75rem]">Hallo, ich bin Alexej.</Eyebrow>
         <h2 class="headline text-h2">Ich schreibe über <Stroke>Produktentwicklung und KI</Stroke>, aus 20 Jahren Praxis.</h2>
-        <p class="max-w-[600px] text-lead text-ink/72">Interim Product Manager, Co-Autor des Agile Product Manifesto, Lehrbeauftragter für KI-Projekte. Hier teile ich, was in Produktteams wirklich funktioniert. Handwerk, Struktur, Tools statt Hype.</p>
+        <p class="max-w-[600px] text-lead text-ink/72">{site.authorBio}</p>
         <div class="flex flex-col gap-3 sm:flex-row sm:flex-wrap">
           <Button href="/about" block>Mehr über mich</Button>
           <Button href={site.workWithMeUrl} variant="outline" block>Work with me</Button>
         </div>
+        <NewsletterInline id="email-home" class="mt-3 max-w-[540px]" />
       </div>
       <AuthorPortrait layout="home" />
     </div>

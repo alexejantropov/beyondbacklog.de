@@ -4,10 +4,8 @@ subtitle: The Agile Product Manifesto is a helpful guide to mastering agile prod
 eyebrow: The values
 date: 2023-06-01T04:00:54.431Z
 lang: en
-tags:
-  - english-only
-cover: ~/assets/posts/agile-product-manifesto-skills-product-manager-1/6d9989cd-4030-45f8-8b61-38cb4aef298d_4752x3168.webp
-coverAlt: ""
+cover: ~/assets/posts/agile-product-manifesto-skills-product-manager-1/agile-product-manifesto-skills-product-manager-1-6d9989cd.webp
+coverAlt: Pomeranian dog wearing glasses and a sweater, working on a tablet
 substackId: 122631500
 ---
 
@@ -32,7 +30,7 @@ The manifesto begins with a powerful statement:
 
 As a product manager, the role is instrumental in fulfilling this purpose. You are the bridge between the people (customers, end-users & stakeholders), business, and development teams, driving the creation and adaption of products that bring value to the world.
 
-![Agile Product Manifesto. Helping teams create value sooner.](~/assets/posts/agile-product-manifesto-skills-product-manager-1/2784632d-bad2-4d1b-8e3f-8b4ae4eea59c_1200x860.webp)
+![Agile Product Manifesto. Helping teams create value sooner.](~/assets/posts/agile-product-manifesto-skills-product-manager-1/agile-product-manifesto-skills-product-manager-1-2784632d.webp)
 *agileproductmanifesto.com published on June, 1st, 2022.*
 
 ## 🔑 The Values: Embracing What Truly Matters
@@ -79,7 +77,7 @@ While it’s a good idea to start with an assumption, as a product manager, it�
 
 As a data-driven product manager, you must have strong analytical skills to identify causal links and measure the impact of your decisions as well as the success of your product. Proficiency in collecting, analyzing, and interpreting data allows you to make informed decisions based on evidence and insights. This skill empowers you to track key performance indicators (KPIs), conduct A/B tests, and iterate on your product strategy for continuous improvement by understanding the difference between correlation and causality.
 
-![Photo by Cookie the Pom on Unsplash](~/assets/posts/agile-product-manifesto-skills-product-manager-1/6d9989cd-4030-45f8-8b61-38cb4aef298d_4752x3168.webp)
+![Photo by Cookie the Pom on Unsplash](~/assets/posts/agile-product-manifesto-skills-product-manager-1/agile-product-manifesto-skills-product-manager-1-6d9989cd.webp)
 *Photo by Cookie the Pom on Unsplash*
 
 ## 🤝 Reflect and Thrive!

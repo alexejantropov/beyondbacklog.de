@@ -1,7 +1,6 @@
 import { defineCollection } from 'astro:content';
 import { file, glob } from 'astro/loaders';
 import { z } from 'astro/zod';
-import { tagSlugs } from './data/site';
 
 // Posts: one Markdown file per post in src/content/posts/<slug>.md, written by
 // scripts/import-substack.mjs from the Substack backup and edited by hand afterwards.
@@ -17,9 +16,10 @@ const posts = defineCollection({
       eyebrow: z.string().default(''),
       date: z.coerce.date(),
       lang: z.enum(['de', 'en']).default('de'),
-      tags: z.array(z.enum(tagSlugs)).default([]),
       cover: image().optional(),
       coverAlt: z.string().default(''),
+      /** Part of the KI-Radar series: listed on /ki-radar instead of /beitraege and the homepage. */
+      kiRadar: z.boolean().default(false),
       /** Substack post id, kept for traceability. */
       substackId: z.number().optional(),
       /** Substack "page" (e.g. /p/work-with-me): not a post, not in lists or the feed. */

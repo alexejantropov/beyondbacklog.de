@@ -4,7 +4,7 @@
 // No LinkedIn embed, no tracking: the buttons link to the post on LinkedIn.
 import { getCollection } from 'astro:content';
 import { Image } from 'astro:assets';
-import author from '~/assets/site/author.jpg';
+import { authorPhoto as author } from '../data/images';
 import Eyebrow from './ui/Eyebrow.astro';
 import Stroke from './ui/Stroke.astro';
 import { site } from '../data/site';
@@ -14,18 +14,20 @@ const posts = (await getCollection('linkedin', p => !p.data.draft)).sort((a, b) 
 // Labels only when the bar is wide enough for all three (container query); below that icons only.
 const action = 'inline-flex min-h-11 min-w-11 items-center justify-center gap-2 rounded-control px-3 text-[0.8125rem] font-bold whitespace-nowrap text-ink/70 transition-colors hover:bg-tint hover:text-ink';
 const label = 'hidden @[24rem]:inline';
+const follow = 'min-h-12 items-center gap-2.5 rounded-control bg-ink px-6 text-sm font-bold whitespace-nowrap text-paper transition-colors hover:bg-accent-deep';
 const linkedinIcon = 'M20.45 20.45h-3.56v-5.57c0-1.33-.03-3.04-1.85-3.04-1.86 0-2.14 1.45-2.14 2.94v5.67H9.34V9h3.42v1.56h.05c.48-.9 1.64-1.85 3.37-1.85 3.6 0 4.27 2.37 4.27 5.46v6.28zM5.34 7.43a2.07 2.07 0 1 1 0-4.13 2.07 2.07 0 0 1 0 4.13zM7.12 20.45H3.56V9h3.56v11.45zM22.22 0H1.77C.79 0 0 .77 0 1.73v20.54C0 23.23.79 24 1.77 24h20.45c.98 0 1.78-.77 1.78-1.73V1.73C24 .77 23.2 0 22.22 0z';
 ---
 {posts.length > 0 && (
   <section class="border-y border-ink/8 bg-white" aria-labelledby="linkedin-title">
+    <!-- Follow button: next to the heading from md (measured: fits from 700px), below the cards on
+         smaller screens. Rendered at both spots and shown at one, so focus order matches what is seen. -->
     <div class="container-bb section-y flex flex-col gap-7 md:gap-8">
-      <div class="flex flex-wrap items-end justify-between gap-6">
+      <div class="flex items-end justify-between gap-6">
         <div class="flex flex-col gap-3">
           <Eyebrow>Aktuell auf LinkedIn</Eyebrow>
           <h2 id="linkedin-title" class="headline text-h2">Kurz gedacht, <Stroke>laut gesagt</Stroke>.</h2>
-          <p class="max-w-[560px] text-lead text-ink/70">Zwischen den Ausgaben schreibe ich auf LinkedIn. Die neuesten Posts, ohne Login lesbar.</p>
         </div>
-        <a href={site.linkedinUrl} target="_blank" rel="noopener noreferrer" class="inline-flex min-h-12 items-center gap-2.5 rounded-control bg-ink px-6 text-sm font-bold whitespace-nowrap text-paper transition-colors hover:bg-accent-deep">
+        <a href={site.linkedinUrl} target="_blank" rel="noopener noreferrer" class:list={[follow, 'hidden md:inline-flex']}>
           <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d={linkedinIcon} /></svg>
           Auf LinkedIn folgen
         </a>
@@ -59,6 +61,10 @@ const linkedinIcon = 'M20.45 20.45h-3.56v-5.57c0-1.33-.03-3.04-1.85-3.04-1.86 0-
           </li>
         ))}
       </ul>
+      <a href={site.linkedinUrl} target="_blank" rel="noopener noreferrer" class:list={[follow, 'inline-flex self-start md:hidden']}>
+        <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d={linkedinIcon} /></svg>
+        Auf LinkedIn folgen
+      </a>
     </div>
   </section>
 )}

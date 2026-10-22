@@ -4,10 +4,9 @@ subtitle: Zum Jahresende bekommt das KI-Radars eine neue Struktur zur Einordnung
 eyebrow: Statt Rollen
 date: 2024-12-17T20:30:21.274Z
 lang: de
-tags:
-  - ki
-cover: ~/assets/posts/das-ki-radar-struktur-update-122024/99d3557a-3419-4aab-afae-5821fd4e4c23_9292x8780.webp
-coverAlt: ""
+kiRadar: true
+cover: ~/assets/posts/das-ki-radar-struktur-update-122024/das-ki-radar-struktur-update-122024-99d3557a.webp
+coverAlt: "KI-Radar mit neuer Struktur: Bereiche von Market Research bis Leadership & Communication"
 substackId: 151314336
 ---
 
@@ -26,7 +25,7 @@ Long story short: ja, es wäre hilfreicher!
 
 Darum, et voila! Das KI-Radar für Produktmanagement & Softwareentwicklung in seiner neuen Struktur:
 
-![Das KI-Radar für Produktmanagement & Softwareentwicklung 12/2024](~/assets/posts/das-ki-radar-struktur-update-122024/99d3557a-3419-4aab-afae-5821fd4e4c23_9292x8780.webp)
+![Das KI-Radar für Produktmanagement & Softwareentwicklung 12/2024](~/assets/posts/das-ki-radar-struktur-update-122024/das-ki-radar-struktur-update-122024-99d3557a.webp)
 *Das KI-Radar für Produktmanagement & Softwareentwicklung 12/2024*
 
 ## Warum die neue Struktur?
@@ -39,7 +38,7 @@ Genau deswegen halte ich es für viel sinnvoller, das Radar nun nach Aufgabenber
 
 Dual Track Agile ist ein Konzept, das zwei essentielle Tracks der Produktentwicklung gleichzeitig betont: Discovery und Delivery.
 
-![](~/assets/posts/das-ki-radar-struktur-update-122024/757cc84c-4f42-44b2-8c29-197d3fff85c9_848x520.webp)
+![](~/assets/posts/das-ki-radar-struktur-update-122024/das-ki-radar-struktur-update-122024-757cc84c.webp)
 
 Das Konzept trägt dieser bitteren Wahrheit des Innovationsmanagements in Worten von Marty Cagan Rechnung:
 
@@ -109,7 +108,7 @@ Und ansonsten, bleib dran & mach einfach!
 
 PS: Hier das aktuelle KI-Radar 12/2024 in voller Auflösung. Teile es gerne mit deinen Kollegen intern in Slack, Teams etc.
 
-![Das KI-Radar für Produktmanagement & Softwareentwicklung 12/2024](~/assets/posts/das-ki-radar-struktur-update-122024/12c39e59-ab9c-4309-945b-e3b541ef60e3_9292x8780.webp)
+![Das KI-Radar für Produktmanagement & Softwareentwicklung 12/2024](~/assets/posts/das-ki-radar-struktur-update-122024/das-ki-radar-struktur-update-122024-12c39e59.webp)
 *Das KI-Radar für Produktmanagement & Softwareentwicklung 12/2024*
 
 <p><a class="button" href="/p/das-ki-radar-struktur-update-122024">Teilen</a></p>

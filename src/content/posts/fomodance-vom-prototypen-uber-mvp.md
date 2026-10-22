@@ -4,11 +4,8 @@ subtitle: Du siehst ein Problem? Dann löse es. Selbst. KI-Tools können helfen.
 eyebrow: build to learn
 date: 2025-07-12T19:03:14.017Z
 lang: de
-tags:
-  - product
-  - ki
-cover: ~/assets/posts/fomodance-vom-prototypen-uber-mvp/e2172e9b-f2ff-4c61-8b62-3717a52da912_1179x1978.webp
-coverAlt: ""
+cover: ~/assets/posts/fomodance-vom-prototypen-uber-mvp/fomodance-vom-prototypen-uber-mvp-e2172e9b.webp
+coverAlt: Screenshot der Web-App FOMO.dance mit West-Coast-Swing-Terminen in München
 substackId: 167969925
 ---
 
@@ -18,14 +15,14 @@ Und ich will etwas teilen. Seit über zwei Monaten nun betreibe ich [FOMO.dance]
 
 Was für die Nutzer simpel und intuitiv aussieht (und genau das war die Herausforderung!), ist im Hintergrund inzwischen ein komplexes System mit Login-Bereich, Rechte- und Rollenverwaltung, Termin-Formular, Klonen von Terminen, JSON-Feed, Moderations-System, Location-Seiten und einem Kompakt-Überblick für Promo-Zwecke.
 
-![Video: FOMO.dance: Vom Prototypen über MVP zum MMP - mit KI.](~/assets/posts/fomodance-vom-prototypen-uber-mvp/video-9a8aef60.png)
-<!-- TODO video: Substack upload 9a8aef60-841b-4445-9248-4ba4362fef75 liegt als MP4 in migration/substack-public/videos/. Nach dem YouTube-Upload ersetzen durch: <a class="video" href="https://www.youtube.com/watch?v=ID">![Video](~/assets/posts/fomodance-vom-prototypen-uber-mvp/yt-ID.jpg)</a> -->
+![Video: FOMO.dance: Vom Prototypen über MVP zum MMP - mit KI.](~/assets/posts/fomodance-vom-prototypen-uber-mvp/fomodance-vom-prototypen-uber-mvp-video-9a8aef60.png)
+<!-- TODO video: Substack upload 9a8aef60-841b-4445-9248-4ba4362fef75 liegt als MP4 in migration/substack-public/videos/. Nach dem YouTube-Upload ersetzen durch: <a class="video" href="https://www.youtube.com/watch?v=ID">![Video](~/assets/posts/fomodance-vom-prototypen-uber-mvp/fomodance-vom-prototypen-uber-mvp-yt-ID.jpg)</a> -->
 
 ### Eine klassische Produkt-Reise
 
 Das Faszinierende an [FOMO.dance](https://fomo.dance/): Es hat eine typische Produkt-Evolution durchlaufen - vom Prototyp über einen Pivot des Problem-Solution-Fits zum Minimum Viable Product (MVP) und schließlich zum Minimum Marketable Product (MMP). Denn begonnen habe ich mit einer ganz anderen Idee: einem persönlichen Festival-Planner mit Checklisten für Tänzer. Eine Lösung für ein Problem, das ich selbst hatte.
 
-![Der Prototyp: Die erste Idee, was FOMO.dance werden sollte - ein persönlicher Festival-Besuch-Planer](~/assets/posts/fomodance-vom-prototypen-uber-mvp/6b1dac08-10fd-41a8-99ba-384a0ecef6f5_1179x2556.webp) ![Der Prototyp: Die erste Idee, was FOMO.dance werden sollte - ein persönlicher Festival-Besuch-Planer](~/assets/posts/fomodance-vom-prototypen-uber-mvp/1134f34c-fac6-4aac-b481-0a4142aa2932_1179x2556.webp) ![Der Prototyp: Die erste Idee, was FOMO.dance werden sollte - ein persönlicher Festival-Besuch-Planer](~/assets/posts/fomodance-vom-prototypen-uber-mvp/39765397-a68c-45c7-8a6e-f685ecfeab94_1179x2556.webp) ![Der Prototyp: Die erste Idee, was FOMO.dance werden sollte - ein persönlicher Festival-Besuch-Planer](~/assets/posts/fomodance-vom-prototypen-uber-mvp/a6ef7e6f-11a0-42ef-aaf7-041f45606712_1179x2556.webp) ![Der Prototyp: Die erste Idee, was FOMO.dance werden sollte - ein persönlicher Festival-Besuch-Planer](~/assets/posts/fomodance-vom-prototypen-uber-mvp/936b5fc1-7118-49cb-b64d-be53871ef8e1_1179x2556.webp)
+![Der Prototyp: Die erste Idee, was FOMO.dance werden sollte - ein persönlicher Festival-Besuch-Planer](~/assets/posts/fomodance-vom-prototypen-uber-mvp/fomodance-vom-prototypen-uber-mvp-6b1dac08.webp) ![Der Prototyp: Die erste Idee, was FOMO.dance werden sollte - ein persönlicher Festival-Besuch-Planer](~/assets/posts/fomodance-vom-prototypen-uber-mvp/fomodance-vom-prototypen-uber-mvp-1134f34c.webp) ![Der Prototyp: Die erste Idee, was FOMO.dance werden sollte - ein persönlicher Festival-Besuch-Planer](~/assets/posts/fomodance-vom-prototypen-uber-mvp/fomodance-vom-prototypen-uber-mvp-39765397.webp) ![Der Prototyp: Die erste Idee, was FOMO.dance werden sollte - ein persönlicher Festival-Besuch-Planer](~/assets/posts/fomodance-vom-prototypen-uber-mvp/fomodance-vom-prototypen-uber-mvp-a6ef7e6f.webp) ![Der Prototyp: Die erste Idee, was FOMO.dance werden sollte - ein persönlicher Festival-Besuch-Planer](~/assets/posts/fomodance-vom-prototypen-uber-mvp/fomodance-vom-prototypen-uber-mvp-936b5fc1.webp)
 *Der Prototyp: Die erste Idee, was FOMO.dance werden sollte - ein persönlicher Festival-Besuch-Planer*
 
 Ich begann damit, mit den selben Prompts u.a. mit [lovable](https://lovable.dev/), [bolt](https://bolt.new/) und [v0](https://v0.dev/) zu experimentieren und so meine Idee zu verfeinern. Für die Umsetzung entschied ich mich am Ende dann für [Replit](https://replit.com/).
@@ -36,7 +33,7 @@ Ich nutzte das Oster-Wochenende, um einen ersten MVP zu entwickeln - mit starkem
 
 Am 30. April war dann der Launch - in unserer WhatsApp-Gruppe mit 600 Menschen. Das Ergebnis: Auf fast jeder Tanzparty werde ich seither darauf angesprochen. Und ja, zugegeben, ich bin auch ein bisschen stolz.
 
-![Lauch von FOMO.dance am 30.04.2025](~/assets/posts/fomodance-vom-prototypen-uber-mvp/ccf3d215-cdd1-48ca-8cde-603a2e3dee3d_1179x2556.webp) ![Lauch von FOMO.dance am 30.04.2025](~/assets/posts/fomodance-vom-prototypen-uber-mvp/b528f91a-4ac7-4a94-8986-269fd101cf5b_1179x2556.webp)
+![Lauch von FOMO.dance am 30.04.2025](~/assets/posts/fomodance-vom-prototypen-uber-mvp/fomodance-vom-prototypen-uber-mvp-ccf3d215.webp) ![Lauch von FOMO.dance am 30.04.2025](~/assets/posts/fomodance-vom-prototypen-uber-mvp/fomodance-vom-prototypen-uber-mvp-b528f91a.webp)
 *Lauch von FOMO.dance am 30.04.2025*
 
 ### Was können wir als Produktmenschen daraus lernen?
@@ -60,12 +57,12 @@ Heute sieht die Discovery-Praxis, wenn es denn überhaupt gemacht wird, so aus: 
 
 Künftig kann ein Produktmensch oder Designer mit den richtigen KI-Tools in einem Bruchteil der Zeit einen funktionierenden Prototypen erschaffen.
 
-![Meine derzeitige Entwicklungsumgebung in Replit](~/assets/posts/fomodance-vom-prototypen-uber-mvp/449aadb1-42df-4bd5-b80b-057e6c79f753_2938x1494.webp)
+![Meine derzeitige Entwicklungsumgebung in Replit](~/assets/posts/fomodance-vom-prototypen-uber-mvp/fomodance-vom-prototypen-uber-mvp-449aadb1.webp)
 *Meine derzeitige Entwicklungsumgebung in Replit*
 
 Meine eigene Erfahrung mit FOMO.dance zeigt: Wenn du ein echtes Problem vermutest oder kennst und die richtigen Tools nutzt, kannst du innerhalb weniger Tage vom Konzept zum ersten MVP kommen. Die wahre Herausforderung liegt nicht mehr in der technischen Umsetzung der ersten Iteration, sondern im Finden eines ‘problems worth being solved’ und in der Gestaltung einer überzeugenden Nutzererfahrung.
 
-![FOMO.dance](~/assets/posts/fomodance-vom-prototypen-uber-mvp/e2172e9b-f2ff-4c61-8b62-3717a52da912_1179x1978.webp)
+![FOMO.dance](~/assets/posts/fomodance-vom-prototypen-uber-mvp/fomodance-vom-prototypen-uber-mvp-e2172e9b.webp)
 *FOMO.dance*
 
 ### Meine Learnings, wenn Du es selbst probieren willst
@@ -91,5 +88,5 @@ PS: Was interessiert euch so? Schreibt mir. Ich teile großzügig und gerne :-)
 
 PPS: hier ein paar der sehr führen Screenshots, als ich die erste Idee für mich verfeinert habe. So fängt es immer an. Mit der ersten Visualisierung einer Idee…
 
-![Erste Prototypen von FOMO.dance als es noch ein persönlicher Festival-Planner werden sollte](~/assets/posts/fomodance-vom-prototypen-uber-mvp/75bbbf75-6030-4adb-8213-7cdbba359738_2938x1414.webp) ![Erste Prototypen von FOMO.dance als es noch ein persönlicher Festival-Planner werden sollte](~/assets/posts/fomodance-vom-prototypen-uber-mvp/c7f4097d-f7e3-47c9-bf38-7e4e10f3e669_2934x1418.webp) ![Erste Prototypen von FOMO.dance als es noch ein persönlicher Festival-Planner werden sollte](~/assets/posts/fomodance-vom-prototypen-uber-mvp/dca797c6-503d-48f5-ae17-f6d9e67c8363_2926x1418.webp)
+![Erste Prototypen von FOMO.dance als es noch ein persönlicher Festival-Planner werden sollte](~/assets/posts/fomodance-vom-prototypen-uber-mvp/fomodance-vom-prototypen-uber-mvp-75bbbf75.webp) ![Erste Prototypen von FOMO.dance als es noch ein persönlicher Festival-Planner werden sollte](~/assets/posts/fomodance-vom-prototypen-uber-mvp/fomodance-vom-prototypen-uber-mvp-c7f4097d.webp) ![Erste Prototypen von FOMO.dance als es noch ein persönlicher Festival-Planner werden sollte](~/assets/posts/fomodance-vom-prototypen-uber-mvp/fomodance-vom-prototypen-uber-mvp-dca797c6.webp)
 *Erste Prototypen von FOMO.dance als es noch ein persönlicher Festival-Planner werden sollte*

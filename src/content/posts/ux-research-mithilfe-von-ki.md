@@ -4,10 +4,8 @@ subtitle: „Customer first!“ Klingt einfach, ist jedoch nicht leicht. „Get 
 eyebrow: Ohne Ausrede
 date: 2024-10-07T20:07:56.851Z
 lang: de
-tags:
-  - ki
-cover: ~/assets/posts/ux-research-mithilfe-von-ki/8f3547a8-33dc-4c22-900b-e86be1567232_454x448.webp
-coverAlt: ""
+cover: ~/assets/posts/ux-research-mithilfe-von-ki/ux-research-mithilfe-von-ki-8f3547a8.webp
+coverAlt: "Meme: Skelett am Schreibtisch, „1 week to run, summarize & analyze 5 customer interviews“"
 substackId: 149872247
 ---
 
@@ -15,7 +13,7 @@ Wann haben wir zuletzt wirklich intensiv mit unseren Kunden gesprochen? Und wer 
 
 Wir alle kennen das Mantra „Customer First“. Es klingt so einfach, ist jedoch nicht leicht. Und mal ehrlich: Wie oft verlassen wir sinnbildlich wirklich unser komfortables Büro, um direkt mit unseren Nutzern zu interagieren? Zu selten. Warum? Mitunter, weil die Analyse all dieser Kundeninterviews alles andere als ein Spaziergang ist.
 
-![](~/assets/posts/ux-research-mithilfe-von-ki/8f3547a8-33dc-4c22-900b-e86be1567232_454x448.webp)
+![](~/assets/posts/ux-research-mithilfe-von-ki/ux-research-mithilfe-von-ki-8f3547a8.webp)
 
 Stundenlanges Abhören, das Wichtigste notieren, Erkenntnisse zusammenfassen und dann noch für die Kollegen verdaulich aufbereiten. Und dabei nichts Wichtiges vergessen. Wir haben das Gefühl, dass Durchführen und Analysieren von z. B. 5 Kundeninterviews eine ganze Woche Zeit kostet. Kein Wunder, dass wir lieber Ausreden suchen: Das Management gibt uns nicht genug Zeit für Product Discovery. Bequemlichkeit siegt, der direkte Draht zum Kunden bleibt auf der Strecke und die Innovationskraft stagniert.
 
@@ -27,7 +25,7 @@ Es gibt smarte Tools mit KI-Funktionen, die uns genau bei diesem Problem unterst
 
 [Dovetail](http://www.dovetail.com/) ist eine Plattform für Kundeneinblicke (Customer Insights Hub), die die qualitative Datenanalyse und Erkenntnisgewinnung automatisiert. Selbst die kostenlose Version bietet alles, was nötig ist, um den Schmerz bei der Aufbereitung von Interview-Erkenntnissen zu lindern.
 
-![www.dovetail.com](~/assets/posts/ux-research-mithilfe-von-ki/aa836b5f-e3d5-4cdb-baaa-eee8c6a98380_2316x1396.webp)
+![www.dovetail.com](~/assets/posts/ux-research-mithilfe-von-ki/ux-research-mithilfe-von-ki-aa836b5f.webp)
 *www.dovetail.com*
 
 ### Condens.io
@@ -36,7 +34,7 @@ Es gibt smarte Tools mit KI-Funktionen, die uns genau bei diesem Problem unterst
 
 Mit Condens.io ist im Wesentlichen der gleiche Workflow wie mit Dovetail möglich. Was die Plattform zusätzlich bietet, ist: KI-unterstütztes Tagging. Du kannst so die Tags für Zitate konsistenter organisieren. Das reduziert Fehlerquellen.
 
-![www.condens.io](~/assets/posts/ux-research-mithilfe-von-ki/fd70b666-aab2-409a-9add-5506c7069219_2152x1310.webp)
+![www.condens.io](~/assets/posts/ux-research-mithilfe-von-ki/ux-research-mithilfe-von-ki-fd70b666.webp)
 *www.condens.io*
 
 ## Wie funktioniert’s? Der Workflow.
@@ -78,7 +76,7 @@ Und es geht nicht darum, UX-Researcher oder Produktmanager obsolet zu machen. Im
 
 Fun fact zum Schluss: Ich sehe KI als das trojanische Pferd, um die Product Discovery in Unternehmen zu etablieren. Es ist oft einfacher, neue Tools einzuführen, als dem Management das gesamte Konzept der Product Discovery zu erklären. Wenn du sagst: „Wir wollen KI einsetzen“, sind die Chancen höher, dass du Unterstützung bekommst, als wenn Du sagst „ich will Product Discovery machen“. Manager kennen das Thema KI und sehen es heißes Eisen. Sie wollen, dass ihre Leute Wissen darüber erwerben. Denn wer will sich schon nachsagen lassen, den Anschluss an die neueste Technologie zu verpassen?
 
-![KI als Trojanisches Pferd für Product Discovery](~/assets/posts/ux-research-mithilfe-von-ki/e1bc7b1d-9a4f-4a71-b889-480b5f592bd3_488x480.webp)
+![KI als Trojanisches Pferd für Product Discovery](~/assets/posts/ux-research-mithilfe-von-ki/ux-research-mithilfe-von-ki-e1bc7b1d.webp)
 *KI als Trojanisches Pferd für Product Discovery*
 
 Also, nutze die Gelegenheit! Schenke Dir die Ausreden, endlose Diskussionen über Ressourcen oder Zeit. Die Tools sind da, die Möglichkeiten liegen auf dem Tisch. Es liegt an Dir, den Schritt zu wagen und die Vorteile zu nutzen.

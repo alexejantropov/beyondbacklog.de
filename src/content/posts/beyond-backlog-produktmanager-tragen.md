@@ -4,10 +4,8 @@ subtitle: ""
 eyebrow: Bullshit Umbrella
 date: 2024-01-03T12:37:00.000Z
 lang: de
-tags:
-  - product
-cover: ~/assets/posts/beyond-backlog-produktmanager-tragen/photo-1531399395381-6603d3b9899f.webp
-coverAlt: ""
+cover: ~/assets/posts/beyond-backlog-produktmanager-tragen/beyond-backlog-produktmanager-tragen-photo-6603d3b9899f.webp
+coverAlt: "Schwarz-weiß-Foto: mehrere Cowboyhüte übereinander gestapelt"
 substackId: 140492313
 ---
 
@@ -30,5 +28,5 @@ und mein Lieblingshut: bullshit umbrella :-)
   
 Damit gewinnst du Vertrauen der anderen als Team-Player, auf den man sich verlassen kann.
 
-![grayscale photography of piled cowboy hats](~/assets/posts/beyond-backlog-produktmanager-tragen/photo-1531399395381-6603d3b9899f.webp)
+![grayscale photography of piled cowboy hats](~/assets/posts/beyond-backlog-produktmanager-tragen/beyond-backlog-produktmanager-tragen-photo-6603d3b9899f.webp)
 *Photo by Simeon Jacobson on Unsplash*

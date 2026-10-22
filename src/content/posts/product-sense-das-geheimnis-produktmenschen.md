@@ -4,11 +4,10 @@ subtitle: Über den sechsten Sinn für Entscheidungen oder wie Demut, Neugier, A
 eyebrow: Sechster Sinn
 date: 2024-08-10T07:00:29.932Z
 lang: de
-tags:
-  - product
-cover: ~/assets/posts/product-sense-das-geheimnis-produktmenschen/photo-1518792528501-352f829886dc.webp
-coverAlt: ""
+cover: ~/assets/posts/product-sense-das-geheimnis-produktmenschen/product-sense-das-geheimnis-produktmenschen-photo-352f829886dc.webp
+coverAlt: Kind baut mit Elektronikteilen und Bauteilen auf dem Boden
 substackId: 147029040
+imported: false
 ---
 
 Hast du dich jemals gefragt, warum manche Menschen gefühlt immer die richtigen Entscheidungen treffen und scheinbar mühelos die schlüssigen Erkenntnisse ziehen, wenn es um neue Produkte geht? Sie wirken, als hätten sie einen sechsten Sinn für Markttrends und Kundenbedürfnisse. Diese Menschen, auf die Führungskräfte bei strategischen Entscheidungen vertrauen, scheinen eine Art sechsten Sinn zu haben.
@@ -23,7 +22,7 @@ Zunächst mal: „Product Sense“ klingt für viele wie ein angeborenes Talent.
 
 Marty spricht von vier Kernelementen: Demut, Neugierde, Handlungsfähigkeit (engl. Agency) und Empathie. Eigentlich alles, was wir als Kleinkinder eh schon auf die Welt mitbringen.
 
-![boy sitting while holding electronic device part](~/assets/posts/product-sense-das-geheimnis-produktmenschen/photo-1518792528501-352f829886dc.webp)
+![boy sitting while holding electronic device part](~/assets/posts/product-sense-das-geheimnis-produktmenschen/product-sense-das-geheimnis-produktmenschen-photo-352f829886dc.webp)
 *Photo by Kevin Jarrett on Unsplash*
 
 ### 1) Demut
@@ -93,4 +92,4 @@ Also, bleib dran & mach einfach!
 -   🔗 *Teile bei LinkedIn, in WhatsApp, Slack oder Teams*
     
 
-*📮 Und sende mir gerne Dein Feedback an [beyondbacklog@substack.com](http://beyondbacklog@substack.com/).*
+*📮 Und sende mir gerne Dein Feedback an [alexej@beyondbacklog.de](mailto:alexej@beyondbacklog.de).*

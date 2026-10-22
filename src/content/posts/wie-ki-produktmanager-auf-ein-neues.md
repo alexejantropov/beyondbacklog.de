@@ -4,11 +4,8 @@ subtitle: Heute eine Podcast-Empfehlung mit Tipps, um mit KI-Tools effizient Pro
 eyebrow: Podcast-Tipp
 date: 2024-11-23T11:22:17.152Z
 lang: de
-tags:
-  - product
-  - ki
-cover: ~/assets/posts/wie-ki-produktmanager-auf-ein-neues/E_rNotqs--I.webp
-coverAlt: ""
+cover: ~/assets/posts/wie-ki-produktmanager-auf-ein-neues/wie-ki-produktmanager-auf-ein-neues-E_rNotqs--I.webp
+coverAlt: Grafik „Why every PM will be an AI PM“ mit Aman Khan, Director of Product, LLM @ Arize AI
 substackId: 151931438
 ---
 
@@ -62,7 +59,7 @@ Mein Tipp für’s Wochenende: lass dich von diesem inspirierenden Gespräch zwi
 
 Oder alternativ bei YouTube:
 
-<a class="video" href="https://www.youtube.com/watch?v=E_rNotqs--I">![Video auf YouTube abspielen](~/assets/posts/wie-ki-produktmanager-auf-ein-neues/yt-E_rNotqs--I.jpg)</a>
+<a class="video" href="https://www.youtube.com/watch?v=E_rNotqs--I">![Video auf YouTube abspielen](~/assets/posts/wie-ki-produktmanager-auf-ein-neues/wie-ki-produktmanager-auf-ein-neues-yt-E_rNotqs--I.jpg)</a>
 
 Also, bleib dran & mach einfach!  
 <p class="signature">Alexej</p>

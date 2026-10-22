@@ -7,7 +7,7 @@ import Eyebrow from '../../components/ui/Eyebrow.astro';
 import Stroke from '../../components/ui/Stroke.astro';
 import Button from '../../components/ui/Button.astro';
 import NewsletterBox from '../../components/ui/NewsletterBox.astro';
-import author from '~/assets/site/author.jpg';
+import { authorPhoto as author } from '../../data/images';
 import { site } from '../../data/site';
 import { person } from '../../lib/structuredData';
 
@@ -40,7 +40,7 @@ const facts = [
             <Button href={`mailto:${site.contactEmail}`} variant="outline" size="lg" block>E-Mail schreiben</Button>
           </div>
         </div>
-        <AuthorPortrait loading="eager" />
+        <AuthorPortrait />
       </div>
     </div>
   </section>

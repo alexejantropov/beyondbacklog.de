@@ -4,10 +4,8 @@ subtitle: ""
 eyebrow: Sebastian Dinzenhofer
 date: 2024-01-05T12:37:00.000Z
 lang: de
-tags:
-  - product
-cover: ~/assets/posts/ist-es-safe-enough-to-try-oder-hat/photo-1586739050530-2fddeb1770d4.webp
-coverAlt: ""
+cover: ~/assets/posts/ist-es-safe-enough-to-try-oder-hat/ist-es-safe-enough-to-try-oder-hat-photo-2fddeb1770d4.webp
+coverAlt: Scrabble-Steine bilden das Wort SAFE
 substackId: 140492433
 ---
 
@@ -42,7 +40,7 @@ Meine Lieblingsfrage, nachdem ich das Gefühl habe, dass jeder Blickwinkel gehö
   
 Ist es "safe enough to try"? Oder gibt es Einwände, wenn wir uns jetzt so entscheiden?
 
-![brown and black letter b letter](~/assets/posts/ist-es-safe-enough-to-try-oder-hat/photo-1586739050530-2fddeb1770d4.webp)
+![brown and black letter b letter](~/assets/posts/ist-es-safe-enough-to-try-oder-hat/ist-es-safe-enough-to-try-oder-hat-photo-2fddeb1770d4.webp)
 *Photo by Clarissa Watson on Unsplash*
 
   

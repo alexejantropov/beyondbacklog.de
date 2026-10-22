@@ -4,16 +4,14 @@ subtitle: Lost track of 100+ AI tools? This curated overview will help you find 
 eyebrow: At a glance
 date: 2024-10-04T17:19:27.661Z
 lang: en
-tags:
-  - english-only
-cover: ~/assets/posts/the-ai-radar-for-product-management-and-software-development/b700add1-6009-4228-b2a1-b85d442764ea_8212x8167.webp
-coverAlt: ""
+kiRadar: true
+cover: ~/assets/posts/the-ai-radar-for-product-management-and-software-development/the-ai-radar-for-product-management-and-software-development-b700add1.webp
+coverAlt: "AI radar: AI tools for design, product, engineering and team"
 substackId: 149680600
+imported: false
 ---
 
-*This is the translated English version of my [German article about the AI radar](/p/das-ki-radar-fur-produktmanagement-und-software-entwicklung). I am happy to share it with my international audience. Though I am publishing in German first, I will publish English versions of my most important articles and resources in English as well. Consider subscribing to the “🇺🇸 English only” list for free to stay up-to-date:*
-
-→ [English only posts](/s/english-only)
+*This is the translated English version of my [German article about the AI radar](/p/das-ki-radar-fur-produktmanagement-und-software-entwicklung). I am happy to share it with my international audience. Though I am publishing in German first, I will publish English versions of my most important articles and resources in English as well.*
 
 * * *
 
@@ -28,7 +26,7 @@ In the rapidly developing world of artificial intelligence, there are well over 
 
 The AI Radar received a remarkable response from product people after [my talk at Product Tank](/p/product-tank-munich-orga-fitness-in-the-age-of-ai-tool-radar-web-product-development-dovetail-miro-juttu-claude-uizard): I received dozens of messages and comments. And I won't forget the moment when around 50 mobile phones went up to take a photo of it 😅
 
-![The AI radar shown for the first time at Product Tank Munich, 17/09/2024 Thanks Adrian for the photo!](~/assets/posts/the-ai-radar-for-product-management-and-software-development/19abf703-bf00-400a-86a9-b77a4d81bdf5_2048x1536.webp)
+![The AI radar shown for the first time at Product Tank Munich, 17/09/2024 Thanks Adrian for the photo!](~/assets/posts/the-ai-radar-for-product-management-and-software-development/the-ai-radar-for-product-management-and-software-development-19abf703.webp)
 *The AI radar shown for the first time at Product Tank Munich, 17/09/2024 Thanks Adrian for the photo!*
 
 In response to this interest, I have written this guide to provide a practical guide on how to read the radar. And thanks to helpful suggestions from the community about tools that were missing from the radar, I have added to it.
@@ -108,7 +106,7 @@ I therefore invite you to share your experiences with the tools with me, especia
 
 This is what the AI Radar looks like in version 10/2024 as of 1 October 2024. The high-resolution version can be found at the very end for downloading and sharing with colleagues.
 
-![The AI Radar for Product Management & Software Development, 10/2024.](~/assets/posts/the-ai-radar-for-product-management-and-software-development/b700add1-6009-4228-b2a1-b85d442764ea_8212x8167.webp)
+![The AI Radar for Product Management & Software Development, 10/2024.](~/assets/posts/the-ai-radar-for-product-management-and-software-development/the-ai-radar-for-product-management-and-software-development-b700add1.webp)
 *The AI Radar for Product Management & Software Development, 10/2024.*
 
 ### What has changed in the 10/2024 version?
@@ -172,7 +170,7 @@ So, stay tuned & just do it!
 
 PS: Here is the AI Radar 10/2024 in full resolution:
 
-![The AI Radar for Product Management & Software Development, 10/2024.](~/assets/posts/the-ai-radar-for-product-management-and-software-development/28fdaef2-d5c0-43a6-b4c3-783a382ca75c_8212x8167.webp)
+![The AI Radar for Product Management & Software Development, 10/2024.](~/assets/posts/the-ai-radar-for-product-management-and-software-development/the-ai-radar-for-product-management-and-software-development-28fdaef2.webp)
 *The AI Radar for Product Management & Software Development, 10/2024.*
 
 * * *
@@ -183,5 +181,5 @@ PS: Here is the AI Radar 10/2024 in full resolution:
 
 As of version 10/2024 of the radar, I have removed the ‘to try out’ rating with a question mark (?) without replacement. It was more of my internal note about what I still wanted to try out and therefore had no benefit for the community.
 
-![The very first version of the AI Radar, presented at Product Tank Munich at September, 17th, 2024.](~/assets/posts/the-ai-radar-for-product-management-and-software-development/8422c7ec-b8b0-4492-8c9a-c6ffb4a01f59_1340x1385.webp)
+![The very first version of the AI Radar, presented at Product Tank Munich at September, 17th, 2024.](~/assets/posts/the-ai-radar-for-product-management-and-software-development/the-ai-radar-for-product-management-and-software-development-8422c7ec.webp)
 *The very first version of the AI Radar, presented at Product Tank Munich at September, 17th, 2024.*

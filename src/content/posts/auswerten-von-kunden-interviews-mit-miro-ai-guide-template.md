@@ -4,18 +4,17 @@ subtitle: "PMs und Designer haben wenig Zeit. Gleichzeitig: Führen und Auswerte
 eyebrow: David Pereira
 date: 2024-10-22T20:27:53.846Z
 lang: de
-tags:
-  - ki
-cover: ~/assets/posts/auswerten-von-kunden-interviews-mit-miro-ai-guide-template/e8cbba06-6ee7-4dd7-8fc5-05c23a761d7a_2248x1062.webp
-coverAlt: ""
+cover: ~/assets/posts/auswerten-von-kunden-interviews-mit-miro-ai-guide-template/auswerten-von-kunden-interviews-mit-miro-ai-guide-template-e8cbba06.webp
+coverAlt: Miro-Template „Interview Results“ mit Anleitung, Kundenprofil, Zitaten und Opportunities
 substackId: 149872367
+imported: false
 ---
 
 Bevor es mit dem eigentlichen Thema losgeht …
 
 *Ich möchte den Status Quo über KI-Einsatz im Produktmanagement und in der Softwareentwicklung verstehen. Die Erkenntnisse will ich per Newsletter mit der Community teilen (natürlich vertraulich) und einige meiner Ideen dazu vorzuschlagen. Dafür führe ich im Moment Interviews durch und dafür brauche ich Dich! Bitte schreibe mir eine Nachricht:*
 
-<p><a class="button" href="mailto:beyondbacklog@substack.com">Mail an Alexej senden</a></p>
+<p><a class="button" href="mailto:alexej@beyondbacklog.de">Mail an Alexej senden</a></p>
 
 *Keine Sorge: Es gibt kein „Ich kann nichts beitragen, weil ich KI kaum benutze“. Das ist genau das, was ich herausfinden möchte.😊 Du bist der Richtige für ein Interview, wenn du als PM, PO, Product Lead, Product / UX / UI Designer, Engineer oder in einer verwandten Rolle in der digitalen Produkt- & Softwareentwicklung arbeitest.*
 
@@ -40,8 +39,8 @@ Ich sehe es auch so. Und ich zeige dir, wie du Miro mit AI nutzen kannst, um …
 
 Schauen wir uns also an, wie die neuen KI-Funktionen von Miro Product Ownern, Managern oder Designern helfen. Heute im Fokus: die Analyse von Kundeninterviews und das Ableiten produktrelevanter Erkenntnisse. Und das in wenigen Minuten statt Stunden.
 
-![Video: Kundeninterviews mit Miro AI auswerten – ein Guide mit Template](~/assets/posts/auswerten-von-kunden-interviews-mit-miro-ai-guide-template/video-54c21a2e.png)
-<!-- TODO video: Substack upload 54c21a2e-6db9-4982-aa0f-3afac9526d1d liegt als MP4 in migration/substack-public/videos/. Nach dem YouTube-Upload ersetzen durch: <a class="video" href="https://www.youtube.com/watch?v=ID">![Video](~/assets/posts/auswerten-von-kunden-interviews-mit-miro-ai-guide-template/yt-ID.jpg)</a> -->
+![Video: Kundeninterviews mit Miro AI auswerten – ein Guide mit Template](~/assets/posts/auswerten-von-kunden-interviews-mit-miro-ai-guide-template/auswerten-von-kunden-interviews-mit-miro-ai-guide-template-video-54c21a2e.png)
+<!-- TODO video: Substack upload 54c21a2e-6db9-4982-aa0f-3afac9526d1d liegt als MP4 in migration/substack-public/videos/. Nach dem YouTube-Upload ersetzen durch: <a class="video" href="https://www.youtube.com/watch?v=ID">![Video](~/assets/posts/auswerten-von-kunden-interviews-mit-miro-ai-guide-template/auswerten-von-kunden-interviews-mit-miro-ai-guide-template-yt-ID.jpg)</a> -->
 
 ## Interview Results Template
 
@@ -55,7 +54,7 @@ Wenn Du Discovery-Arbeit nach dem Lehrbuch erledigen willst, solltest Du für je
 
 Ich bevorzuge dafür dieses kostenlose Miro-Template für Interview-Snapshots von [David Pereira](https://www.d-pereira.com/). Diese Vorlage ist auf das Wesentliche reduziert. Es braucht m.E. nicht mehr:
 
-![Original Miroverse Template for Interview Results by David Pereira](~/assets/posts/auswerten-von-kunden-interviews-mit-miro-ai-guide-template/e8cbba06-6ee7-4dd7-8fc5-05c23a761d7a_2248x1062.webp)
+![Original Miroverse Template for Interview Results by David Pereira](~/assets/posts/auswerten-von-kunden-interviews-mit-miro-ai-guide-template/auswerten-von-kunden-interviews-mit-miro-ai-guide-template-e8cbba06.webp)
 *Original Miroverse Template for Interview Results by David Pereira*
 
 ## Miro-Template & Miro AI
@@ -83,13 +82,13 @@ Und wenn Du keine Interviews durchführst, fang endlich damit an!
 2.  Klicke im Kontext-Menü auf das Miro-AI Symbol → Document → Custom Prompt:
     
 
-![Miro AI Menü](~/assets/posts/auswerten-von-kunden-interviews-mit-miro-ai-guide-template/2140a7d4-bed7-4383-bbc8-0df0c9928c12_1026x867.webp)
+![Miro AI Menü](~/assets/posts/auswerten-von-kunden-interviews-mit-miro-ai-guide-template/auswerten-von-kunden-interviews-mit-miro-ai-guide-template-2140a7d4.webp)
 *Miro AI Menü*
 
 3.  wähle im Prompt-Eingabefenster die Option „Document“ aus, weil wir im ersten Schritt einen Text generieren wollen:
     
 
-![Miro AI Prompt-Eingabe](~/assets/posts/auswerten-von-kunden-interviews-mit-miro-ai-guide-template/d7efe5ca-f2c4-44e1-897a-7ce579a6aff7_349x685.webp)
+![Miro AI Prompt-Eingabe](~/assets/posts/auswerten-von-kunden-interviews-mit-miro-ai-guide-template/auswerten-von-kunden-interviews-mit-miro-ai-guide-template-d7efe5ca.webp)
 *Miro AI Prompt-Eingabe*
 
 4.  kopiere folgenden Prompt und füge ihn ins Eingabe-Fenster ein und füge am Ende das Transkript aus dem Interview ein:
@@ -119,7 +118,7 @@ PASTE THE TRANSCRIPT WITHOUT PERSONAL DATA INSTEAD OF THIS TEXT
 
 Das sieht dann insgesamt wie folgt aus:
 
-![Ausfüllen des Interview Results Templates mithilfe von Miro AI](~/assets/posts/auswerten-von-kunden-interviews-mit-miro-ai-guide-template/ab6018cb-aca9-4f37-b59c-053020b79bda_1560x816.webp)
+![Ausfüllen des Interview Results Templates mithilfe von Miro AI](~/assets/posts/auswerten-von-kunden-interviews-mit-miro-ai-guide-template/auswerten-von-kunden-interviews-mit-miro-ai-guide-template-ab6018cb.webp)
 *Ausfüllen des Interview Results Templates mithilfe von Miro AI*
 
 Sobald Du auf “generate document” klickst, wertet Miro AI das Transkript in weniger als 1 Minute aus und formuliert Vorschläge für die Opportunities sowie einen Powerful Quote.
@@ -169,7 +168,7 @@ Für mehrere Interviews rund um die gleiche Fragestellung empfehle ich, alle aus
 1.  Wähle nun alle Ergebnisse in allen Snapshots untereinander aus, wie hier demonstriert:
     
 
-![mehrere Interview Snapshots untereinander](~/assets/posts/auswerten-von-kunden-interviews-mit-miro-ai-guide-template/9b63f7fc-f723-4b43-81d3-962267f5f888_786x1700.webp)
+![mehrere Interview Snapshots untereinander](~/assets/posts/auswerten-von-kunden-interviews-mit-miro-ai-guide-template/auswerten-von-kunden-interviews-mit-miro-ai-guide-template-9b63f7fc.webp)
 *mehrere Interview Snapshots untereinander*
 
 2.  navigiere wieder zu Miro AI → Document → Custom Prompt und wähle diesmal „Sticky Notes“ im Prompt-Eingabefenster aus. Verwende folgenden Prompt:
@@ -183,7 +182,7 @@ Miro AI erzeugt Post-its mit Vorschlägen für Problem Statements. Das sind die 
 
 3.  Markiere die erzeugten Sticky Notes, navigiere zu Miro AI und wähle den Product Leader Sidekick aus:
     
-    ![Product Leader Sidekick von Miro AI](~/assets/posts/auswerten-von-kunden-interviews-mit-miro-ai-guide-template/e87c74e0-5848-4a87-b5ee-bdd1eb146c8d_1174x904.webp)
+    ![Product Leader Sidekick von Miro AI](~/assets/posts/auswerten-von-kunden-interviews-mit-miro-ai-guide-template/auswerten-von-kunden-interviews-mit-miro-ai-guide-template-e87c74e0.webp)
 *Product Leader Sidekick von Miro AI*
     
 
@@ -251,7 +250,7 @@ In diesem Sinne, bleib dran & mach einfach!
 
 PS: Erstens: Es gibt keinen perfekten Prompt! Zweitens: Die KI-Modelle entwickeln sich ständig weiter. Wenn einer meiner Prompts für Dich nicht gut funktioniert oder Du Verbesserungsvorschläge hast, lass es mich wissen. Schreib mir gerne einen Kommentar oder eine Nachricht – ich freue mich darauf, die Zukunft der Produktmanagement-Arbeit gemeinsam zu gestalten.
 
-<p><a class="button" href="mailto:beyondbacklog@substack.com">Mail an Alexej senden</a></p>
+<p><a class="button" href="mailto:alexej@beyondbacklog.de">Mail an Alexej senden</a></p>
 
-![Interview Snapshot Template von David Pereira mit meinen Prompts für Miro AI](~/assets/posts/auswerten-von-kunden-interviews-mit-miro-ai-guide-template/5db3c805-36dd-49c8-a742-26713e8014d7_8202x5973.webp)
+![Interview Snapshot Template von David Pereira mit meinen Prompts für Miro AI](~/assets/posts/auswerten-von-kunden-interviews-mit-miro-ai-guide-template/auswerten-von-kunden-interviews-mit-miro-ai-guide-template-5db3c805.webp)
 *Interview Snapshot Template von David Pereira mit meinen Prompts für Miro AI*

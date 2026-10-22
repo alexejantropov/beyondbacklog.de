@@ -6,6 +6,7 @@
 //  2. Every internal link, image and asset referenced from the HTML resolves to a file.
 //  3. Sitemap and indexing: only indexable pages in the sitemap; og:image files exist.
 //  4. Privacy: no third-party scripts/iframes/images on page view (YouTube loads on click).
+//  5. Posts: the cover above the text is not repeated inside the text.
 import { redirects } from '../src/data/redirects.ts';
 import { checkRedirects, resolvePath } from '../src/lib/redirects.ts';
 import { stripTrailingSlash } from '../src/lib/seo.ts';
@@ -130,5 +131,21 @@ for (const [route, html] of pages) {
 }
 if (privacyErrors.length) { failed = true; console.error(`✗ ${privacyErrors.length} privacy problem(s):`); privacyErrors.slice(0, 10).forEach(e => console.error(`    ${e}`)); }
 else console.log('✓ Privacy: no third-party embeds, media or fonts on page view');
+
+// 5. Posts: the cover above the text (<figure data-cover>) is not repeated in the article text.
+//    Same source image = same content hash in the asset name (/_astro/<name>.<hash>_<variant>.webp),
+//    whatever the file is called. Only the article counts, not the related-post cards below it.
+const assetHash = src => src.match(/\/_astro\/[^"/]*?\.([A-Za-z0-9_-]{8})_[^"/.]+\.\w+/)?.[1];
+const coverErrors = [];
+for (const [route, html] of pages) {
+  if (!route.startsWith('/p/')) continue;
+  const figure = html.match(/<figure\b[^>]*\sdata-cover\b[^>]*>([\s\S]*?)<\/figure>/);
+  if (!figure) continue;
+  const hash = [...figure[1].matchAll(ATTR)].map(m => assetHash(m[1])).find(Boolean);
+  const text = html.slice(figure.index + figure[0].length, html.indexOf('</article>', figure.index));
+  if (hash && [...text.matchAll(ATTR)].some(m => assetHash(m[1]) === hash)) coverErrors.push(route);
+}
+if (coverErrors.length) { failed = true; console.error(`✗ ${coverErrors.length} post(s) show the cover twice (above and in the text):`); coverErrors.forEach(e => console.error(`    ${e}`)); }
+else console.log('✓ Posts: no cover shown twice');
 
 if (failed) process.exit(1);

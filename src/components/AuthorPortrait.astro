@@ -1,37 +1,57 @@
 ---
-// Author photo with handwritten quote sticker (homepage closing, about, work-with-me).
+// Author photo (4:5) with handwritten quote sticker: homepage closing, about, work-with-me, and the
+// author box under every post. The square source is cropped to 4:5 at build (width + height).
 import { Image } from 'astro:assets';
-import author from '~/assets/site/author.jpg';
+import { authorPhoto } from '../data/images';
 import { site } from '../data/site';
 
 interface Props {
-  /** Homepage closing uses a slightly larger column and image. */
-  layout?: 'home' | 'page';
-  loading?: 'eager' | 'lazy';
+  /** home: homepage closing (smaller on phones, next to the text from md);
+   *  page: about / work-with-me hero (above the fold, loads eagerly); box: author box under posts. */
+  layout?: 'home' | 'page' | 'box';
 }
 
-const { layout = 'page', loading } = Astro.props;
-const home = layout === 'home';
+const { layout = 'page' } = Astro.props;
 
-const wrap = home ? 'relative max-w-[420px] lg:justify-self-end' : 'relative max-w-[380px] lg:justify-self-end';
-const width = home ? 840 : 760;
-const widths = home ? [480, 840] : [480, 760];
-const sizes = home ? '(min-width: 1024px) 420px, 100vw' : '(min-width: 1024px) 380px, 100vw';
-const img =
-  'aspect-[4/5] w-full rounded-photo object-cover object-top shadow-[0_24px_60px_rgba(10,10,10,0.14)]';
-const quote =
-  'absolute bottom-8 -left-3 -rotate-3 rounded-control border border-ink/10 bg-white px-5 py-3 font-hand text-[1.625rem] leading-none font-semibold text-accent-deep shadow-[0_10px_30px_rgba(10,10,10,0.12)]';
+const shadowLarge = 'shadow-[0_24px_60px_rgba(10,10,10,0.14)]';
+const variant = {
+  home: {
+    wrap: 'max-w-[260px] md:max-w-[280px] md:justify-self-end lg:max-w-[420px]',
+    widths: [480, 840],
+    sizes: '(min-width: 1024px) 420px, (min-width: 768px) 280px, 260px',
+    shadow: shadowLarge,
+    quote: 'bottom-6 -left-3 px-4 py-2.5 text-[1.375rem] md:-left-6 lg:bottom-8 lg:px-5 lg:py-3 lg:text-[1.625rem]',
+  },
+  page: {
+    wrap: 'max-w-[380px] lg:justify-self-end',
+    widths: [480, 760],
+    sizes: '(min-width: 1024px) 380px, 100vw',
+    shadow: shadowLarge,
+    quote: 'bottom-8 -left-3 px-5 py-3 text-[1.625rem]',
+    loading: 'eager' as const,
+  },
+  box: {
+    wrap: 'w-[150px] shrink-0 md:w-[170px]',
+    widths: [170, 340],
+    sizes: '170px',
+    shadow: 'shadow-[0_12px_30px_rgba(10,10,10,0.14)]',
+    quote: 'bottom-4 -left-2 px-2.5 py-1.5 text-[1rem]',
+  },
+}[layout];
+const width = variant.widths.at(-1)!;
 ---
 
-<div class={wrap}>
+<div class:list={['relative', variant.wrap]}>
   <Image
-    src={author}
+    src={authorPhoto}
     alt={site.author}
     width={width}
-    widths={widths}
-    sizes={sizes}
-    loading={loading}
-    class={img}
+    height={Math.round((width * 5) / 4)}
+    widths={variant.widths}
+    sizes={variant.sizes}
+    position="top"
+    loading={'loading' in variant ? variant.loading : undefined}
+    class:list={['aspect-[4/5] w-full rounded-photo object-cover object-top', variant.shadow]}
   />
-  <p class:list={[quote, home && 'md:-left-6']}>Geht nicht, gibt’s nicht.</p>
+  <p class:list={['absolute -rotate-3 rounded-control border border-ink/10 bg-white font-hand leading-none font-semibold whitespace-nowrap text-accent-deep shadow-[0_10px_30px_rgba(10,10,10,0.12)]', variant.quote]}>Geht nicht, gibt’s nicht.</p>
 </div>

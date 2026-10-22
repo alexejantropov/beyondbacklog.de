@@ -1,0 +1,16 @@
+---
+// The KI-Radar series (posts with `kiRadar: true`), newest first. The posts keep their /p/<slug> URLs.
+import Layout from '../layouts/Layout.astro';
+import PostGrid from '../components/PostGrid.astro';
+import NewsletterBox from '../components/ui/NewsletterBox.astro';
+import { kiRadarPosts } from '../lib/posts';
+import { site } from '../data/site';
+
+const posts = await kiRadarPosts();
+---
+<Layout title={`KI-Radar | ${site.name}`} description={`Das KI-Radar von ${site.author}: KI-Tools für Produktmanagement und Software-Entwicklung, alle ${posts.length} Ausgaben und Updates.`}>
+  <PostGrid posts={posts} eagerFirstRow headingLevel="h1" eyebrow="KI-Radar" heading="KI-Tools für Produktmanagement und Software-Entwicklung." />
+  <div class="container-bb pb-20 md:pb-24">
+    <NewsletterBox id="email-ki-radar" />
+  </div>
+</Layout>

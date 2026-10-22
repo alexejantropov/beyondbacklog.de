@@ -1,0 +1,13 @@
+---
+// Sign-up as a secondary part of an author block (author box under posts, homepage closing):
+// short label and the form with an outline button.
+import NewsletterForm from './NewsletterForm.astro';
+import { site } from '../../data/site';
+
+interface Props { id: string; class?: string }
+const { id, class: className } = Astro.props;
+---
+<div class:list={['flex flex-col gap-3', className]}>
+  <p class="text-[0.9375rem] font-bold">{site.newsletterClaim.start} {site.newsletterClaim.highlight}</p>
+  <NewsletterForm id={id} variant="outline" />
+</div>

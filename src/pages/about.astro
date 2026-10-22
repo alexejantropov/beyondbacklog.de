@@ -1,16 +1,24 @@
 ---
-// About page: intro with photo, three clear blocks (what this is, who I am, contact).
+// About page: intro with photo, the original Substack About text word for word ("Hi, ich bin Alexej!"),
+// then three blocks (what this is, who I am, contact).
+import { Image } from 'astro:assets';
+import ProseImageLightbox from '../components/ProseImageLightbox.astro';
+import taenzer from '~/assets/about/alexej-antropov-beyondbacklog-taenzer.webp';
+import consultant1 from '~/assets/about/alexej-antropov-beyondbacklog-consultant-1.webp';
+import consultant2 from '~/assets/about/alexej-antropov-beyondbacklog-consultant-2.webp';
+import consultant3 from '~/assets/about/alexej-antropov-beyondbacklog-consultant-3.webp';
 import Layout from '../layouts/Layout.astro';
 import AuthorPortrait from '../components/AuthorPortrait.astro';
 import Eyebrow from '../components/ui/Eyebrow.astro';
 import Stroke from '../components/ui/Stroke.astro';
 import Button from '../components/ui/Button.astro';
 import NewsletterBox from '../components/ui/NewsletterBox.astro';
-import author from '~/assets/site/author.jpg';
+import { authorPhoto as author } from '../data/images';
 import { site } from '../data/site';
 import { person } from '../lib/structuredData';
 
-const description = `${site.author}: Interim Product Manager, Co-Autor des Agile Product Manifesto, Lehrbeauftragter für KI-Projekte. Über ${site.name} und mich.`;
+const description = `${site.author}: ${site.authorRoles}. Über ${site.name} und mich.`;
+const gallery = [consultant1, consultant2, consultant3];
 const stations = [
   { year: 'seit 2006', text: 'Produktrollen für kundenorientierte Software: Web und Mobile, Marktplätze, SaaS, B2B und B2C, CRM, AdTech und MarTech, Medienprodukte.' },
   { year: '2016', text: 'Erste Berührung mit KI. Seit 2022 beruflich und privat im Einsatz, Anfang 2023 die ersten KI-Features in Softwareprodukten.' },
@@ -37,8 +45,73 @@ const links = [
             <Button href="/newsletter" variant="outline" block>Newsletter abonnieren</Button>
           </div>
         </div>
-        <AuthorPortrait loading="eager" />
+        <AuthorPortrait />
       </div>
+    </div>
+  </section>
+
+  <!-- Original text of the Substack About page (backup migration/substack-public/about.html), unchanged. -->
+  <section class="container-bb section-y">
+    <div class="prose prose-bb mx-auto max-w-[42rem]">
+      <h2>Hi, ich bin Alexej! 👋</h2>
+      <p>Ich bin überzeugt: in einer Welt des schnellen Wandels braucht es sowohl technologie-gestützte Produkte &amp; Lösungen als auch Arbeitsweisen mit Mut, Menschlichkeit und Technologieeinsatz, um nachhaltig wertschöpfend und schnell genug zu innovieren.</p>
+      <p>Mit dem Newsletter teile ich mit Euch, was ich gelernt oder erfahren habe. Dafür schreibe ich regelmäßig in unregelmäßigen Abständen. Das Thema ist:</p>
+      <blockquote><p>Künstliche Intelligenz (KI) &amp; Produktmanagement in der agilen Software-Entwicklung</p></blockquote>
+      <p>Weil keine KI-Nutzung keine Option mehr ist – für niemanden, für keine Firma und auch nicht in der agilen Produktentwicklung, erforsche ich gemeinsam mit Euch hier die Einsatzmöglichkeiten von KI in Product Teams. Das Motto:</p>
+      <blockquote><p>Geht nicht, gibt’s nicht.<br />Deshalb: Dran bleiben &amp; einfach machen!</p></blockquote>
+      <p>Ich will überlegen, wie durch Produktivitätssteigerung mit KI die Innovationskraft von der Produkt- und Softwareentwicklungs-Teams gesteigert werden kann.</p>
+      <p>Bleib über KI in der Produktentwicklung auf dem Laufenden:</p>
+      <p><a class="button" href="/newsletter">Abonnieren</a></p>
+
+      <h2>Warum Beyondbacklog?</h2>
+      <p>Beyond Backlog steht sinnbildlich dafür, was den Außenstehenden in der digitalen Produktentwicklung und dem Produktmanagement oft im Verborgenen bleibt.</p>
+      <p>Wer mit Einsatz künstlicher Intelligenz im Product Management wirklich etwas bewegen will, braucht mehr als ein paar starke Zitate. Es geht nicht um Hype – sondern um Handwerk der Zukunft. Nicht um Schlagworte, sondern um Verständnis, Struktur, Tools und ein klares gemeinsames Ziel im Team.</p>
+
+      <h2>Wer bin ich?</h2>
+      <p>Ich bin leidenschaftlicher West Coast Swing Tänzer, Eishockeyspieler und Papa. Beruflich bin ich seit 2006 stets auf der Produktseite von customer facing software applications im Business-Leben unterwegs und liebe es Dinge zu bewegen und einfach machen.</p>
+      <figure>
+        <Image src={taenzer} alt="Ich, der Tänzer" widths={[480, 800]} sizes="(min-width: 768px) 30rem, 100vw" />
+        <figcaption>Ich, der Tänzer</figcaption>
+      </figure>
+      <p>Als erfahrener Product Leader begleite ich als Interim Product Manager &amp; Consultant Unternehmen und Product-Teams durch die digitale &amp; KI-Transformation. Als Dozent für Business Model Innovation &amp; Plattformökonomie reiche ich meine Erfahrung an die Macher von morgen weiter.</p>
+      <figure>
+        <div class="gallery">
+          {gallery.map((img, i) => (
+            <Image
+              src={img}
+              alt={`Ich, der Product Management Consultant (Foto ${i + 1} von ${gallery.length})`}
+              width={800}
+              widths={[400, 800]}
+              sizes={img.height > img.width ? '(min-width: 768px) 10rem, 50vw' : '(min-width: 768px) 21rem, 100vw'}
+              style={`--ar: ${img.width / img.height}`}
+            />
+          ))}
+        </div>
+        <figcaption>Ich, der Product Management Consultant</figcaption>
+      </figure>
+      <p>Dieses Ziel motiviert mich dabei:</p>
+      <blockquote><p>less poor products. less poor companies.</p></blockquote>
+      <p>Ich habe 10+ Jahre Führungserfahrung und arbeite insgesamt ca. 20 Jahre in der agilen Produkt- &amp; Plattformentwicklung im Digital-Business &amp; Start-ups. Meine Erfahrung liegt überwiegend in customer facing Web &amp; Mobile Applikationen breit gefächert über Branchen und Anwendungsfelder: u. a. Marktplatz- und SaaS-Geschäftsmodelle (v.a. E-Commerce &amp; Recruiting), B2B, B2C und B2B2C, CRM / AdTech / MarTech / CDP, API-Integrationen, Communitys und Medienprodukte.</p>
+      <p><a class="button" href={site.workWithMeUrl}>alexejantropov.de: work with me!</a></p>
+      <p>KI als Technologie beobachte ich mit Spannung seit 2016, wende KI seit dem ChatGPT-Durchbruch in 2022 privat und beruflich an, habe Anfang 2023 erste KI-Features in Software-Produkte implementiert und KI-Nutzung in Organisationen eingeführt.</p>
+      <p>Darauf bin ich außerdem stolz:</p>
+      <ul>
+        <li>In 2022 habe ich das <a href="https://agileproductmanifesto.com">Agile Product Manifesto</a> mitverfasst.</li>
+        <li>Das Kapitel 6 von <a href="https://www.d-pereira.com/untrapping-product-teams">Davids Buch</a> ist durch meine Review entstanden.</li>
+        <li>M.Sc. Technologie- und Innovationsmanagement studiert zu haben.</li>
+      </ul>
+
+      <h2>Mehr</h2>
+      <ul>
+        <li><a href={`mailto:${site.contactEmail}`}>{site.contactEmail}</a> zum Schreiben</li>
+        <li><a href={site.personalSiteUrl}>alexejantropov.de</a> fürn Überblick</li>
+        <li><a href={site.linkedinUrl}>LinkedIn</a> fürs Geschäftliche</li>
+        <li><a href="https://open.spotify.com/user/kolobok24">Spotify</a> für tanzbare Musik</li>
+        <li><a href="https://www.instagram.com/alexejantropov/">Instagram</a> fürs Tanzen</li>
+        <li><a href="https://github.com/alexejantropov">GitHub</a> zum Nerden</li>
+      </ul>
+      <p>Viele Grüße!</p>
+      <p class="signature">Alexej</p>
     </div>
   </section>
 
@@ -52,13 +125,12 @@ const links = [
         {[
           ['Erfahrungen', 'Learnings aus Kundenprojekten, eigenen Produkten und dem Alltag in Produktteams. Unregelmäßig, wenn es etwas zu sagen gibt.'],
           ['Handwerk', 'Struktur, Tools und gemeinsame Ziele. Wie KI-Werkzeuge in Produktmanagement und Softwareentwicklung wirklich helfen.'],
-          ['Zwei Sprachen', 'Die Beiträge sind deutsch. Die wichtigsten Themen und Ressourcen gibt es zusätzlich unter English Only.'],
+          ['Das Motto', 'Geht nicht, gibt’s nicht. Deshalb: Dran bleiben & einfach machen!'],
         ].map(([title, text], i) => (
           <article class:list={['flex flex-col gap-3 rounded-box p-6', i === 0 ? 'bg-ink text-paper' : 'border border-ink/10 bg-white']}>
             <span class:list={['font-hand text-[1.625rem] leading-none font-semibold', i === 0 ? 'text-accent-light' : 'text-accent-deep']}>0{i + 1}</span>
             <h3 class="headline text-[1.375rem] leading-tight tracking-[-0.02em]">{title}</h3>
             <p class:list={['text-[0.9375rem] leading-relaxed', i === 0 ? 'text-paper/75' : 'text-ink/70']}>{text}</p>
-            {i === 2 && <a href="/s/english-only" class="mt-auto text-sm font-bold underline decoration-2 underline-offset-[5px] hover:text-accent-deep">English Only →</a>}
           </article>
         ))}
       </div>
@@ -105,4 +177,19 @@ const links = [
     </div>
     <NewsletterBox id="email-about" class="mt-16" />
   </section>
+  <ProseImageLightbox />
 </Layout>
+
+<style>
+  /* Phone: the two portraits side by side, the landscape image below at full width.
+     From 48rem: one row, every image the same height (width follows --ar, set per image), like
+     Substack. The reset undoes the prose-bb image limits from global.css (max-height, auto width),
+     which the shared `p:has(> img + img)` gallery needs but a mixed portrait/landscape row doesn't. */
+  .gallery { display: grid; grid-template-columns: 1fr 1fr; gap: 0.75rem; }
+  .gallery :global(img) { width: 100%; height: auto; max-width: none; max-height: none; margin: 0; }
+  .gallery :global(img:last-child) { grid-column: span 2; }
+  @media (width >= 48rem) {
+    .gallery { display: flex; }
+    .gallery :global(img) { flex: var(--ar) 1 0; width: 0; }
+  }
+</style>

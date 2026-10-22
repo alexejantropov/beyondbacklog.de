@@ -4,10 +4,8 @@ subtitle: The Agile Product Manifesto is a helpful guide to mastering agile prod
 eyebrow: Six principles
 date: 2023-06-05T11:37:50.734Z
 lang: en
-tags:
-  - english-only
-cover: ~/assets/posts/agile-product-manifesto-skills-product-manager-2/236b9ec3-c400-4b41-a0c6-821de52aa67c_4752x3168.webp
-coverAlt: ""
+cover: ~/assets/posts/agile-product-manifesto-skills-product-manager-2/agile-product-manifesto-skills-product-manager-2-236b9ec3.webp
+coverAlt: Pomeranian dog with glasses and a pearl necklace sitting in front of a tablet
 substackId: 122726116
 ---
 
@@ -19,7 +17,7 @@ In my previous issue, I delved into the Agile Product Manifesto ([agileproductma
 
 In this second episode, I am taking a step further and starting to examine the skill requirements beyond the first six **principles** of the Agile Product Manifesto. As a product manager, you'll need more than just an understanding of the manifesto; you'll need a diverse skill set to tackle the challenges that come your way.
 
-![Photo by Cookie the Pom on Unsplash](~/assets/posts/agile-product-manifesto-skills-product-manager-2/236b9ec3-c400-4b41-a0c6-821de52aa67c_4752x3168.webp)
+![Photo by Cookie the Pom on Unsplash](~/assets/posts/agile-product-manifesto-skills-product-manager-2/agile-product-manifesto-skills-product-manager-2-236b9ec3.webp)
 *Photo by Cookie the Pom on Unsplash*
 
 Are you a product manager seeking to enhance your skills? An aspiring candidate looking to step into a product management role? Or perhaps a boss or supervisor who wants to guide your product manager toward success? This episode is for you.

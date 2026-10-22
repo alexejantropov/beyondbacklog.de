@@ -4,10 +4,8 @@ subtitle: The Agile Product Manifesto is a helpful guide to mastering agile prod
 eyebrow: The other six
 date: 2023-06-08T20:45:05.002Z
 lang: en
-tags:
-  - english-only
-cover: ~/assets/posts/agile-product-manifesto-skills-product-manager-3/c9a6a36a-1e6d-4d0b-8e22-ee0765fa6aa9_4752x3168.webp
-coverAlt: ""
+cover: ~/assets/posts/agile-product-manifesto-skills-product-manager-3/agile-product-manifesto-skills-product-manager-3-c9a6a36a.webp
+coverAlt: Pomeranian dog with glasses looking at a tablet on a table
 substackId: 122731207
 ---
 
@@ -27,7 +25,7 @@ Now, in this episode, I want to go through the last six principles of the [Agile
 
 Whether you're a seasoned product manager seeking to enhance your skills, an aspiring candidate eager to step into the world of product management, or a visionary boss seeking to support the personal growth of your product manager toward a path of success, this episode is tailor-made for you.
 
-![Photo by Cookie the Pom on Unsplash](~/assets/posts/agile-product-manifesto-skills-product-manager-3/c9a6a36a-1e6d-4d0b-8e22-ee0765fa6aa9_4752x3168.webp)
+![Photo by Cookie the Pom on Unsplash](~/assets/posts/agile-product-manifesto-skills-product-manager-3/agile-product-manifesto-skills-product-manager-3-c9a6a36a.webp)
 *Photo by Cookie the Pom on Unsplash*
 
 > ### Measure business metrics and focus on improving them beyond monetary results

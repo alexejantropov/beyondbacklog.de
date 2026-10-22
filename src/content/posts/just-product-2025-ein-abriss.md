@@ -4,16 +4,14 @@ subtitle: "Was ich dieses mal für mich mitgenommen habe: Erfolgreiche Produkten
 eyebrow: Klassentreffen
 date: 2025-10-13T17:02:51.333Z
 lang: de
-tags:
-  - product
-cover: ~/assets/posts/just-product-2025-ein-abriss/bfc62b9b-e8f5-43b2-9026-8b54b1dda6d1_1280x853.webp
-coverAlt: ""
+cover: ~/assets/posts/just-product-2025-ein-abriss/just-product-2025-ein-abriss-bfc62b9b.webp
+coverAlt: Drei Teilnehmer im angeregten Gespräch auf der Just Product 2025
 substackId: 176057282
 ---
 
 Vergangenen Freitag war ich auf der [Just Product Konferenz in München](https://www.product-masterclass.com/events/just-product). Die Konferenz hat mir einmal mehr gezeigt: Erfolgreiche Produktentwicklung beginnt nicht im eigenen Team, sondern im gesamten Unternehmenskontext - auch und insbesondere in Zeiten von KI. Im Folgenden ein Abriss über da, was ich mir so notiert habe.
 
-![Just Product. Beste Location für eine Konferenz. Und free popcorn!](~/assets/posts/just-product-2025-ein-abriss/bdd3f28a-de24-4758-b575-ba96259f6b9f_2048x1152.webp)
+![Just Product. Beste Location für eine Konferenz. Und free popcorn!](~/assets/posts/just-product-2025-ein-abriss/just-product-2025-ein-abriss-bdd3f28a.webp)
 *Just Product. Beste Location für eine Konferenz. Und free popcorn!*
 
 ## **Kultur schlägt Prozesse – jedes Mal**
@@ -101,9 +99,9 @@ In diesem Sinne, bleib dran & mach einfach!
 
 <p class="signature">Alexej</p>
 
-![angeregte Unterhaltung mit Thomas Hartmann & Sebastian Borggrewe 😅](~/assets/posts/just-product-2025-ein-abriss/bfc62b9b-e8f5-43b2-9026-8b54b1dda6d1_1280x853.webp)
+![angeregte Unterhaltung mit Thomas Hartmann & Sebastian Borggrewe 😅](~/assets/posts/just-product-2025-ein-abriss/just-product-2025-ein-abriss-bfc62b9b.webp)
 *angeregte Unterhaltung mit Thomas Hartmann & Sebastian Borggrewe 😅*
 
-![](~/assets/posts/just-product-2025-ein-abriss/621589ba-814b-4aae-bfb2-d6f444a03342_3000x2000.webp)
+![](~/assets/posts/just-product-2025-ein-abriss/just-product-2025-ein-abriss-621589ba.webp)
 
-![](~/assets/posts/just-product-2025-ein-abriss/8bf85f20-4786-4b0d-8786-5aa71cef6db7_3000x2000.webp)
+![](~/assets/posts/just-product-2025-ein-abriss/just-product-2025-ein-abriss-8bf85f20.webp)

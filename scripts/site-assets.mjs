@@ -11,7 +11,7 @@ mkdirSync('src/assets/site', { recursive: true });
 mkdirSync('public', { recursive: true });
 
 await sharp(LOGO).resize(512, 512).png().toFile('src/assets/site/logo.png');
-if (existsSync(AUTHOR)) await sharp(AUTHOR).resize(1000, 1000, { fit: 'cover' }).jpeg({ quality: 84 }).toFile('src/assets/site/author.jpg');
+if (existsSync(AUTHOR)) await sharp(AUTHOR).resize(1000, 1000, { fit: 'cover' }).jpeg({ quality: 84 }).toFile('src/assets/site/alexej-antropov-beyondbacklog-portrait.jpg');
 
 // Social card: paper background, logo left, wordmark + tagline as SVG text.
 const logo = await sharp(LOGO).resize(360, 360).png().toBuffer();

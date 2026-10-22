@@ -4,10 +4,8 @@ subtitle: Let's not mince words here - the challenge to master product developme
 eyebrow: Not a sum
 date: 2023-10-21T16:18:00.000Z
 lang: en
-tags:
-  - english-only
-cover: ~/assets/posts/agile-product-mindset/0623307c-c519-4d7b-9c8f-0bbcd149f974_498x498.gif
-coverAlt: ""
+cover: ~/assets/posts/agile-product-mindset/agile-product-mindset-0623307c.gif
+coverAlt: Man in a checked jacket tapping his temple, with the word MINDSET below
 substackId: 122900184
 ---
 
@@ -109,7 +107,7 @@ Let's get one thing straight, the word 'skill' has been grossly underused and mi
 
 Mindset isn't innate; it's a learned attribute, shaped over time by attitudes, beliefs, and perspectives. It determines how you perceive situations and approach challenges. Take the 'growth mindset' - it's an absolute gem in the world of product management. It's about believing in your ability to evolve, being open to feedback, embracing failure as a growth catalyst, and wielding resilience in the face of adversity. Isn't that a skill worth its weight in gold?
 
-![GIF by tenor.com](~/assets/posts/agile-product-mindset/0623307c-c519-4d7b-9c8f-0bbcd149f974_498x498.gif)
+![GIF by tenor.com](~/assets/posts/agile-product-mindset/agile-product-mindset-0623307c.gif)
 *GIF by tenor.com*
 
 And since humans are masters of adaptation (and mindset is no exception) you don’t need a magic wand to work on your mindset. It's a journey - convoluted, personal, and unique to every individual. How long does it take to develop your mindset, you ask? Well, it's not a one-size-fits-all situation. Following could be your roadmap, but only you can know, where you stand in terms of your mindset skills:

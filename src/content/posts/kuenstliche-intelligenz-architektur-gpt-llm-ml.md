@@ -4,16 +4,14 @@ subtitle: "GPTs, LLMs und ML: Ein Erklärbär-Artikel zum Verstehen und Mitreden
 eyebrow: Erklärbär
 date: 2024-07-12T15:48:55.450Z
 lang: de
-tags:
-  - ki
-cover: ~/assets/posts/kuenstliche-intelligenz-architektur-gpt-llm-ml/20d2ad43-7e3f-4b7e-bc28-485dd0f4dc42_2268x1763.webp
-coverAlt: ""
+cover: ~/assets/posts/kuenstliche-intelligenz-architektur-gpt-llm-ml/kuenstliche-intelligenz-architektur-gpt-llm-ml-20d2ad43.webp
+coverAlt: "Eisberg-Grafik: über Wasser Logos von ChatGPT, Claude und Gemini, darunter GPT, LLM, Generative KI, Deep Learning, ML, Schwache KI und Künstliche Intelligenz"
 substackId: 146395566
 ---
 
 Die Welt der Künstlichen Intelligenz (KI) ist voll von Fachbegriffen und Abkürzungen wie GPTs, LLMs oder ML. Heute daher ein Erklärbär-Artikel zur Einordnung. Die Zusammenhänge verstehen ist besonders wichtig, wenn man, wie ich, seine berufliche Heimat in der Produktentwicklung hat. Und wenn nicht, kann man zumindest in der Kaffeeküche mitreden :-)
 
-![](~/assets/posts/kuenstliche-intelligenz-architektur-gpt-llm-ml/20d2ad43-7e3f-4b7e-bc28-485dd0f4dc42_2268x1763.webp)
+![](~/assets/posts/kuenstliche-intelligenz-architektur-gpt-llm-ml/kuenstliche-intelligenz-architektur-gpt-llm-ml-20d2ad43.webp)
 
 Das, was wir als Anwender kennen und sehen sind Tools wie [ChatGPT](https://chatgpt.com/), [Gemini](https://gemini.google.com/) und [Claude](https://claude.ai/). Heute tauchen wir in die unsichtbare Welt der Technologie hinter diesen Tools ab.
 
@@ -66,7 +64,7 @@ Parameter sind damit das Herzstück des Lernprozesses in KI-Modellen. Sie machen
 
 Generative KI erzeugt oder verändert Inhalte durch Nutzung statistischer Muster in Daten. Es geht dabei also nicht um Kreativität im menschlichen Sinne. Ein bekanntes Beispiel dafür sind Deepfakes, bei denen visuelle und auditive Inhalte so manipuliert werden, dass sie täuschend echt wirken.
 
-![deep fake videos revolution](~/assets/posts/kuenstliche-intelligenz-architektur-gpt-llm-ml/daafa8d8-db60-44f1-af2c-294e3d505c9a_1356x762.webp)
+![deep fake videos revolution](~/assets/posts/kuenstliche-intelligenz-architektur-gpt-llm-ml/kuenstliche-intelligenz-architektur-gpt-llm-ml-daafa8d8.webp)
 *Papst Franziskus im römischen Tanzclub „Magic Fly“ (2017) | © Deepfake: Pavel Sokolov, entnommen aus filmpuls.info/deepfake-film-video/*
 
 Der Hype um generative KI begann 2014 mit der Einführung der Generative Adversarial Networks (GANs) durch Ian Goodfellow. Diese Netzwerke trugen zur Forschung bei und wurden später in 2017 durch die Transformer-Modelle von Google ergänzt.
@@ -77,7 +75,7 @@ Generative KI ist ein sehr faszinierender Bereich des Deep Learning und darum ge
 
 Deep Learning basiert auf künstlichen neuronalen Netzen (KNN), die aus vielen künstlichen Neuronen bestehen. Diese sind miteinander verbunden und in der Regel in Schichten organisiert. Deshalb der Begriff „deep“. Im Bild zeigt jeder Kreis ein künstliches Neuron und jeder Pfeil eine Verbindung zwischen zwei künstlichen Neuronen.
 
-![undefined](~/assets/posts/kuenstliche-intelligenz-architektur-gpt-llm-ml/7476262d-4bae-4ac2-9473-4499d3918c0b_1280x1540.webp)
+![undefined](~/assets/posts/kuenstliche-intelligenz-architektur-gpt-llm-ml/kuenstliche-intelligenz-architektur-gpt-llm-ml-7476262d.webp)
 *Schema eines künstlichen neuronalen Netzes, aus Wikipedia.*
 
 Obwohl die Idee der KNN vom menschlichen Gehirn inspiriert ist, funktionieren sie anders als die biologischen Prozesse. Die KNN sind hoch entwickelte Mustererkennungssysteme und nicht mit bewussten Wesen zu verwechseln.

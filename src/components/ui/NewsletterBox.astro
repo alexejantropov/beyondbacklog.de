@@ -1,18 +1,19 @@
 ---
-// Tinted sign-up box (post page and homepage; design decision 17.10.2026).
+// Tinted sign-up box (posts list, KI-Radar, about, work with me; design decision 17.10.2026). The
+// homepage and posts use NewsletterInline inside the author block instead.
 import Eyebrow from './Eyebrow.astro';
 import Stroke from './Stroke.astro';
 import NewsletterForm from './NewsletterForm.astro';
-interface Props { id: string; compact?: boolean; class?: string }
-const { id, compact = false, class: className } = Astro.props;
+import { site } from '../../data/site';
+interface Props { id: string; class?: string }
+const { id, class: className } = Astro.props;
 ---
-<aside class:list={['rounded-box border border-ink/8 bg-tint', compact ? 'p-6 md:p-8' : 'p-7 md:p-11', className]} aria-labelledby={`${id}-title`}>
-  <div class:list={['grid gap-6', !compact && 'lg:grid-cols-2 lg:items-center lg:gap-10']}>
+<aside class:list={['rounded-box border border-ink/8 bg-tint p-7 md:p-11', className]} aria-labelledby={`${id}-title`}>
+  <div class="grid gap-6 lg:grid-cols-2 lg:items-center lg:gap-10">
     <div class="flex flex-col gap-3">
       <Eyebrow>Newsletter</Eyebrow>
-      <p id={`${id}-title`} class:list={['headline tracking-[-0.02em]', compact ? 'text-2xl' : 'text-[2rem] leading-[1.1]']}>Neue Beiträge <Stroke>direkt ins Postfach</Stroke>.</p>
-      <p class="text-base leading-relaxed text-ink/70">Unregelmäßig, kostenlos, jederzeit abbestellbar.</p>
+      <p id={`${id}-title`} class="headline text-[2rem] leading-[1.1] tracking-[-0.02em]">{site.newsletterClaim.start} <Stroke>{site.newsletterClaim.highlight}</Stroke>.</p>
     </div>
-    <NewsletterForm id={id} stacked={compact} />
+    <NewsletterForm id={id} />
   </div>
 </aside>

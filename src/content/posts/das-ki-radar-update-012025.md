@@ -4,16 +4,15 @@ subtitle: Zu Jahresbeginn (wieder) mit einer neuen Struktur und mit 25 neuen KI-
 eyebrow: 25 Tools
 date: 2025-01-22T19:40:10.109Z
 lang: de
-tags:
-  - ki
-cover: ~/assets/posts/das-ki-radar-update-012025/9d145cf3-4ad6-4b88-88e7-588e426aa294_9292x8780.webp
-coverAlt: ""
+kiRadar: true
+cover: ~/assets/posts/das-ki-radar-update-012025/das-ki-radar-update-012025-9d145cf3.webp
+coverAlt: KI-Radar Update 01/2025 mit Tool-Logos in den neuen Bereichen
 substackId: 153134396
 ---
 
 Dank zahlreichen Hinweisen aus der Community auf Basis eigener Marktbeobachtung und Experimente, habe ich das KI-Radar aktualisiert. So sieht die Version 01/2025 aus.
 
-![The AI Radar for Product Management & Software Development, 01/2025](~/assets/posts/das-ki-radar-update-012025/9d145cf3-4ad6-4b88-88e7-588e426aa294_9292x8780.webp)
+![The AI Radar for Product Management & Software Development, 01/2025](~/assets/posts/das-ki-radar-update-012025/das-ki-radar-update-012025-9d145cf3.webp)
 *The AI Radar for Product Management & Software Development, 01/2025*
 
 Die hochauflösende Version befindet sich - wie immer - am Ende des Artikels zum Herunterladen und Teilen unter Kollegen.
@@ -177,5 +176,5 @@ PS: hier der vollständige Guide, wie das Radar zu lesen ist:
 
 PPS: Hier das KI-Radar 01/2025 per 22.01.2025 in voller Auflösung:
 
-![The AI Radar for Product Management & Software Development, 01/2025](~/assets/posts/das-ki-radar-update-012025/bb208976-69e5-4bbc-9b8d-bdb89595e6c4_9292x8780.webp)
+![The AI Radar for Product Management & Software Development, 01/2025](~/assets/posts/das-ki-radar-update-012025/das-ki-radar-update-012025-bb208976.webp)
 *The AI Radar for Product Management & Software Development, 01/2025*

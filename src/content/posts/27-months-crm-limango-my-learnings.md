@@ -4,10 +4,8 @@ subtitle: ""
 eyebrow: "Don't guess"
 date: 2019-06-17T11:37:00.000Z
 lang: en
-tags:
-  - english-only
-cover: ~/assets/posts/27-months-crm-limango-my-learnings/e7123954-6bd1-43fc-9e0b-d6e9e100349e_1079x720.webp
-coverAlt: ""
+cover: ~/assets/posts/27-months-crm-limango-my-learnings/27-months-crm-limango-my-learnings-e7123954.webp
+coverAlt: Desk seen from above with a laptop, charts and the word CRM surrounded by marketing icons
 substackId: 140456307
 ---
 
@@ -15,7 +13,7 @@ I remember the day in the summer of 2016 sitting in an interview at limango wher
 
 Long story short: my first day as PO for CRM & Customer Dialogue at limango was January, 2nd 2017. BTW: Thank you, [Thomas](https://www.linkedin.com/in/thomas-ernst-61b315153/), for convincing and "selling" this position to me. Otherwise, I would not have found out neither the importance of CRM for the business nor all the tools & methods. And this is what I want to share now.
 
-![from: https://martechtoday.com/way-think-modern-crm-201640](~/assets/posts/27-months-crm-limango-my-learnings/e7123954-6bd1-43fc-9e0b-d6e9e100349e_1079x720.webp)
+![from: https://martechtoday.com/way-think-modern-crm-201640](~/assets/posts/27-months-crm-limango-my-learnings/27-months-crm-limango-my-learnings-e7123954.webp)
 *from: https://martechtoday.com/way-think-modern-crm-201640*
 
 ## What does CRM mean for business?
@@ -26,7 +24,7 @@ Nowadays it became inevitable to keep expensively bought leads active and engage
 
 A business can be sustainable, only if the company acquires right leads by good brand and performance marketing, converts this leads into customers, keeps customers active and repeatedly buying by good CRM. This can be measured by **year based cohort revenues** of leads, as Sven explained at NOAH conference (starting at 5 min 30 sec):
 
-![](~/assets/posts/27-months-crm-limango-my-learnings/f14e9f63-d267-40a3-9c8c-b1f585aa844d_1444x812.webp)
+![](~/assets/posts/27-months-crm-limango-my-learnings/27-months-crm-limango-my-learnings-f14e9f63.webp)
 
 The goal is to keep the revenue from all leads, which have been acquired during a certain year, at least stable. This can be mastered by **churn prevention** combined with the **utilization of own lead and customer base**. If a business masters this challenge, then it will profit from a very low cost-to-revenue-ratio for marketing spendings. It is possible because communication to existing customers or leads via owned channels is significantly cheaper than performance or brand marketing ad spend needed to convince a very new customer to buy.
 

@@ -1,23 +1,25 @@
 ---
 // Sign-up form (double opt-in via /api/subscribe). Works without JS as a normal POST; with JS the
 // result is shown in place. The hidden "website" field is a honeypot for bots.
+import Button from './Button.astro';
+
 interface Props {
   id: string;
-  /** Stack input and button on every width (narrow columns). */
-  stacked?: boolean;
+  /** Button look: accent (default) or outline (secondary, inside an author block via NewsletterInline). */
+  variant?: 'accent' | 'outline';
   class?: string;
 }
-const { id, stacked = false, class: className } = Astro.props;
+const { id, variant = 'accent', class: className } = Astro.props;
 ---
 <form method="post" action="/api/subscribe" class:list={['flex flex-col gap-2.5', className]} data-newsletter-form novalidate>
-  <div class:list={['flex gap-2.5', stacked ? 'flex-col' : 'flex-col sm:flex-row']}>
+  <div class="flex flex-col gap-2.5 sm:flex-row">
     <label for={id} class="sr-only">E-Mail-Adresse</label>
     <input id={id} type="email" name="email" required autocomplete="email" placeholder="deine@email.de" class="min-h-[52px] flex-1 rounded-control border border-ink/25 bg-white px-5 text-base text-ink placeholder:text-ink/45" />
     <input type="text" name="website" tabindex="-1" autocomplete="off" class="hidden" aria-hidden="true" />
-    <button type="submit" class="min-h-[52px] rounded-control bg-accent px-7 text-base font-bold whitespace-nowrap text-white transition-colors hover:bg-accent-deep">Abonnieren</button>
+    <Button type="submit" size="field" variant={variant} class="whitespace-nowrap">Abonnieren</Button>
   </div>
   <p class="text-[0.8125rem] text-ink/60" data-newsletter-note>
-    Kein Spam, jederzeit abbestellbar. <a href="/datenschutz" class="underline underline-offset-[3px]">Datenschutz</a>
+    Unregelmäßig, kostenlos, jederzeit abbestellbar, kein Spam. <a href="/datenschutz" class="underline underline-offset-[3px]">Datenschutz</a>
   </p>
   <p class="hidden text-sm font-semibold" role="status" aria-live="polite" data-newsletter-status></p>
 </form>

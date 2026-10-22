@@ -1,15 +1,16 @@
 ---
 // Post page at the Substack URL /p/<slug> (never changes: migration.md, section 4.2).
+import type { ImageMetadata } from 'astro';
 import { getImage, Image } from 'astro:assets';
 import { render } from 'astro:content';
 import Layout from '../../layouts/Layout.astro';
 import Eyebrow from '../../components/ui/Eyebrow.astro';
-import NewsletterBox from '../../components/ui/NewsletterBox.astro';
+import AuthorBox from '../../components/AuthorBox.astro';
 import PostCard from '../../components/ui/PostCard.astro';
 import ProseImageLightbox from '../../components/ProseImageLightbox.astro';
 import YouTubeLinks from '../../components/YouTubeLinks.astro';
 import logo from '~/assets/site/logo.png';
-import { site, tagLabel } from '../../data/site';
+import { site } from '../../data/site';
 import { formatDate } from '../../lib/seo';
 import { OG_IMAGE } from '../../lib/og';
 import { blogPosting, breadcrumbs } from '../../lib/structuredData';
@@ -24,22 +25,28 @@ export async function getStaticPaths() {
 }
 const { post, posts } = Astro.props as { post: Post; posts: Post[] };
 const { Content } = await render(post);
-const { title, subtitle, date, lang, tags, cover, coverAlt, page } = post.data;
+const { title, subtitle, eyebrow, date, lang, cover, coverAlt, page, kiRadar } = post.data;
+// Where the post is listed: the KI-Radar series or all posts (back link and breadcrumb).
+const list = kiRadar ? { name: 'KI-Radar', path: '/ki-radar' } : { name: 'Alle Beiträge', path: '/beitraege' };
 const description = subtitle || `${title} – ${site.name}`;
 const url = new URL(postPath(post), Astro.site).href;
 const previewUrl = cover && (await getImage({ src: cover, ...OG_IMAGE })).src;
 const related = page ? [] : relatedPosts(post, posts);
-const kind = tags[0] ? tagLabel(tags[0]) : page ? 'Seite' : 'Beitrag';
-// The cover is shown above the text unless the body already starts with the same image.
-const coverFile = cover?.src.split('/').pop()?.replace(/\.[a-z]+$/i, '').replace(/\.[A-Za-z0-9_-]{8}$/, '');
-const coverInBody = Boolean(coverFile && post.body?.includes(coverFile));
+// Eyebrow above the title: the post's kicker (as on its teaser card).
+const kind = eyebrow || 'Seite';
+// The cover is shown above the text unless the text already contains the same image. Compared by
+// the built asset (identical files share one), not by file name: posts may hold copies of one image.
+// The text's images come from Astro's render metadata (`~/assets/…` paths of Markdown images).
+const postImages = import.meta.glob<{ default: ImageMetadata }>('/src/assets/posts/**/*', { eager: true });
+const bodyImages = (post.rendered?.metadata?.imagePaths ?? []).map(path => postImages[path.replace(/^~\//, '/src/')]?.default.src);
+const coverInBody = Boolean(cover && bodyImages.includes(cover.src));
 ---
-<Layout title={`${title} | ${site.name}`} description={description} lang={lang} ogImage={cover} ogType="article" publishedTime={page ? undefined : date} ogImageAlt={coverAlt || title} structuredData={page ? undefined : [blogPosting(Astro.site!.href, { title, description, date, image: previewUrl, url, lang }), breadcrumbs(Astro.site!.href, [{ name: site.name, path: '/' }, ...(tags[0] ? [{ name: tagLabel(tags[0]), path: `/s/${tags[0]}` }] : []), { name: title, path: postPath(post) }])]}>
+<Layout title={`${title} | ${site.name}`} description={description} lang={lang} ogImage={cover} ogType="article" publishedTime={page ? undefined : date} ogImageAlt={coverAlt || title} structuredData={page ? undefined : [blogPosting(Astro.site!.href, { title, description, date, image: previewUrl, url, lang }), breadcrumbs(Astro.site!.href, [{ name: site.name, path: '/' }, list, { name: title, path: postPath(post) }])]}>
   <article class="pt-8 pb-16 md:pt-12 md:pb-24">
     <div class="container-bb">
       <div class="mx-auto max-w-[42rem]">
-        <a href="/beitraege" class="inline-flex min-h-11 items-center gap-2 text-sm font-semibold text-ink/60 hover:text-accent-deep">← Alle Beiträge</a>
-        <Eyebrow class="mt-6">{kind}</Eyebrow>
+        <a href={list.path} class="inline-flex min-h-11 items-center gap-2 text-sm font-semibold text-ink/60 hover:text-accent-deep">← {list.name}</a>
+        <Eyebrow class="mt-6" lang={eyebrow ? lang : undefined}>{kind}</Eyebrow>
         <h1 lang={lang} class="headline text-h1 mt-3">{title}</h1>
         {subtitle && <p lang={lang} class="mt-4 text-[1.25rem] leading-[1.5] text-ink/70 md:text-[1.3125rem]">{subtitle}</p>}
         {!page && (
@@ -52,23 +59,14 @@ const coverInBody = Boolean(coverFile && post.body?.includes(coverFile));
           </div>
         )}
         {cover && !coverInBody && (
-          <figure class="mt-9">
-            <Image src={cover} alt={coverAlt} width={Math.min(cover.width, 1600)} widths={[640, 1024, 1600]} sizes="(min-width: 768px) 42rem, 100vw" loading="eager" class="w-full rounded-card" />
-            {coverAlt && <figcaption class="mt-2 text-sm text-ink/60">{coverAlt}</figcaption>}
+          <figure class="mt-9" data-cover>
+            <Image src={cover} alt={coverAlt} lang={lang} width={Math.min(cover.width, 1600)} widths={[640, 1024, 1600]} sizes="(min-width: 768px) 42rem, 100vw" loading="eager" class="w-full rounded-card" />
           </figure>
         )}
         <div lang={lang} class="prose prose-bb mt-9 max-w-none">
           <Content />
         </div>
-        {!page && (
-          <div class="mt-12 flex flex-wrap items-center justify-between gap-4 border-t border-ink/12 pt-6">
-            <div class="flex flex-wrap gap-2">
-              {tags.map(t => <a href={`/s/${t}`} class="inline-flex min-h-11 items-center rounded-control border border-ink/20 px-4 text-sm font-semibold hover:border-ink">{tagLabel(t)}</a>)}
-            </div>
-            <a href={`https://www.linkedin.com/sharing/share-offsite/?url=${encodeURIComponent(url)}`} target="_blank" rel="noopener noreferrer" class="inline-flex min-h-11 items-center text-sm font-bold underline decoration-2 underline-offset-[6px] hover:text-accent-deep">Auf LinkedIn teilen</a>
-          </div>
-        )}
-        <NewsletterBox id="email-post" compact class="mt-12" />
+        <AuthorBox id="email-post" class="mt-12" />
       </div>
     </div>
   </article>

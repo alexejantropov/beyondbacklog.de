@@ -33,17 +33,6 @@ const SKIP = ['work-with-me'];
 
 const SITE_HOST = new URL(site.url).host;
 const SELF_HOSTS = ['beyondbacklog.substack.com', SITE_HOST, SITE_HOST.replace(/^www\./, '')];
-const TAG_SLUGS = { ki: 'ki', product: 'product', en: 'english-only' };
-// Posts without a Substack tag: suggestions from title and text (migration.md, section 5.3);
-// correct them here or in the Markdown frontmatter (then set `imported: false` there).
-const TAG_SUGGESTIONS = {
-  'auswerten-von-kunden-interviews-mit-miro-ai-guide-template': ['ki'],
-  'beyond-backlog-produktmanager-tragen': ['product'],
-  'das-wichtigste-was-ein-produktmanager': ['product'],
-  'keine-angst-die-zukunft-ist-super': ['product'],
-  'ux-research-mithilfe-von-ki': ['ki'],
-  'was-ware-wenn-sich-8-milliarden-menschen': ['product'],
-};
 
 // ---------- helpers ----------
 const decodeS3 = url => {
@@ -70,31 +59,42 @@ const cleanUrl = raw => {
 const esc = s => s.replace(/\s+/g, ' ').trim();
 const mdEscapeAlt = s => esc(s).replace(/[[\]]/g, '');
 
+/** File name of a post image: the post slug first (search engines read it), then a short stable id
+ *  from the source name (Substack UUID → first 8 hex, Unsplash photo-<n>-<hex> → photo-<hex>), so a
+ *  re-import maps the same source to the same file. Example: fomodance-vom-prototypen-uber-mvp-6b1dac08. */
+function assetStem(slug, sourceStem) {
+  const uuid = sourceStem.match(/^([0-9a-f]{8})-[0-9a-f]{4}-/);
+  const unsplash = sourceStem.match(/^photo-\d+-([0-9a-f]+)$/);
+  return `${slug}-${uuid ? uuid[1] : unsplash ? `photo-${unsplash[1]}` : sourceStem}`;
+}
+
+/** Target file and Markdown reference of a post image (creates the post's folder). */
+function postAsset(slug, sourceStem, ext) {
+  const dir = join(OUT_IMG, slug);
+  mkdirSync(dir, { recursive: true });
+  const name = `${assetStem(slug, sourceStem)}${ext}`;
+  return { target: join(dir, name), ref: `~/assets/posts/${slug}/${name}` };
+}
+
 async function localImage(slug, cdnUrl) {
   const entry = byCdn.get(cdnUrl) ?? byName.get(basename(decodeS3(cdnUrl).split('?')[0]));
   if (!entry || !String(entry.status).startsWith('ok')) return null;
   const src = join(SRC, entry.local_path);
   if (!existsSync(src)) return null;
-  const dir = join(OUT_IMG, slug);
-  mkdirSync(dir, { recursive: true });
-  let name = basename(entry.local_path);
-  const ext = extname(name).toLowerCase();
-  const stem = name.slice(0, -ext.length);
-  if (['.heic', '.heif', '.jpg', '.jpeg', '.png', '.webp'].includes(ext)) {
-    // Photos and screenshots become WebP (quality 82, max 2400 px): smaller sources, and
-    // astro:assets derives its responsive variants from them.
-    name = `${stem}.webp`;
-    const target = join(dir, name);
-    if (!existsSync(target)) {
+  const ext = extname(entry.local_path).toLowerCase();
+  const stem = basename(entry.local_path, extname(entry.local_path));
+  // Photos and screenshots become WebP (quality 82, max 2400 px): smaller sources, and
+  // astro:assets derives its responsive variants from them. gif (animated) and svg stay as they are.
+  const convert = ['.heic', '.heif', '.jpg', '.jpeg', '.png', '.webp'].includes(ext);
+  const { target, ref } = postAsset(slug, stem, convert ? '.webp' : ext);
+  if (!existsSync(target)) {
+    if (!convert) copyFileSync(src, target);
+    else {
       const input = ext === '.heic' || ext === '.heif' ? await heicConvert({ buffer: readFileSync(src), format: 'JPEG', quality: 0.92 }) : src;
       await sharp(input).rotate().resize({ width: MAX_PX, height: MAX_PX, fit: 'inside', withoutEnlargement: true }).webp({ quality: 82 }).toFile(target);
     }
-  } else {
-    // gif (animated), svg: keep as is
-    const target = join(dir, name);
-    if (!existsSync(target)) copyFileSync(src, target);
   }
-  return `~/assets/posts/${slug}/${name}`;
+  return ref;
 }
 
 async function isPortrait(assetRef) {
@@ -107,29 +107,25 @@ async function isPortrait(assetRef) {
 }
 
 async function youtubeThumb(slug, id) {
-  const dir = join(OUT_IMG, slug);
-  mkdirSync(dir, { recursive: true });
-  const target = join(dir, `yt-${id}.jpg`);
+  const { target, ref } = postAsset(slug, `yt-${id}`, '.jpg');
   if (!existsSync(target)) {
-    for (const name of ['maxresdefault', 'hqdefault']) {
-      const res = await fetch(`https://i.ytimg.com/vi/${id}/${name}.jpg`);
+    for (const size of ['maxresdefault', 'hqdefault']) {
+      const res = await fetch(`https://i.ytimg.com/vi/${id}/${size}.jpg`);
       if (res.ok) {
         writeFileSync(target, Buffer.from(await res.arrayBuffer()));
         break;
       }
     }
   }
-  return existsSync(target) ? `~/assets/posts/${slug}/yt-${id}.jpg` : null;
+  return existsSync(target) ? ref : null;
 }
 
 function videoThumb(slug, uploadId) {
   const file = readdirSync(join(SRC, 'videos')).find(f => f.includes(uploadId) && f.endsWith('.thumb.png'));
   if (!file) return null;
-  const dir = join(OUT_IMG, slug);
-  mkdirSync(dir, { recursive: true });
-  const target = join(dir, `video-${uploadId.slice(0, 8)}.png`);
+  const { target, ref } = postAsset(slug, `video-${uploadId.slice(0, 8)}`, '.png');
   if (!existsSync(target)) copyFileSync(join(SRC, 'videos', file), target);
-  return `~/assets/posts/${slug}/video-${uploadId.slice(0, 8)}.png`;
+  return ref;
 }
 
 // Files hosted by Substack (/api/v1/file/<id>.pdf) → public/files/<id>.pdf
@@ -198,7 +194,7 @@ async function convertPost(slug, post) {
     } catch { /* no attrs */ }
     const thumb = id ? videoThumb(slug, id) : null;
     notes.push(`video ${id}`);
-    replace(n, block(`${thumb ? `![Video: ${mdEscapeAlt(post.title)}](${thumb})\n` : ''}<!-- TODO video: Substack upload ${id} liegt als MP4 in migration/substack-public/videos/. Nach dem YouTube-Upload ersetzen durch: <a class="video" href="https://www.youtube.com/watch?v=ID">![Video](~/assets/posts/${slug}/yt-ID.jpg)</a> -->`));
+    replace(n, block(`${thumb ? `![Video: ${mdEscapeAlt(post.title)}](${thumb})\n` : ''}<!-- TODO video: Substack upload ${id} liegt als MP4 in migration/substack-public/videos/. Nach dem YouTube-Upload ersetzen durch: <a class="video" href="https://www.youtube.com/watch?v=ID">![Video](~/assets/posts/${slug}/${slug}-yt-ID.jpg)</a> -->`));
   }
 
   // YouTube embeds → linked preview image (click-to-load player, src/components/YouTubeLinks.astro).
@@ -311,6 +307,8 @@ async function convertPost(slug, post) {
   // the next paragraph as raw text inside the HTML block.
   md = md.replace(/^\*?(?:Dein |Euer |Your )?Alexej\*?[ \t]*$/gm, '<p class="signature">Alexej</p>');
   if (footnotes.length) md += '\n\n' + footnotes.join('\n');
+  // The Substack reply address is gone; feedback goes to the site's address (as a real mail link).
+  md = md.replace(/\(https?:\/\/beyondbacklog@substack\.com\/?\)/g, `(mailto:${site.contactEmail})`).replaceAll('beyondbacklog@substack.com', site.contactEmail);
   return { md, notes };
 }
 
@@ -320,6 +318,8 @@ function keptFrontmatter(prev) {
   const data = YAML.parse(block[1]) ?? {};
   return {
     eyebrow: typeof data.eyebrow === 'string' ? data.eyebrow : '',
+    coverAlt: typeof data.coverAlt === 'string' ? data.coverAlt : '',
+    kiRadar: data.kiRadar === true,
     draft: data.draft === true,
   };
 }
@@ -338,18 +338,16 @@ for (const file of files) {
   const prev = existsSync(target) ? readFileSync(target, 'utf8') : '';
   if (/^imported:\s*false/m.test(prev)) { console.log(`skip ${slug} (imported: false)`); continue; }
 
-  const tags = [];
-  for (const t of post.postTags ?? []) if (TAG_SLUGS[t.slug]) tags.push(TAG_SLUGS[t.slug]);
-  if (/english/i.test(meta.section_name ?? '') && !tags.includes('english-only')) tags.unshift('english-only');
-  if (!tags.length && TAG_SUGGESTIONS[slug]) tags.push(...TAG_SUGGESTIONS[slug]);
-  const lang = tags.includes('english-only') ? 'en' : 'de';
+  // English posts: Substack tag "en" or the section "English Only". The site has no categories.
+  const english = (post.postTags ?? []).some(t => t.slug === 'en') || /english/i.test(meta.section_name ?? '');
+  const lang = english ? 'en' : 'de';
 
   const { md, notes } = await convertPost(slug, post);
   const coverUrl = post.cover_image ?? meta.cover_image;
   const cover = coverUrl ? await localImage(slug, coverUrl) : null;
   if (coverUrl && !cover) notes.push('cover missing');
 
-  // Hand-written card kicker and an explicit unpublish. A re-import must not drop either.
+  // Hand-written card kicker, cover alt text, KI-Radar flag and an explicit unpublish. A re-import must not drop them.
   const kept = keptFrontmatter(prev);
   const fm = {
     title: esc(post.title),
@@ -357,8 +355,8 @@ for (const file of files) {
     ...(kept.eyebrow && { eyebrow: kept.eyebrow }),
     date: post.post_date,
     lang,
-    tags,
-    ...(cover && { cover, coverAlt: '' }),
+    ...(kept.kiRadar && { kiRadar: true }),
+    ...(cover && { cover, coverAlt: kept.coverAlt }),
     substackId: post.id,
     ...(post.type === 'page' && { page: true }),
     ...(kept.draft && { draft: true }),
@@ -366,11 +364,10 @@ for (const file of files) {
   const doc = `---\n${YAML.stringify(fm, { lineWidth: 0 })}---\n\n${md}\n`;
   writeFileSync(target, doc);
   const words = countWords(md);
-  summary.push({ slug, words, substackWords: meta.wordcount ?? null, tags, cover: Boolean(cover), notes });
-  console.log(`${slug}: ${words} Wörter${meta.wordcount ? ` (Substack ${meta.wordcount})` : ''}, tags ${tags.join(',') || '-'}${notes.length ? ' | ' + notes.join('; ') : ''}`);
+  summary.push({ slug, words, substackWords: meta.wordcount ?? null, lang, cover: Boolean(cover), notes });
+  console.log(`${slug}: ${words} Wörter${meta.wordcount ? ` (Substack ${meta.wordcount})` : ''}, ${lang}${notes.length ? ' | ' + notes.join('; ') : ''}`);
 }
 mkdirSync('migration', { recursive: true });
 writeFileSync('migration/import-summary.json', JSON.stringify(summary, null, 2));
-const noTags = summary.filter(s => !s.tags.length).map(s => s.slug);
 const off = summary.filter(s => s.substackWords && Math.abs(s.words - s.substackWords) / s.substackWords > 0.15);
-console.log(`\n${summary.length} Posts konvertiert. Ohne Tag: ${noTags.length} (${noTags.join(', ')}). Wortzahl weicht >15 % ab: ${off.map(s => `${s.slug} (${s.words}/${s.substackWords})`).join(', ') || 'keine'}`);
+console.log(`\n${summary.length} Posts konvertiert. Wortzahl weicht >15 % ab: ${off.map(s => `${s.slug} (${s.words}/${s.substackWords})`).join(', ') || 'keine'}`);

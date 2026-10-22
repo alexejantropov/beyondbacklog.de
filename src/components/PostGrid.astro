@@ -1,51 +1,32 @@
 ---
-// Posts as equal cards in three columns. The pills above link to the topic pages (/s/<tag>) and
-// back to the full list; no in-place filtering, so every state has its own URL.
+// Posts as equal cards in three columns.
 import PostCard from './ui/PostCard.astro';
 import Eyebrow from './ui/Eyebrow.astro';
 import { site } from '../data/site';
-import type { TagSlug } from '../data/site';
-import { postsWithTag, type Post } from '../lib/posts';
+import type { Post } from '../lib/posts';
 
 interface Props {
   posts: Post[];
-  /** Active tag on a tag page; the "Alle" pill links to /beitraege. */
-  activeTag?: TagSlug;
   heading?: string;
+  /** h1 when the grid is the page's main content (/beitraege, /ki-radar), h2 on the homepage. */
+  headingLevel?: 'h1' | 'h2';
   eyebrow?: string;
-  intro?: string;
   /** Show only the first n posts (homepage teaser). */
   limit?: number;
-  /** Tag filter pills (off on the homepage teaser). With them the grid is the first section, so the
-   *  first row of covers loads eagerly. */
-  filter?: boolean;
+  /** The grid is the first section of the page (/beitraege): the first row of covers loads eagerly. */
+  eagerFirstRow?: boolean;
   /** Link below the grid, e.g. to the full list. */
   more?: { href: string; label: string };
 }
-const { posts, activeTag, heading = `Frisch aus dem Backlog, seit ${site.firstYear}.`, eyebrow = 'Alle Beiträge', intro, limit, filter = true, more } = Astro.props;
-const pills = [
-  { label: 'Alle', href: '/beitraege', count: posts.length, active: !activeTag },
-  ...site.tags.map(t => ({ label: t.label, href: `/s/${t.slug}`, count: postsWithTag(posts, t.slug).length, active: activeTag === t.slug })),
-];
-const pill = (active: boolean) => `inline-flex min-h-11 items-center gap-2 rounded-control border px-[18px] text-sm font-bold transition-colors ${active ? 'border-ink bg-ink text-paper' : 'border-ink/20 bg-white text-ink hover:border-ink'}`;
+const { posts, heading = `Frisch aus dem Backlog, seit ${site.firstYear}.`, eyebrow = 'Alle Beiträge', headingLevel: Heading = 'h2', limit, eagerFirstRow = false, more } = Astro.props;
 ---
 <section class="container-bb pt-16 pb-20 md:pt-[72px] md:pb-24">
   <div class="flex flex-col gap-3">
     <Eyebrow>{eyebrow}</Eyebrow>
-    <h2 class="headline text-h2">{heading}</h2>
-    {intro && <p class="max-w-[620px] text-lead text-ink/70">{intro}</p>}
+    <Heading class="headline text-h2">{heading}</Heading>
   </div>
-  {filter && <div class="mt-6">
-    <nav class="flex flex-wrap gap-2.5" aria-label="Nach Thema filtern">
-      {pills.map(p => (
-        <a href={p.href} class={pill(p.active)} aria-current={p.active ? 'page' : undefined}>
-          {p.label} <span class="text-xs font-semibold opacity-70">{p.count}</span>
-        </a>
-      ))}
-    </nav>
-  </div>}
   <div class="mt-8 grid gap-7 sm:grid-cols-2 lg:grid-cols-3">
-    {(activeTag ? postsWithTag(posts, activeTag) : posts).slice(0, limit ?? Infinity).map((post, i) => <PostCard post={post} eager={filter && i < 3} />)}
+    {posts.slice(0, limit ?? Infinity).map((post, i) => <PostCard post={post} eager={eagerFirstRow && i < 3} />)}
   </div>
   {more && (
     <div class="mt-10 flex justify-center md:mt-12">
