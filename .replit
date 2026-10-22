@@ -1,6 +1,6 @@
 # Replit: Autoscale deployment of the Astro site (Express + Node adapter, see server.mjs).
 # Secrets (Deployment → Secrets): RESEND_API_KEY, RESEND_SEGMENT_ID, SUBSCRIBE_SECRET, MAIL_FROM, SITE_URL.
-modules = ["nodejs-22"]
+modules = ["nodejs-24"]
 
 [nix]
 channel = "stable-24_05"
